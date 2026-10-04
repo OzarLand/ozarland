@@ -1,0 +1,46 @@
+name: Feature request
+description: Propose a new capability.
+labels: ["type/feature", "status/triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Operational problem
+      description: Describe the operator pain, not the solution. What happens today, and what does it cost?
+    validations:
+      required: true
+  - type: textarea
+    id: upstream
+    attributes:
+      label: Why can't Kolla Ansible (or another upstream project) do this?
+      description: |
+        OzarLand never re-implements what Kolla Ansible already does well.
+        Link the upstream documentation you checked. If the right answer is "fix it upstream", say so.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered (including "documentation only")
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - deploy
+        - images
+        - upgrade
+        - secrets
+        - day2
+        - lab
+        - ci
+        - governance
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Verifiable statements. Another contributor must be able to implement and verify from this issue alone.

@@ -1,0 +1,33 @@
+name: Epic
+description: Track a set of issues toward one verifiable outcome.
+labels: ["type/epic"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What is true when this epic is done?
+    validations:
+      required: true
+  - type: textarea
+    id: exit
+    attributes:
+      label: Exit criteria
+      description: Verifiable checks, ideally reproducible in the lab.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Out of scope
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Child issues
+      description: Task list of child issues (features, docs, tests, security).
+      value: |
+        - [ ] #
+  - type: input
+    id: adr
+    attributes:
+      label: Related ADR(s)
