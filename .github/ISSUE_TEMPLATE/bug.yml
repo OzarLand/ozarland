@@ -1,0 +1,61 @@
+name: Bug report
+description: Something does not behave as documented.
+labels: ["type/bug", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Do not report security vulnerabilities here** — see `SECURITY.md`.
+        Never paste secrets, real hostnames, IP addresses or customer names.
+  - type: input
+    id: version
+    attributes:
+      label: Component version
+      description: Output of the tool's `--version`, or the commit SHA.
+    validations:
+      required: true
+  - type: input
+    id: series
+    attributes:
+      label: OpenStack series and Kolla Ansible version
+      placeholder: "2026.1 / kolla-ansible 22.2.0"
+    validations:
+      required: true
+  - type: input
+    id: host-os
+    attributes:
+      label: Host OS and architecture
+      placeholder: "Ubuntu 24.04 x86_64, Rocky 10 aarch64, ..."
+  - type: dropdown
+    id: topology
+    attributes:
+      label: Topology
+      options:
+        - all-in-one
+        - multinode (lab)
+        - multinode (production-like)
+  - type: textarea
+    id: command
+    attributes:
+      label: Command run
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected vs actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output (redacted)
+      render: shell
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction
+      options:
+        - label: I removed secrets, hostnames, IP addresses and customer names from this report.
+          required: true
