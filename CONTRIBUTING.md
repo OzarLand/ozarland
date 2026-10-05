@@ -3,15 +3,14 @@
 This is the canonical contribution guide for every OzarLand repository. Each project repository adds only
 its own build and test instructions.
 
-## The first question
+## The first questions
 
-Before proposing anything, answer this:
+Before proposing anything, answer these:
 
-> **Does this really belong in OzarLand, or should it stay in (or go to) Kolla Ansible?**
+> 1. **Which operator task does this serve?** OzarLand exists for the people who run Kolla Ansible in production.
+> 2. **Does it duplicate Kolla Ansible or an existing tool?** If it does, use what exists instead.
 
-OzarLand never re-implements what Kolla Ansible already does well. If a gap is generic — true for every
-Kolla Ansible user, with or without OzarLand — the right fix is usually upstream
-— the "upstream first" principle in [docs/vision.md](docs/vision.md). Feature requests must answer this question explicitly.
+Feature requests must answer both explicitly.
 
 ## Workflow
 
