@@ -16,7 +16,7 @@ Closes #
 
 - [ ] The PR title follows Conventional Commits (it becomes the squash commit message).
 - [ ] Commits are signed off (`git commit -s`, DCO).
-- [ ] "Upstream first" considered: this does not re-implement something Kolla Ansible already does well.
+- [ ] Serves an operator need and does not duplicate Kolla Ansible.
 - [ ] Documentation updated, or not needed.
 - [ ] ADR added or updated if an architectural decision changed.
 - [ ] No secrets, real hostnames, IP addresses or customer data.
