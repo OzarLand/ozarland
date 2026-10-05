@@ -5,17 +5,17 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: Operational problem
-      description: Describe the operator pain, not the solution. What happens today, and what does it cost?
+      label: Operator need
+      description: Which operator task does this serve, in production? What happens today, and what does it cost?
     validations:
       required: true
   - type: textarea
-    id: upstream
+    id: duplication
     attributes:
-      label: Why can't Kolla Ansible (or another upstream project) do this?
+      label: Does Kolla Ansible (or an existing tool) already do this?
       description: |
-        OzarLand never re-implements what Kolla Ansible already does well.
-        Link the upstream documentation you checked. If the right answer is "fix it upstream", say so.
+        OzarLand uses Kolla Ansible as it is and never duplicates it.
+        Link the documentation you checked, and explain why it does not cover the operator need.
     validations:
       required: true
   - type: textarea
