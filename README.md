@@ -1,16 +1,16 @@
 # OzarLand
 
-**An open-source ecosystem for running OpenStack in production with Kolla Ansible.**
+**The open-source operator toolkit for running OpenStack in production with Kolla Ansible.**
 
-OzarLand is being built as an **open-source ecosystem**: a small set of coherent, openly licensed projects
-that help teams deploy, operate and evolve production OpenStack platforms with
-[Kolla Ansible](https://docs.openstack.org/kolla-ansible/latest/) over the long term.
+OzarLand is an **open-source ecosystem** for the people who operate OpenStack platforms deployed with
+[Kolla Ansible](https://docs.openstack.org/kolla-ansible/latest/). Kolla Ansible is used as it is; OzarLand adds
+what an operator needs around it to deploy, operate, upgrade and maintain a production platform over the years.
 
-> **Kolla Ansible stays the deployment engine. OzarLand builds what is missing around it — it never replaces it.**
+> **Kolla Ansible stays the deployment engine. OzarLand is built for the operator who runs it in production.**
 
 ```text
                     OzarLand
-             (open-source ecosystem)
+          (open-source operator toolkit)
                        │
         ┌──────────────┼──────────────┐
         │              │              │
@@ -24,26 +24,21 @@ that help teams deploy, operate and evolve production OpenStack platforms with
                    OpenStack
 ```
 
-## Why an ecosystem
+## Why
 
-Deploying OpenStack is the beginning of the operational journey, not the end. Teams that run Kolla Ansible in
-production for years keep rebuilding the same things around it — reproducibility, change traceability, safe
-upgrades, local patches, multiple environments, Day-2 procedures, documentation that survives people —
-usually by hand and differently each time.
+Deploying OpenStack is the beginning of the operational journey, not the end. Once a platform is in production,
+the operator's daily work is to keep environments under control, prepare and trace changes, upgrade safely, carry
+local patches, maintain hosts, and know before acting what an operation will affect. Teams usually build their own
+scripts and habits for this, differently each time.
 
-OzarLand's goal is to build that missing layer **once, in the open, with the people who operate these platforms**:
-as shared conventions, focused tools and documentation, rather than as one more platform to depend on.
+OzarLand's goal is to provide these operator functions **once, in the open, with the people who run these platforms**.
 
 ## Open source from day one
 
-- **Apache License 2.0** for every project — the same licence as OpenStack, Kolla and Kolla Ansible, so work can
-  move upstream without friction.
+- **Apache License 2.0** for every project — the same licence as OpenStack, Kolla and Kolla Ansible.
 - **Developer Certificate of Origin** (sign-off) rather than a CLA.
-- **Upstream first:** when a gap is generic to every Kolla Ansible user, it is contributed to Kolla Ansible,
-  not kept in OzarLand.
-- **No new lock-in:** everything OzarLand ships must work with upstream Kolla Ansible and standard tooling;
-  removing OzarLand must leave a working Kolla Ansible setup.
-- **On-premise and self-contained:** no SaaS dependency, no mandatory central service.
+- **Kolla Ansible as it is:** OzarLand never forks it or redoes what it already does.
+- **No new lock-in:** removing OzarLand must leave a working Kolla Ansible setup; no SaaS, no mandatory central service.
 - **Decisions in the open:** architecture decisions are written as ADRs, so the reasoning is public along with the code.
 
 ## Status
@@ -61,11 +56,11 @@ No code exists yet. Technical design comes next and will be documented here.
 
 All OzarLand products are prefixed `ozar-`.
 
-| Repository | Purpose | Status |
+| Repository | For the operator who… | Status |
 |---|---|---|
-| [`ozarland`](https://github.com/OzarLand/ozarland) | This repository: vision, governance, cross-project decisions | Active |
-| [`ozar-deploy`](https://github.com/OzarLand/ozar-deploy) | Deployment lifecycle around Kolla Ansible | Scoping |
-| [`ozar-ops`](https://github.com/OzarLand/ozar-ops) | Day-2 operations — "know before you act" | Scoping |
+| [`ozarland`](https://github.com/OzarLand/ozarland) | wants to understand the ecosystem: vision, governance, cross-project decisions | Active |
+| [`ozar-deploy`](https://github.com/OzarLand/ozar-deploy) | prepares, deploys and changes the platform with Kolla Ansible | Scoping |
+| [`ozar-ops`](https://github.com/OzarLand/ozar-ops) | operates the running platform day to day — "know before you act" | Scoping |
 
 ## Learn more
 
