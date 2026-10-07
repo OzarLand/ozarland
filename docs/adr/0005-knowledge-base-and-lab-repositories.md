@@ -1,6 +1,6 @@
 # ADR-0005: Reproducible knowledge base and lab repositories
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-07
 - **Deciders:** @soufian-zaouam
 - **Amends:** ADR-0004, item 5 (the lab repository was deferred; this ADR creates it).
