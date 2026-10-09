@@ -1,6 +1,6 @@
 # ADR-0006: Candidate cases in ozar-kb
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-09
 - **Deciders:** @soufian-zaouam
 - **Amends:** ADR-0005, section 3 (reproduction is mandatory).
