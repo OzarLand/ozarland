@@ -40,14 +40,14 @@ For the qualification loop of `ozar-lab` and for a lab-only trial, `ozar-ops` ma
 - **Marked.** The mandatory `COMMIT` file of such a bundle reads `candidates <sha>`. A bundle cannot lose the mark
   without losing a file the loader requires, and a loader that does not know the mark refuses the bundle.
 - **Explicit opt-in at run time.** `ozar-ops` refuses a candidates bundle unless the run passes `--lab-trial`.
-- **Reported on every output.** A banner in the text report, `bundle_source` set to `candidates` in the JSON report,
-  and a warning on standard error.
+- **Reported on every output.** A banner in the text report, a warning on standard error, and the report fields
+  `bundle_source` (`candidates`), `lab_trial` (`true`) and `ozar_kb_pinned_commit` (the commit `ozar-ops` is pinned
+  to).
 - **Never embedded.** The embedded bundle never contains a candidate; the build, the loader and the checks of
   `ozar-ops` refuse it.
 
 The details are decided in `ozar-ops`
-[ADR 0017](https://github.com/OzarLand/ozar-ops/blob/main/docs/adr/0017-lab-trial-bundle-from-candidates.md)
-(being merged at the date of this ADR).
+[ADR 0017](https://github.com/OzarLand/ozar-ops/blob/main/docs/adr/0017-lab-trial-bundle-from-candidates.md).
 
 What this changes in ADR-0006:
 
@@ -77,7 +77,10 @@ The risk that a reader takes a candidate for a proven case is now mitigated by:
 ## Consequences
 
 - `ozar-lab` can run its qualification loop on candidates, and operators can try `ozar-ops` on a lab.
-- `ozar-ops` gains a build mode, a run flag and a report field; their tests guard the rules above.
+- `ozar-ops` gains a build mode, a run flag and report fields; their tests guard the rules above.
+- **`ozar-ops` cannot detect production.** For a run that opts in, "never in production" rests on the operator, on
+  the marking, and on the double opt-in (the build mode and `--lab-trial`). Such a run stays read-only: it runs the
+  probes only, like any other run.
 - **Residual risk:** someone who edits `COMMIT` by hand can turn a candidates bundle into an unmarked one. That is a
   deliberate act, not a mistake; the embedded bundle stays protected by the build, the loader and the checks.
 - The bar for `cases/` does not move (ADR-0005, section 3).
@@ -86,7 +89,7 @@ The risk that a reader takes a candidate for a proven case is now mitigated by:
 ## Validation
 
 - No file under `cases/` of `ozar-kb` is unqualified (ADR-0006, unchanged).
-- `ozar-ops` never loads a file from `candidates/` without the explicit lab-trial opt-in.
-- The embedded bundle of `ozar-ops` never contains a file from `candidates/`.
-- On the qualification lab, every report of a run on a candidates bundle carries the banner and
-  `"bundle_source": "candidates"`.
+- `ozar-ops` never loads a candidates bundle in a run without `--lab-trial`, and its embedded bundle never contains
+  one.
+- On the qualification lab, every report of a run on a candidates bundle carries the banner,
+  `"bundle_source": "candidates"` and `"lab_trial": true`.
