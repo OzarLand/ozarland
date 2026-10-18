@@ -1,0 +1,32 @@
+title: "[Q] "
+labels: ["kind/question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask away. The more context you give, the more likely someone recognises your problem.
+        **No secrets, real hostnames, IP addresses, customer names or unredacted logs.**
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you seeing, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: releases
+    attributes:
+      label: OpenStack release(s)
+    validations:
+      required: true
+  - type: input
+    id: deployment
+    attributes:
+      label: Deployment method and key environment details
+      placeholder: "kolla-ansible, 3 controllers, OVN, Ceph, Ubuntu 24.04"
+    validations:
+      required: true
+  - type: textarea
+    id: checked
+    attributes:
+      label: What you already checked
+      render: shell

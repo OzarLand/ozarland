@@ -39,7 +39,7 @@ A community with empty repositories does not start. Before announcing anything:
 
 | Action | Target |
 |---|---|
-| Write 5 to 10 VM runbooks from real incidents, anonymised, using the runbook template | `openstack-vm-runbooks` blueprint |
+| Write 5 to 10 VM runbooks from real incidents, anonymised, using the runbook template | Done: 10 seed runbooks in the `openstack-vm-runbooks` blueprint, derived from the incidents in *OpenStack, the Day After Tomorrow* |
 | Write 2 to 3 Kolla-Ansible deployment patterns from real platforms (for example: all-in-one lab, three-controller production with OVN, separated storage network) | `kolla-ansible-deployment-patterns` blueprint |
 | Write 1 upgrade experience report | `openstack-upgrade-playbooks` blueprint, or a Discussion |
 | Open 3 to 5 genuine open questions in Discussions to show what the Q&A space is for | `ozarland` Discussions |
@@ -50,7 +50,7 @@ Seed content is the standard the community will copy. It is worth writing carefu
 
 | Action | Who |
 |---|---|
-| Create `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns` from the blueprints and the shared template files | Owner |
+| Create `openstack-vm-runbooks` (the GitHub App used in this session cannot create organisation repositories) and `kolla-ansible-deployment-patterns` from the blueprints and the shared template files | Owner |
 | Move the seed content into them through pull requests, so the first pages show the expected workflow | Maintainer |
 | Enable Discussions and labels on each | Owner |
 | Update the directory in the main README from "Planned" to "Active" | Maintainer |
