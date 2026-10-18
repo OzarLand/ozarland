@@ -47,6 +47,6 @@ The repositories are private while the repositioning is completed. Before a repo
 2. A content review confirms no customer, employer or project names, no real hostnames, domains, addresses or
    personal paths.
 3. `SECURITY.md` and `CODE_OF_CONDUCT.md` carry a working contact address.
-4. The documentation licence is confirmed (see [conventions/licensing.md](conventions/licensing.md)).
+4. Every file is covered by the Apache-2.0 `LICENSE` and the README states it (see [conventions/licensing.md](conventions/licensing.md)).
 5. GitHub Discussions, issue templates and labels are in place.
 6. Branch protection on `main` (pull request required, no force push) and secret scanning are enabled.

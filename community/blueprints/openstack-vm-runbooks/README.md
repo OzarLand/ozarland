@@ -90,7 +90,7 @@ destructive commands; say where your solution was observed. Full guide: [CONTRIB
 
 ## License
 
-Code and scripts: Apache License 2.0 ([LICENSE](LICENSE)). Documentation: Creative Commons Attribution 4.0, to be
-confirmed before publication ([licensing](https://github.com/OzarLand/ozarland/blob/main/docs/conventions/licensing.md)).
+All content, documentation and code alike, is licensed under the Apache License 2.0 ([LICENSE](LICENSE)). Reuse it
+freely with attribution. See [licensing](https://github.com/OzarLand/ozarland/blob/main/docs/conventions/licensing.md).
 
 OpenStack is a project of the OpenInfra Foundation community. OzarLand is an independent community initiative.

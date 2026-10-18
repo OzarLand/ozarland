@@ -9,6 +9,6 @@ and they are kept as short as possible.
 | [Runbook structure](runbook-structure.md) | The sections every runbook has, and why |
 | [Risk warnings](risk-warnings.md) | How to flag read-only, state-changing and destructive commands |
 | [Sensitive data](sensitive-data.md) | What must never be published, and how to redact |
-| [Licensing](licensing.md) | Licence for code and for documentation, to confirm before publication |
+| [Licensing](licensing.md) | Apache License 2.0 for all content, documentation and code alike |
 
 Document templates implementing these conventions are under [`community/templates/`](../../community/templates/).

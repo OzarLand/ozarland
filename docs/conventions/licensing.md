@@ -1,39 +1,34 @@
 # Licensing
 
-**Status: proposed, to be confirmed by the organization owner before any repository goes public.**
+**Status: confirmed by the organization owner on 2026-10-18.**
 
-## Why it matters
+## Decision
 
-Community content is only useful if people can copy a runbook into their internal wiki, adapt a pattern to their
-platform, quote an experience report in a post-mortem, or publish a translation. The licence has to allow that
-clearly, and contributors have to know under which terms they are giving their work.
+Every OzarLand repository, and everything in it (documentation, runbooks, patterns, playbooks, reports, scripts,
+configuration examples), is licensed under the **[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)**.
 
-## Proposal
+## Why
 
-| Content | Licence | Rationale |
-|---|---|---|
-| **Documentation** (runbooks, patterns, playbooks, reports, this repository's docs) | [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) | The standard licence for technical documentation. Allows copying, adaptation and commercial use with attribution. Compatible with the licence of the OpenStack documentation. No copyleft, so companies can reuse content internally without publishing their own wiki. |
-| **Code** (scripts, snippets longer than a few lines, Ansible or configuration examples meant to be run) | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Already in place in this repository. The licence of OpenStack and Kolla, so examples can move upstream. Explicit patent grant. |
+- It is the licence of OpenStack, Kolla and Kolla-Ansible, so content and examples can move upstream without friction.
+- It is permissive: operators can copy a runbook into an internal wiki, adapt a pattern, or reuse a script,
+  commercially or not, as long as attribution and the licence notice are kept.
+- One licence for everything keeps the rules simple for contributors and readers. Apache-2.0 is less common than
+  Creative Commons for prose, but it is well understood by the OpenStack community and perfectly valid for
+  documentation.
 
-Each repository carries a `LICENSE` file (Apache-2.0, for code), a `LICENSE-docs` file (CC BY 4.0) and a sentence
-in its README stating which applies to what. Short command examples inside a page are part of the documentation.
+## What it means in practice
 
-## Contributor terms
-
-Contributions keep the Developer Certificate of Origin sign-off (`git commit -s`, automatic on web commits): the
-contributor certifies they have the right to submit the content under the repository's licences. There is no
-contributor licence agreement.
+- Each repository carries the `LICENSE` file (the Apache-2.0 text) and a one-line licence statement in its README.
+- Reusing content requires keeping the attribution and the licence notice. A link to the source page plus
+  "Licensed under Apache-2.0" is enough.
+- Contributions are accepted under the same licence, certified by the Developer Certificate of Origin sign-off
+  (`git commit -s`, automatic on web commits). There is no contributor licence agreement.
+- Content quoted from upstream documentation stays under its own licence and is attributed.
 
 ## Alternatives considered
 
-| Option | Why not (for now) |
+| Option | Why not |
 |---|---|
-| CC BY-SA 4.0 for documentation | Share-alike would prevent companies from copying pages into internal, non-public wikis, which is one of the main intended uses. |
-| Apache-2.0 for everything | Workable, but unusual for prose and awkward for attribution of text; CC BY is what readers of documentation expect. |
-| CC0 / public domain | Loses attribution, which is the only thing contributors get back. |
-
-## To confirm
-
-- [ ] CC BY 4.0 for documentation, Apache-2.0 for code (or another combination).
-- [ ] Add `LICENSE-docs` to this repository and to the blueprint.
-- [ ] Add the licence sentence to every README (already present in the templates, marked "to confirm").
+| CC BY 4.0 for documentation, Apache-2.0 for code | Two licences to explain; the boundary between "a page" and "a script in a page" is blurry in runbooks. |
+| CC BY-SA 4.0 | Share-alike would prevent copying pages into internal, non-public wikis, one of the main intended uses. |
+| CC0 / public domain | Loses attribution, which is what contributors get back. |

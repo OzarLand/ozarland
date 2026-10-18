@@ -54,8 +54,8 @@ The templates ask for these fields so that you do not have to remember them. See
   There is no contributor agreement.
 - Pull requests are **squash-merged** after one maintainer approval. Reviews focus on accuracy, safety and scope,
   not on style.
-- Contributions are published under the repository's licences (Apache-2.0 for code, documentation licence to be
-  confirmed, see [licensing](docs/conventions/licensing.md)).
+- Contributions are published under the Apache License 2.0, which covers all content, documentation and code alike
+  (see [licensing](docs/conventions/licensing.md)).
 
 ## Reviewing
 

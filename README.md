@@ -129,9 +129,8 @@ behind the repositioning is recorded in [ADR-0008](docs/adr/0008-community-knowl
 
 ## License
 
-Code and scripts are released under the Apache License 2.0, see [LICENSE](LICENSE). The licence applied to
-documentation (the bulk of community content) is proposed as Creative Commons Attribution 4.0 and must be
-confirmed before the repositories go public. See [docs/conventions/licensing.md](docs/conventions/licensing.md).
+All content, documentation and code alike, is licensed under the Apache License 2.0, see [LICENSE](LICENSE).
+Reuse it freely with attribution. See [docs/conventions/licensing.md](docs/conventions/licensing.md).
 
 OpenStack and Kolla are projects of the OpenInfra Foundation community. OzarLand is an independent community
 initiative and is not affiliated with or endorsed by the OpenInfra Foundation or any vendor.

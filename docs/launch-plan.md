@@ -13,9 +13,9 @@ a repository contributor does not have.
 | Update the organization description (value below) | Owner | To do, manual |
 | Enable GitHub Discussions on `ozarland` and create the five categories listed in [github-conventions.md](github-conventions.md) | Owner | To do, manual |
 | Apply the shared label taxonomy | Owner | To do, manual |
-| Confirm the documentation licence ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decision needed |
+| Licence: Apache-2.0 for all content ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decided 2026-10-18 |
 | Set a working contact address in `SECURITY.md` and `CODE_OF_CONDUCT.md` | Owner | To do before going public |
-| Review `ozarMVP` and `OzarBuild`: archive, repurpose or keep private | Owner | Decision needed |
+| `ozarMVP` and `OzarBuild` stay private and outside the community scope | Owner | Decided 2026-10-18 |
 
 ## GitHub metadata
 
