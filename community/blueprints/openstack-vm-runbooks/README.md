@@ -60,22 +60,36 @@ variants for other methods are added by whoever has them.
 
 | Page | Components | Releases | Status |
 |---|---|---|---|
-| | | | |
+| [Instance stuck in BUILD, then ERROR after vif_plugging_timeout](lifecycle/instance-stuck-in-build-waiting-for-vif-plugged.md) | nova, neutron, ovn, ovs | unrecorded | draft |
+| [Stale records: stuck instances, orphan ports and attachments, phantom allocations](lifecycle/stale-records-stuck-instances-orphan-ports-attachments.md) | nova, placement, neutron, cinder | unrecorded | draft |
+| [No valid host was found, although capacity exists](scheduling/no-valid-host-with-free-capacity.md) | nova, placement | unrecorded | draft |
+| [Moving instances off a compute host for planned maintenance](migration/moving-instances-off-a-host-for-maintenance.md) | nova, libvirt, qemu | unrecorded | draft |
+| [CPU steal time on pinned instances; live migration moves the symptom](migration/cpu-steal-on-pinned-instances.md) | nova, libvirt, qemu | unrecorded | draft |
+| [Compute host unreachable: fence before you evacuate](recovery/compute-host-failure-fence-before-evacuate.md) | nova, libvirt, cinder, ceph | unrecorded | draft |
+| [Reopening provisioning after a control-plane incident](recovery/reopening-provisioning-after-control-plane-incident.md) | nova, neutron, rabbitmq, mariadb | unrecorded | draft |
+| [VM creation fails platform-wide: check the shared dependencies first](diagnostics/vm-creation-fails-platform-wide-check-shared-dependencies.md) | rabbitmq, mariadb, keystone, haproxy | unrecorded | draft |
+| [What a VM creation traverses, and tracing one boot by request id](diagnostics/what-a-vm-creation-traverses-and-tracing-by-request-id.md) | nova, placement, neutron, glance, cinder | unrecorded | draft |
+| [Control plane down: what still works for running instances](diagnostics/control-plane-down-what-still-works-for-instances.md) | nova, neutron, ovn, ovs | unrecorded | draft |
 
-## First pages to write
+**About the seed pages.** The first pages were written from incidents and technical notes described by the
+founding maintainer in *OpenStack, the Day After Tomorrow*, rewritten in runbook form with the author's
+permission. The source does not record the OpenStack release on which each incident happened, so these pages carry
+`openstack_releases: [unrecorded]` and `status: draft`. The first confirmations from other operators will add the
+releases and move them to `validated`. Confirming one of them on your platform is the most useful first
+contribution you can make.
 
-Candidate seed runbooks, chosen because almost every operator has met them. Each needs a real occurrence behind it.
+## Pages wanted next
 
-1. Instance stuck in `deleting` after the compute host was lost.
-2. `No valid host was found` with enough apparent capacity (Placement allocation candidates, aggregates, traits).
-3. Instance stuck in `BUILD` / `spawning` (image download, volume creation, port binding, hypervisor).
-4. Live migration fails: pre-check errors, shared storage assumptions, CPU model mismatch.
-5. Instance has no network: no DHCP lease versus no metadata versus no external connectivity, and how to tell.
-6. Floating IP does not answer: where to look between the router, the gateway and the security groups.
-7. Volume stuck in `attaching` or `detaching`, and stale attachments on the Nova side.
-8. Instance in `ERROR` after a resize: recovering with `reset-state` and what that does not fix.
-9. Console not available: VNC/SPICE proxy and hypervisor side.
-10. Evacuating instances from a dead compute node, and verifying nothing was duplicated.
+Candidate runbooks that almost every operator has met and that are not written yet. Each needs a real occurrence
+behind it; open a *Problem solved* issue if you have one.
+
+1. Live migration fails: pre-check errors, shared storage assumptions, CPU model mismatch.
+2. Instance has no network: no DHCP lease versus no metadata versus no external connectivity, and how to tell.
+3. Floating IP does not answer: where to look between the router, the gateway and the security groups.
+4. Volume stuck in `attaching` or `detaching` (the Cinder side of stale attachments).
+5. Instance in `ERROR` after a resize: recovering with `reset-state` and what that does not fix.
+6. Console not available: VNC/SPICE proxy and hypervisor side.
+7. Instance stuck in `deleting` after the compute host was lost (the deletion-specific details beyond the stale-records page).
 
 ## Contributing
 

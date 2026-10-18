@@ -5,7 +5,7 @@ one, including its scope, directory layout, metadata (description, topics) and a
 
 | Blueprint | Priority | Status |
 |---|---|---|
-| [`openstack-vm-runbooks/`](openstack-vm-runbooks/) | 1 | Ready to create once 5 to 10 seed runbooks exist |
+| [`openstack-vm-runbooks/`](openstack-vm-runbooks/) | 1 | **Complete initial repository**: README, shared files, template and 10 seed runbooks. Ready to copy into the repository once created. |
 | [`kolla-ansible-deployment-patterns/`](kolla-ansible-deployment-patterns/) | 1 | Ready to create once 2 to 3 seed patterns exist |
 | [`openstack-upgrade-playbooks/`](openstack-upgrade-playbooks/) | 2 | Create after the first upgrade reports arrive |
 
