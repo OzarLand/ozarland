@@ -3,11 +3,11 @@
 - **Status:** Proposed | Accepted | Superseded by ADR-NNNN | Rejected
 - **Date:** YYYY-MM-DD
 - **Deciders:** @maintainer
-- **Upstream check:** Does Kolla Ansible (or another upstream project) already do this? yes / partly / no — link
+- **Discussion:** link to the Ideas discussion or issue where this was proposed
 
 ## Context
 
-What problem are we solving, and what forces are at play?
+What problem are we solving, and what forces are at play? Keep it to a few paragraphs.
 
 ## Decision
 
@@ -21,8 +21,4 @@ What we decided, stated plainly.
 
 ## Consequences
 
-Positive, negative, and follow-ups.
-
-## Validation
-
-How we will know the decision holds (lab test, review, metric).
+What changes for contributors and maintainers, and any follow-up actions.

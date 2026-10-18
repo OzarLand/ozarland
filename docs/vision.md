@@ -1,77 +1,68 @@
-# Vision and principles
+# Mission and principles
 
 ## Mission
 
-> Give the operators of OpenStack platforms deployed with Kolla Ansible an open-source toolkit to deploy, operate,
-> upgrade and maintain them safely over many years — using Kolla Ansible as it is, without depending on a new platform.
+> **OzarLand is a collaborative knowledge-sharing space for OpenStack operators.**
 
-## The operator first
+OzarLand exists so that the people who run OpenStack platforms can learn from each other. It collects what
+operators know from experience: how they deploy, what breaks, how they diagnose it, how they fix it, how they
+upgrade, and what they would do differently next time.
 
-OzarLand starts from the operator's work, not from a list of features. Every project answers one question:
+## The problem OzarLand addresses
 
-> **What does an operator need to run Kolla Ansible in production?**
+Operational knowledge about OpenStack is abundant but fragmented. It lives in private wikis, chat threads,
+personal notes and the heads of a few experienced people. When those people move on, the knowledge goes with them.
+Public documentation explains how components are meant to work; it rarely explains what to do at 3 a.m. when an
+instance is stuck in `deleting` and the compute node's agent is silent.
 
-Typical operator tasks:
+Many operators solve the same problems independently, in isolation, with no way to compare their approaches or to
+confirm that a fix is sound outside their own environment.
 
-- keep several environments (lab, pre-production, production) under control and comparable;
-- prepare a change, see its effect before applying it, and keep a trace of it;
-- upgrade to a new OpenStack series with prerequisites checked and backups in place;
-- carry local patches and rebuild images without losing track of them;
-- maintain hosts (patching, reboots, evacuations) knowing what will be affected;
-- check the platform before acting, and collect evidence during an incident;
-- make knowledge survive the people who hold it.
+## What OzarLand does
 
-## Why Kolla Ansible
+- Gives operators a public place to **ask questions** and get answers from peers who have seen the same thing.
+- Captures **problems solved in production** as runbooks others can follow and improve.
+- Documents **how operators deploy and operate** OpenStack, with the context and consequences of each choice.
+- Pools **upgrade, incident and maintenance experience**, including what went wrong.
+- Makes the **validity of each piece of knowledge explicit**: release, deployment method, conditions, and how
+  many people have confirmed it.
 
-Kolla Ansible is an official OpenStack project. It deploys OpenStack services in containers, covers the deployment
-lifecycle and, together with Kolla, offers mature configuration and image customisation. It is plain Ansible and
-containers: operators can read it, debug it and reason about it.
+## What OzarLand does not do
 
-OzarLand uses it **as it is**. This commits the ecosystem to:
-
-1. never forking Kolla Ansible, and never redoing what it already does;
-2. keeping the upstream vocabulary, so that a Kolla Ansible operator understands OzarLand immediately;
-3. keeping Kolla Ansible's behaviour and output visible to the operator;
-4. following the OpenStack release rhythm.
-
-## What the ecosystem covers
-
-Deployment · configuration · lifecycle management · upgrades · local patches · image rebuilds ·
-environment management · Day-2 administration · configuration validation · operation preparation ·
-documentation · observability · operational governance · reproducibility · change management.
-
-Each of these will be scoped project by project. Some needs are best served by documentation and conventions
-rather than by new code.
-
-## What OzarLand is not
-
-- a fork or a replacement of Kolla Ansible;
-- a new OpenStack distribution;
-- a bare-metal provisioning tool;
-- a monitoring stack;
-- a Horizon alternative;
-- a SaaS or a control plane that users must run.
+- It does not define a reference architecture or a recommended way to deploy OpenStack.
+- It does not develop, promote or require any tool, distribution or vendor product.
+- It does not certify procedures. "Validated by several operators" means exactly that, nothing more.
+- It does not replace upstream documentation. It complements it with operational experience and links to it.
+- It is not a support channel with response-time commitments. People help each other when they can.
 
 ## Principles
 
-1. **Operator first.** A function exists because an operator needs it in production.
-2. **Kolla Ansible as it is.** Use it; never fork it or duplicate it.
-3. **Simple → coherent → maintainable → evolvable.** Few projects, each with a clear responsibility.
-4. **Eject path.** Removing OzarLand leaves a plain, working Kolla Ansible setup.
-5. **Observe before acting; evidence before assumption.** "Unknown" is never "OK".
-6. **Automation with control.** Risky actions are explicit, reviewed and recorded; humans stay in the loop.
-7. **Stability before feature velocity.**
-8. **Knowledge must survive people.** Decisions are ADRs; procedures are runbooks.
-9. **No new lock-in.** Prefer OpenStack, Kolla Ansible, Docker, Ansible, Git and standard Linux tooling over any new dependency.
+1. **Collaboration over authority.** Nobody owns the right answer. Content is improved by comparing experiences.
+2. **Openness.** Public discussions, public content, public decisions. Anyone can contribute, review and reuse.
+3. **Tool neutrality.** Kolla-Ansible, OpenStack-Ansible, Charmed OpenStack, vendor distributions, custom
+   builds: all are legitimate. Content about a specific tool says so, and never implies the others are wrong.
+4. **Respect for different approaches.** When operators disagree, the community documents the trade-offs and the
+   context in which each choice makes sense.
+5. **Real experience first.** A page describes something that happened on a real platform, or an approach someone
+   actually operates. Hypotheses are labelled as such.
+6. **Honesty about validity.** Every procedure states the release, the components, the deployment method and the
+   conditions under which it was observed, and whether anyone else has confirmed it.
+7. **Safety.** Commands that change state are flagged. Destructive commands carry an explicit warning. Secrets,
+   hostnames, addresses, unredacted logs and anything that identifies an infrastructure never reach a repository.
+8. **Lightweight governance.** Templates and conventions exist to make content findable and trustworthy. They are
+   kept as small as possible, and they change when they get in the way.
+9. **Knowledge must survive people.** Content is written so that someone who was not there can use it.
 
 ## Who it is for
 
-- Platform and operations engineers who run Kolla Ansible-based OpenStack in production.
-- Technical leads who need changes to be reviewable, reproducible and auditable.
-- Contributors who share these operator needs.
+- Operators who run OpenStack platforms, in production or on their way there.
+- Cloud and platform engineers who design and change those platforms.
+- SREs and on-call engineers who respond to incidents on them.
+- Newcomers who want to learn how OpenStack is actually operated, beyond the installation guides.
+- Experienced operators who want to compare their practices with others and give back.
 
-## An ecosystem, built with its users
+## Relationship with upstream
 
-OzarLand is meant to become a community project. Until it is public, it is developed by its founding maintainer
-with the same discipline an open community requires: public-ready content, documented decisions, issues and pull
-requests, and no dependency on any single company's environment.
+OzarLand is an independent community initiative. It is not affiliated with or endorsed by the OpenInfra
+Foundation or any vendor. When a community page uncovers a bug or a documentation gap in an OpenStack project,
+contributors are encouraged to report it upstream and to link the upstream bug or change from the page.

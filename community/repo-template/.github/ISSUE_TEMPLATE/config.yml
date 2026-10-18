@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask the community (Q&A discussion)
+    url: https://github.com/OzarLand/ozarland/discussions/categories/q-a
+    about: Not sure it is a tracked problem yet? Ask in Discussions first.
+  - name: Share an experience report
+    url: https://github.com/OzarLand/ozarland/discussions/categories/experience-reports
+    about: Upgrades, incidents, migrations, architecture choices, told first-hand.
+  - name: Sensitive data published by mistake, or unsafe procedure
+    url: https://github.com/OzarLand/ozarland/blob/main/SECURITY.md
+    about: Do not open a public issue. Follow the security policy.
+  - name: Vulnerability in OpenStack itself
+    url: https://security.openstack.org/
+    about: Upstream vulnerabilities go to the OpenStack Vulnerability Management Team.

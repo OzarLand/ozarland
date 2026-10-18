@@ -1,0 +1,57 @@
+name: Documentation proposal
+description: Propose a new page, or report that an existing one is wrong, missing something or unsafe.
+labels: ["kind/docs", "status/open"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - New page proposal
+        - Existing page is wrong or outdated
+        - Existing page is missing a variant (another release, deployment method or backend)
+        - Existing page is unsafe (missing risk warning, sensitive data)
+        - I confirmed an existing page in my environment
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page (path or link), or proposed title
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What is wrong, missing or proposed. For a confirmation, say what you did and the result.
+    validations:
+      required: true
+  - type: input
+    id: releases
+    attributes:
+      label: OpenStack release(s) this concerns
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment method
+      options:
+        - kolla-ansible
+        - openstack-ansible
+        - charmed
+        - vendor distribution
+        - manual / other
+        - any
+  - type: checkboxes
+    id: offer
+    attributes:
+      label: Offer
+      options:
+        - label: I am willing to write or update the page myself.
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction
+      options:
+        - label: This issue contains no secrets, hostnames, IP addresses, customer or person names.
+          required: true

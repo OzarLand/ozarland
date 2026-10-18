@@ -1,64 +1,77 @@
 # Contributing to OzarLand
 
-This is the canonical contribution guide for every OzarLand repository. Each project repository adds only
-its own build and test instructions.
+Thank you for sharing what you know. This guide applies to every OzarLand community repository. It is short on
+purpose: the goal is to make sharing easy, not to make it formal.
 
-## The first questions
+## Ways to contribute
 
-Before proposing anything, answer these:
+| You want to… | Do this |
+|---|---|
+| Ask for help with an operational problem | Open a **Q&A discussion**, or an issue with the *Question* template if you want it tracked |
+| Share a problem you solved | Open an issue with the *Problem solved* template, or go straight to a pull request with a runbook |
+| Add or improve a runbook, pattern or playbook | Open a pull request using the matching template from [`community/templates/`](community/templates/) |
+| Tell what happened during an upgrade, an incident or a migration | Start an **Experience reports** discussion, or submit an experience-report page |
+| Confirm that a page works (or does not) in your environment | Comment on the page's pull request or open a *Documentation proposal* issue with your release, deployment method and result. This is how pages become **validated** |
+| Fix a typo, a broken link, an outdated command | Open a pull request directly, no issue needed |
+| Propose a change to the community itself (templates, structure, a new repository) | Start an **Ideas** discussion in `ozarland` |
 
-> 1. **Which operator task does this serve?** OzarLand exists for the people who run Kolla Ansible in production.
-> 2. **Does it duplicate Kolla Ansible or an existing tool?** If it does, use what exists instead.
+If you are not sure where something goes, open a discussion. Someone will point you to the right place.
 
-Feature requests must answer both explicitly.
+## What a good contribution contains
 
-## Workflow
+Operational knowledge is only reusable with its context. Whatever you share, give:
 
-```text
-Issue → Branch → Implementation → Tests → Pull request → Review → Squash merge
-```
+- the **OpenStack release(s)** (upstream names, for example `2025.1`);
+- the **components** involved (Nova, Neutron, Cinder, MariaDB, RabbitMQ, Ceph, OVN…);
+- the **deployment method** (Kolla-Ansible, OpenStack-Ansible, Charmed, a vendor distribution, manual);
+- the **environment conditions that matter** (topology, network plugin, storage backend, OS);
+- what you **already checked** or **actually did**, with the commands;
+- what you **are not sure about**.
 
-1. **Open or pick an issue.** Significant work starts from an issue with acceptance criteria.
-   Architectural changes start from an ADR (`docs/adr/`).
-2. **Branch** from `main`: `feat/<issue>-<slug>`, `fix/<issue>-<slug>`, `docs/<slug>`, `chore/<slug>`.
-3. **Commit** with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) and a DCO sign-off
-   (`git commit -s`). Types: `feat`, `fix`, `docs`, `refactor`, `test`, `build`, `ci`, `chore`, `perf`, `revert`.
-   Scope is the area: `feat(images): …`. Breaking changes use `!`.
-4. **Open a pull request** using the template. The PR title becomes the squash commit message.
-5. **Merge** with squash merge only. `main` must stay releasable.
+The templates ask for these fields so that you do not have to remember them. See
+[content metadata](docs/conventions/content-metadata.md) for the full list.
 
-Direct pushes to `main` are not allowed, except for the documented repository bootstrap.
-While repositories are private on the GitHub Free plan this rule cannot be enforced by branch protection;
-it is a maintainer commitment (see [GitHub conventions](docs/github-conventions.md)).
+## The rules that are not optional
 
-## Developer Certificate of Origin
+1. **No sensitive data.** No secrets, no real hostnames, domains, IP or MAC addresses, no customer, employer or
+   person names, no unredacted logs. See [sensitive data](docs/conventions/sensitive-data.md) for how to redact.
+   Maintainers will ask for redaction before anything else.
+2. **Flag risky commands.** State-changing commands carry a ⚠️ warning; destructive ones carry a 🛑 warning with
+   what can be lost and what to check first. See [risk warnings](docs/conventions/risk-warnings.md). Unflagged
+   destructive commands are not merged.
+3. **Say where it was observed.** A solution that worked on your platform is documented as exactly that. Never
+   present a procedure or an upgrade path as universally valid or officially supported without a reference.
+4. **Respect other approaches.** When your way differs from a documented one, add yours with its context. Do not
+   replace someone else's approach with your own.
+5. **Follow the [code of conduct](CODE_OF_CONDUCT.md).**
 
-Every commit must carry a `Signed-off-by:` line certifying the [Developer Certificate of Origin 1.1](https://developercertificate.org/).
-OzarLand does not use a CLA. Web-based commits are signed off automatically (organization policy).
+## Mechanics
 
-## Local checks and CI
+- Content is **Markdown**, in **English**, with Mermaid diagrams when a diagram helps.
+- Work on a branch, open a **pull request** against `main`. One page per pull request is easiest to review.
+- Sign off your commits (`git commit -s`) to certify the
+  [Developer Certificate of Origin](https://developercertificate.org/). Web commits are signed off automatically.
+  There is no contributor agreement.
+- Pull requests are **squash-merged** after one maintainer approval. Reviews focus on accuracy, safety and scope,
+  not on style.
+- Contributions are published under the Apache License 2.0, which covers all content, documentation and code alike
+  (see [licensing](docs/conventions/licensing.md)).
 
-Not defined yet. Tooling (linters, secret scanning, CI) will be decided through ADRs when the first
-implementation work starts. The intended principle: CI logic lives in versioned scripts that run identically
-on a workstation, so the project stays portable beyond GitHub.
+## Reviewing
 
-## Content rules (publish-ready from day one)
+Reviewing is contributing. Useful review comments:
 
-Repositories are private today and will become public. Write everything as if it were public now:
+- "Confirmed on 2025.1 / Kolla-Ansible / OVN." (adds a confirmation and may move the page to validated)
+- "On OpenStack-Ansible the service is restarted with … instead." (adds a variant)
+- "This command also deletes X, it needs a destructive warning." (safety)
+- "I believe the cause is actually Y, because …" (accuracy, discussed in the thread, both views kept if unresolved)
 
-- No secrets, credentials, private keys or `passwords.yml` in clear — ever.
-- No customer, employer or project names; no real hostnames, domains or IP addresses.
-- Use `example.org` / `example.com` (RFC 2606) and `192.0.2.0/24`, `198.51.100.0/24`, `203.0.113.0/24` (RFC 5737) in examples.
-- No dependency on a personal environment (paths such as `/Users/<name>`, private registries, internal mirrors).
-- Real operational experience is welcome once anonymised and generalised into a pattern.
+Reviewers do not need to be maintainers. Maintainers merge; anyone can review.
 
-## Language and style
+## Conventions and templates
 
-- All repository content is written in English.
-- Markdown + Mermaid diagrams, rendered natively by GitHub.
-- Prefer upstream vocabulary (Kolla Ansible verbs, OpenStack terms). Do not invent synonyms.
-
-## Labels
-
-Labels are shared across repositories: `type/*`, `area/*`, `priority/*`, `status/*`, plus `upstream`,
-`security`, `good first issue`, `help wanted`. See [docs/github-conventions.md](docs/github-conventions.md).
+- [Content conventions](docs/conventions/README.md): metadata, runbook structure, risk warnings, sensitive data,
+  licensing.
+- [Document templates](community/templates/): runbook, deployment pattern, upgrade playbook, experience report.
+- [Knowledge lifecycle](docs/knowledge-lifecycle.md): how content moves from an open question to a validated page.
+- [GitHub conventions](docs/github-conventions.md): discussions, issues, labels, branches.

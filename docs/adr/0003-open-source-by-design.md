@@ -1,6 +1,6 @@
 # ADR-0003: Open source by design
 
-- **Status:** Accepted
+- **Status:** Accepted (adjusted by [ADR-0008](0008-community-knowledge-sharing-space.md): a documentation licence is added for community content)
 - **Date:** 2026-10-04
 - **Deciders:** @soufian-zaouam
 

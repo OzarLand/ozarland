@@ -1,6 +1,6 @@
 # ADR-0002: Kolla Ansible remains the engine
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0008](0008-community-knowledge-sharing-space.md). Kept unchanged for the record; the content below describes the operator toolkit OzarLand was before it became a knowledge-sharing community.
 - **Date:** 2026-10-04 (clarified 2026-10-05)
 - **Deciders:** @soufian-zaouam
 

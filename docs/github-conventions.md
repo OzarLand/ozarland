@@ -1,45 +1,81 @@
 # GitHub conventions
 
-## Organization settings (applied 2026-10-04)
+How OzarLand uses GitHub. These conventions apply to every community repository.
 
-| Setting | Value |
-|---|---|
-| Plan | Free |
-| Repository visibility | All repositories private during the foundation phase |
-| Base member permission | Read |
-| Repository creation by members | Disabled (owners only) — avoids repository sprawl |
-| Forking of private repositories | Disabled |
-| Visibility change, deletion, transfer | Owners only |
-| Team and Pages creation by members | Disabled |
-| App access requests | Members only; repository admins cannot install apps without approval |
-| Default branch | `main` |
-| Commit sign-off on web commits | Required for all repositories (DCO) |
-| Immutable releases | Required for all repositories |
-| Default repository labels | OzarLand taxonomy (below) |
-| GitHub Actions | GitHub-created actions only, pinned to a full commit SHA; read-only `GITHUB_TOKEN`; Actions cannot approve pull requests; approval required for outside contributors' workflows |
-| Two-factor authentication required | Pending owner action |
+## Where things happen
 
-**Limits of the Free plan for private repositories:** no branch protection or rulesets, no secret scanning or push
-protection, no code scanning, no private vulnerability reporting, and organization-wide community files only work
-from a public `.github` repository. These become available when a repository goes public. Until then, the pull
-request workflow is a maintainer commitment.
+| Need | Where | Why |
+|---|---|---|
+| Ask for help, compare observations, share an experience report, discuss an architecture choice | **GitHub Discussions** (categories below) | Threaded, open-ended, no "done" state to manage |
+| Report that a page is wrong, missing or unsafe; propose a new page; track a problem until it becomes a runbook | **Issues** (templates below) | Has a clear done state and can be linked to a pull request |
+| Add or change content | **Pull requests** | Reviewable, attributable, versioned |
+| The content itself | **Markdown files in the repository** | Readable on GitHub, diffable, forkable |
+
+Discussions should be enabled on every community repository. In the first phase, discussions are centralised in
+`ozarland` so that the community has one visible place to meet; see [knowledge lifecycle](knowledge-lifecycle.md).
+
+### Discussion categories
+
+| Category | Type | Purpose |
+|---|---|---|
+| **Q&A** | Question / answer | "How do I…", "Has anyone seen…". An accepted answer can be turned into a runbook. |
+| **Experience reports** | Open discussion | Upgrades, incidents, migrations, architecture choices told first-hand |
+| **Show and compare** | Open discussion | "Here is how we do X, how do you do it?" |
+| **Ideas** | Open discussion | Proposals about the community itself: structure, templates, new repositories |
+| **Announcements** | Announcement | Maintainer updates |
+
+Discussion category forms are provided under `community/repo-template/.github/DISCUSSION_TEMPLATE/`.
+
+### Issue templates
+
+| Template | Purpose | Default labels |
+|---|---|---|
+| Question | A specific operational question that needs a tracked answer | `kind/question`, `status/needs-info` or `status/open` |
+| Problem solved | A problem you fixed that could become a runbook | `kind/problem-solved`, `status/candidate` |
+| Documentation proposal | A new page, or a correction to an existing one | `kind/docs`, `status/open` |
+| Experience report | Offer an experience report to be written up | `kind/experience`, `status/open` |
+
+Templates live under `community/repo-template/.github/ISSUE_TEMPLATE/` and are copied into each repository.
 
 ## Labels
 
-| Group | Labels |
-|---|---|
-| Type | `type/bug`, `type/feature`, `type/epic`, `type/docs`, `type/adr`, `type/spike`, `type/chore` |
-| Area | `area/deploy`, `area/images`, `area/upgrade`, `area/secrets`, `area/day2`, `area/lab`, `area/ci`, `area/governance` |
-| Priority | `priority/critical`, `priority/high`, `priority/medium`, `priority/low` |
-| Status | `status/triage`, `status/blocked`, `status/needs-decision` |
-| Other | `upstream`, `security`, `good first issue`, `help wanted` |
+Labels are shared across repositories so that cross-repository searches work.
+
+| Group | Labels | Meaning |
+|---|---|---|
+| Kind | `kind/question`, `kind/problem-solved`, `kind/docs`, `kind/experience`, `kind/community` | What the item is |
+| Status | `status/open`, `status/needs-info`, `status/candidate`, `status/in-review`, `status/validated`, `status/stale` | Where it is in the [knowledge lifecycle](knowledge-lifecycle.md) |
+| Component | `component/nova`, `component/neutron`, `component/cinder`, `component/glance`, `component/keystone`, `component/placement`, `component/octavia`, `component/ceph`, `component/mariadb`, `component/rabbitmq`, `component/haproxy`, `component/other` | OpenStack or infrastructure component involved |
+| Deployment | `deploy/kolla-ansible`, `deploy/openstack-ansible`, `deploy/charmed`, `deploy/vendor`, `deploy/other`, `deploy/any` | Deployment method the content applies to |
+| Risk | `risk/destructive`, `risk/production-impact` | Content contains commands that need explicit warnings |
+| Other | `good first contribution`, `help wanted`, `security`, `upstream` | Onboarding, calls for help, security review needed, upstream bug involved |
+
+Release-specific items use a milestone or the release name in the title (for example `[2025.1]`) rather than a label
+per release, to keep the label set small.
 
 ## Branches, commits, pull requests
 
-- `main` is always releasable. Work happens on short-lived branches: `feat/<issue>-<slug>`, `fix/…`, `docs/…`, `chore/…`.
-- Commits follow [Conventional Commits 1.0](https://www.conventionalcommits.org/en/v1.0.0/) with a DCO sign-off.
-- Pull requests are squash-merged; the PR title becomes the commit message.
-- No AI co-author trailers in commits.
-- The first content of each repository was added through a single bootstrap pull request.
+- `main` is the published state. Work happens on short-lived branches named after what they change
+  (`runbook/nova-instance-stuck-deleting`, `pattern/three-controller-ovn`, `fix/typo-cinder-attach`).
+- Commit messages are plain descriptive sentences. [Conventional Commits](https://www.conventionalcommits.org/)
+  prefixes (`docs:`, `fix:`, `chore:`) are welcome but not required.
+- Every commit carries a Developer Certificate of Origin sign-off (`git commit -s`). Web commits are signed off
+  automatically by organization policy. This is the only legal formality; there is no contributor agreement.
+- Pull requests are squash-merged. One page, pattern or runbook per pull request keeps review easy.
+- A pull request needs one approval from a maintainer. A contribution that reports "I confirmed this in my
+  environment" on an existing page is merged quickly: it is how content gets validated.
 
-Issue planning, milestones, versioning and release conventions will be defined later.
+## Organization settings to apply
+
+Settings that cannot be changed from a repository and need an organization owner:
+
+| Setting | Target value |
+|---|---|
+| Organization description | See [launch plan](launch-plan.md), section "GitHub metadata" |
+| Repository description and topics | Per repository, see the launch plan |
+| Discussions | Enabled on `ozarland` first, then on each community repository |
+| Default labels | The taxonomy above, applied organization-wide |
+| Visibility | Public, once the go-public checklist in [governance](governance.md) is complete |
+| Member repository creation | Owners only, to avoid repository sprawl; repositories are created from a decision record |
+| Commit sign-off on web commits | Required (already set) |
+| Two-factor authentication | Required for members |
