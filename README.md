@@ -102,8 +102,8 @@ is in [docs/repositories.md](docs/repositories.md).
 | Repository | Role | Status |
 |---|---|---|
 | [`ozarland`](https://github.com/OzarLand/ozarland) | Community home: mission, principles, contribution model, shared templates, repository blueprints, open questions | **Active** |
-| `kolla-ansible-deployment-patterns` | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | Planned, priority 1 |
-| `openstack-vm-runbooks` | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | Planned, priority 1. Initial content (10 runbooks) ready in [`community/blueprints/openstack-vm-runbooks`](community/blueprints/openstack-vm-runbooks/) |
+| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**, awaiting first patterns |
+| [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**, seed runbooks under review |
 | `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2 |
 | `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
 
