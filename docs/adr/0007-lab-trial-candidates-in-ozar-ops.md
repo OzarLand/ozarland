@@ -1,6 +1,6 @@
 # ADR-0007: Marked candidates in ozar-ops for lab trials only
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0008](0008-community-knowledge-sharing-space.md). Kept unchanged for the record; the content below describes the operator toolkit OzarLand was before it became a knowledge-sharing community.
 - **Date:** 2026-10-11
 - **Deciders:** @soufian-zaouam
 - **Amends:** [ADR-0006](0006-candidate-cases-in-ozar-kb.md): its "Read by `ozar-ops`" column for `candidates/`,

@@ -1,81 +1,136 @@
 # OzarLand
 
-**The open-source operator toolkit for running OpenStack in production with Kolla Ansible.**
+**A collaborative knowledge-sharing space for OpenStack operators.**
 
-OzarLand is an **open-source ecosystem** for the people who operate OpenStack platforms deployed with
-[Kolla Ansible](https://docs.openstack.org/kolla-ansible/latest/). Kolla Ansible is used as it is; OzarLand adds
-what an operator needs around it to deploy, operate, upgrade and maintain a production platform over the years.
+> Share experiences, document solutions, learn from each other.
+> No imposed tools, no single way of operating OpenStack.
 
-> **Kolla Ansible stays the deployment engine. OzarLand is built for the operator who runs it in production.**
+OzarLand is where people who run OpenStack platforms meet to compare how they deploy, operate, upgrade and
+troubleshoot them, and to turn what they learn in production into knowledge that others can reuse and improve.
 
-```text
-                    OzarLand
-          (open-source operator toolkit)
-                       │
-        ┌──────────────┼──────────────┐
-        │              │              │
-   Deployment       Lifecycle      Day 2
-   ecosystem        management      operations
-        │              │              │
-        └──────────────┼──────────────┘
-                       │
-                 Kolla Ansible
-                       │
-                   OpenStack
-```
+## What is OzarLand?
 
-## Why
+Running OpenStack is a craft learned mostly on the job. Every operations team builds its own runbooks, its own
+checklists and its own hard-won understanding of why a platform behaves the way it does. Most of that knowledge
+never leaves the team.
 
-Deploying OpenStack is the beginning of the operational journey, not the end. Once a platform is in production,
-the operator's daily work is to keep environments under control, prepare and trace changes, upgrade safely, carry
-local patches, maintain hosts, and know before acting what an operation will affect. Teams usually build their own
-scripts and habits for this, differently each time.
+OzarLand exists to change that. It is a community, not a product. Its purpose is to:
 
-OzarLand's goal is to provide these operator functions **once, in the open, with the people who run these platforms**.
+- share deployment and operations practices for OpenStack;
+- document problems met in production and the solutions that were applied;
+- pool runbooks and operational procedures;
+- compare different technical approaches without declaring a single winner;
+- share experience reports on upgrades, incidents, performance, availability and maintenance;
+- help experienced operators and newcomers learn from each other;
+- turn individual knowledge into collective knowledge that anyone can reuse and improve.
 
-## Open source from day one
+OzarLand does not tell operators how they must run OpenStack. It gives them a place to learn from one another and
+to build a common body of operational knowledge, one real experience at a time.
 
-- **Apache License 2.0** for every project — the same licence as OpenStack, Kolla and Kolla Ansible.
-- **Developer Certificate of Origin** (sign-off) rather than a CLA.
-- **Kolla Ansible as it is:** OzarLand never forks it or redoes what it already does.
-- **No new lock-in:** removing OzarLand must leave a working Kolla Ansible setup; no SaaS, no mandatory central service.
-- **Decisions in the open:** architecture decisions are written as ADRs, so the reasoning is public along with the code.
+## Who is it for?
 
-## Status
+- **OpenStack operators** who run platforms day to day, whatever their distribution or deployment method.
+- **Cloud and platform engineers** who design, build and change OpenStack environments.
+- **SREs and on-call engineers** who diagnose and resolve incidents on OpenStack services.
+- **Anyone responsible for an OpenStack platform** who wants to compare notes with peers, from a one-node lab
+  to a multi-region production cloud.
 
-**Private — foundation phase (October 2026).** The repositories are private while the projects are being scoped
-and stabilised. They are written as if they were already public, and will be opened progressively:
+You do not need to use a particular deployment tool, distribution, storage backend or network plugin to take part.
+Kolla-Ansible, OpenStack-Ansible, Charmed OpenStack, TripleO heritage platforms, vendor distributions, hand-built
+clouds: every real-world setup is a valid source of experience.
 
-```text
-Private → Internal development → Early adopters → Open source → Community → Production ecosystem
-```
+## What can you find here?
 
-No code exists yet. Technical design comes next and will be documented here.
+Content is organised in thematic repositories (see the [repository directory](#repository-directory)). Across them,
+you will find:
 
-## Projects
+| Kind of content | What it is |
+|---|---|
+| **Runbooks** | Symptom-driven procedures: what you see, what to check, what it usually means, what to do, how to confirm it is fixed. |
+| **Deployment patterns** | How operators actually deploy OpenStack: topologies, network and storage choices, inventory layouts, and the consequences of those choices. |
+| **Upgrade experiences** | Preparation, prerequisite checks, what went wrong, what worked, and how to roll back, per release and per deployment method. |
+| **Diagnostics** | Command sequences and log-reading guides for Nova, Neutron, Cinder, Glance, Keystone and the infrastructure services around them. |
+| **Experience reports** | First-hand accounts of an incident, a migration, a capacity problem or an architectural decision, with the context that makes them useful. |
+| **Open questions** | Problems the community has not solved yet, where several operators compare their observations. |
 
-All OzarLand products are prefixed `ozar-`.
+Every piece of content states the OpenStack release, the components involved, the deployment method and the
+conditions under which it was observed. A solution that worked in one environment is documented as exactly that,
+not as a universal truth. See [knowledge lifecycle](docs/knowledge-lifecycle.md) for how content matures from an
+open question to a procedure validated by several operators.
 
-| Repository | For the operator who… | Status |
+## How to contribute?
+
+Any real experience is worth sharing. You can:
+
+- **Ask a question.** Open a discussion or an issue using the *Question* template. Give the release, the deployment
+  method and what you have already checked.
+- **Share a problem you solved.** Use the *Problem solved* template. Once the fix is confirmed by someone else, it
+  becomes a runbook.
+- **Add or improve a procedure.** Open a pull request with the runbook or pattern template. Small improvements to
+  existing content are as welcome as new pages.
+- **Share an experience report.** Upgrades, incidents, architecture choices: tell what happened, what you learned,
+  and what you would do differently.
+- **Review other people's contributions.** Confirming that a procedure also works in your environment, or does not,
+  is one of the most valuable contributions there is.
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the practical rules. They are short on purpose. The non-negotiable
+ones: never publish secrets, real hostnames, IP addresses, unredacted logs or anything that identifies an
+infrastructure, and clearly flag commands that can affect production.
+
+## Community principles
+
+1. **Collaboration over authority.** Knowledge is built by comparing experiences, not by handing down rules.
+2. **Openness.** Discussions, decisions and content are public and reviewable. Anyone can contribute.
+3. **Tool neutrality.** No deployment tool, distribution or vendor is promoted as the right one. Each approach
+   is documented with its context, its benefits, its limits and its lessons.
+4. **Respect for different approaches.** Two operators can make opposite choices for good reasons. The goal is to
+   understand why, not to decide who is right.
+5. **Real experience first.** Content comes from things that actually happened on real platforms. Theory is
+   welcome when it explains an observation.
+6. **Honesty about validity.** Every procedure states where and when it was verified, and what is still uncertain.
+7. **Safety.** Risky and destructive commands are flagged. Sensitive data never reaches a public repository.
+8. **Lightweight governance.** Just enough structure to keep content findable and trustworthy, and nothing more.
+
+The [code of conduct](CODE_OF_CONDUCT.md) applies everywhere in the organisation.
+
+## Repository directory
+
+OzarLand starts small and grows with the community. Repositories are created when there is content to put in them,
+not before. The full reasoning, including the trade-offs between separate repositories and grouped documentation,
+is in [docs/repositories.md](docs/repositories.md).
+
+| Repository | Role | Status |
 |---|---|---|
-| [`ozarland`](https://github.com/OzarLand/ozarland) | wants to understand the ecosystem: vision, governance, cross-project decisions | Active |
-| [`ozar-deploy`](https://github.com/OzarLand/ozar-deploy) | prepares, deploys and changes the platform with Kolla Ansible | Scoping |
-| [`ozar-ops`](https://github.com/OzarLand/ozar-ops) | operates the running platform day to day — "know before you act" | Scoping |
+| [`ozarland`](https://github.com/OzarLand/ozarland) | Community home: mission, principles, contribution model, shared templates, repository blueprints, open questions | **Active** |
+| `kolla-ansible-deployment-patterns` | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | Planned, priority 1 |
+| `openstack-vm-runbooks` | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | Planned, priority 1 |
+| `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2 |
+| `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
+
+Open questions and discussions live in this repository until a dedicated space proves necessary. Initial READMEs
+and structures for the planned repositories are kept under [`community/blueprints/`](community/blueprints/) so they
+can be created as soon as the first content is ready.
+
+Earlier OzarLand repositories that developed operator tooling (`ozar-deploy`, `ozar-ops`, `ozar-kb`, `ozar-lab`)
+are archived. They are not part of the community's scope and are kept read-only for reference. The reasoning
+behind the repositioning is recorded in [ADR-0008](docs/adr/0008-community-knowledge-sharing-space.md).
 
 ## Learn more
 
-- [Vision and principles](docs/vision.md)
+- [Mission and principles](docs/vision.md)
+- [Knowledge lifecycle: from question to validated procedure](docs/knowledge-lifecycle.md)
+- [Repository architecture and priorities](docs/repositories.md)
+- [Content conventions](docs/conventions/README.md): metadata, runbook structure, risk warnings, sensitive data
+- [Shared templates for every community repository](community/README.md)
 - [Governance](docs/governance.md)
-- [Architecture decision records](docs/adr/README.md)
+- [Decision records](docs/adr/README.md)
 - [GitHub conventions](docs/github-conventions.md)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md), the [code of conduct](CODE_OF_CONDUCT.md) and the
-[security policy](SECURITY.md).
+- [Launch plan](docs/launch-plan.md)
 
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE).
-OpenStack, Kolla and Kolla Ansible are projects of the OpenInfra Foundation community. OzarLand is an
-independent project and is not affiliated with or endorsed by the OpenInfra Foundation.
+All content, documentation and code alike, is licensed under the Apache License 2.0, see [LICENSE](LICENSE).
+Reuse it freely with attribution. See [docs/conventions/licensing.md](docs/conventions/licensing.md).
+
+OpenStack and Kolla are projects of the OpenInfra Foundation community. OzarLand is an independent community
+initiative and is not affiliated with or endorsed by the OpenInfra Foundation or any vendor.

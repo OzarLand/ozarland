@@ -1,41 +1,52 @@
 # Governance
 
-## Today
+OzarLand keeps governance deliberately light. The aim is to make it easy to ask, answer, share and review, and to
+keep content trustworthy, without creating a bureaucracy.
 
-OzarLand is in its **private foundation phase** with a single maintainer, who is the organization owner.
-Decisions are taken by the maintainer and recorded as ADRs. Proposed ADRs stay "Proposed" until the
-maintainer explicitly accepts them.
+## Roles
 
-## Decision making
+| Role | Who | What they do |
+|---|---|---|
+| **Contributor** | Anyone | Asks questions, answers them, proposes or improves content, reviews pull requests, confirms procedures in their own environment |
+| **Maintainer** | Contributors trusted with write access to one or more repositories | Triage issues and discussions, review and merge pull requests, keep the structure and conventions consistent, protect the community from unsafe or sensitive content |
+| **Organization owner** | The founding maintainer today | Creates repositories, manages organization settings and membership, resolves conflicts that maintainers cannot |
 
-- Cross-project decisions → an ADR in `ozarland/docs/adr/`.
-- Project-level decisions → an ADR in that project's `docs/adr/`.
-- An ADR is never deleted; a replaced decision is marked "Superseded by ADR-NNNN".
-- A new repository, a new mandatory dependency or a new product requires an ADR.
+Today OzarLand has a single maintainer and organization owner, @soufian-zaouam. Becoming a maintainer is based on
+sustained, constructive contributions and is decided by the existing maintainers. The first external maintainers
+are expected to be recruited from the first active contributors; see the [launch plan](launch-plan.md).
+
+## How decisions are made
+
+- **Content decisions** (is this runbook correct, is this pattern well described) are made in the pull request,
+  by review and discussion. Disagreement is documented in the content as a trade-off, not resolved by authority.
+- **Structural decisions** (a new repository, a change to templates or conventions, a licence change) are proposed
+  as an issue or discussion in this repository and recorded as a short decision record in [`docs/adr/`](adr/README.md).
+  Decision records exist so that newcomers can understand why things are the way they are; they are not a gate.
+- **Code of conduct matters** are handled by the maintainers in private, as described in
+  [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md).
+
+## What maintainers commit to
+
+- Acknowledge new questions and contributions within a reasonable time, and say so when they cannot.
+- Review on substance (is it accurate, safe, well scoped) rather than on style.
+- Never merge content that contains secrets, identifiable infrastructure data or unflagged destructive commands.
+- Keep the maturity labels honest: a page is "validated" only when more than one operator has confirmed it.
+- Prefer merging an imperfect but correct contribution and improving it later over blocking it.
 
 ## Independence
 
-OzarLand is an independent open-source project around Kolla Ansible. It is not affiliated with or endorsed
-by the OpenInfra Foundation. Everything OzarLand ships must work with upstream Kolla Ansible alone: using
-OzarLand must never require a commercial product or a specific company's infrastructure.
+OzarLand is independent of any vendor, employer or foundation. Content may describe commercial products when
+operators use them, with the same neutrality as any other approach. No company's product is required to take part
+or to use the content.
 
-## From private to public
+## Going public
 
-Each repository goes public individually, after a go-public review:
+The repositories are private while the repositioning is completed. Before a repository becomes public:
 
-1. Full-history secret scan is clean; any historical secret is rotated and the history rewritten.
-2. Content review: no customer, employer or project names; no real hostnames, domains or IP addresses; no personal paths.
-3. `SECURITY.md` and `CODE_OF_CONDUCT.md` carry a real contact address; private vulnerability reporting is enabled.
-4. A ruleset protects `main` (pull request required, checks required, no force push).
-5. Secret scanning, push protection and Dependabot alerts are enabled.
-6. The organization `.github` repository is created **public** with the shared community files; per-repository copies are removed.
-7. The README states maturity honestly.
-
-## Maintainers
-
-| Name | Role |
-|---|---|
-| @soufian-zaouam | Founding maintainer, organization owner |
-
-The maintainer model (additional maintainers, review rules, technical steering) will be written before the
-Community phase.
+1. A full-history scan confirms no secret was ever committed.
+2. A content review confirms no customer, employer or project names, no real hostnames, domains, addresses or
+   personal paths.
+3. `SECURITY.md` and `CODE_OF_CONDUCT.md` carry a working contact address.
+4. Every file is covered by the Apache-2.0 `LICENSE` and the README states it (see [conventions/licensing.md](conventions/licensing.md)).
+5. GitHub Discussions, issue templates and labels are in place.
+6. Branch protection on `main` (pull request required, no force push) and secret scanning are enabled.

@@ -1,29 +1,38 @@
 # Security policy
 
-## Reporting a vulnerability
+## What this policy covers
 
-**Do not open a public issue for a security problem.**
+OzarLand repositories contain documentation, runbooks and occasional scripts contributed by OpenStack operators.
+Two kinds of security issues can arise:
 
-- **While OzarLand repositories are private:** contact the maintainers directly through the organization owner on GitHub.
-- **Once repositories are public:** use GitHub private vulnerability reporting ("Report a vulnerability" in the Security tab). This policy will be updated with a dedicated contact address before any repository becomes public.
+1. **Sensitive data published by mistake**: a secret, a real hostname or address, an unredacted log, anything that
+   identifies an infrastructure or a person. See [sensitive data](docs/conventions/sensitive-data.md).
+2. **Unsafe procedures**: a runbook or script whose steps could cause data loss or an outage without the warning
+   required by [risk warnings](docs/conventions/risk-warnings.md), or a procedure that weakens the security of an
+   OpenStack platform (for example by disabling authentication or exposing a service).
 
-Please include the affected component and version, reproduction steps and the impact you observed.
-Never include secrets, real inventories, IP addresses or customer data in a report.
+## How to report
+
+**Do not open a public issue or discussion for either case.**
+
+- While the repositories are private: contact the organization owner directly on GitHub.
+- Once the repositories are public: use GitHub private vulnerability reporting ("Report a vulnerability" in the
+  Security tab). A dedicated contact address will be added here before any repository becomes public.
+
+Tell us which repository and page, what you found, and, for an unsafe procedure, what could go wrong. Do not
+include the sensitive data itself in the report beyond what is needed to locate it.
 
 ## What to expect
 
-- Acknowledgement within 5 business days, triage within 10.
-- Coordinated disclosure, with a default embargo of 90 days.
-- Credit in the advisory unless you prefer to stay anonymous.
-- Fixes are published as GitHub Security Advisories, with a CVE when applicable.
+- Acknowledgement within 5 business days.
+- Sensitive data is removed promptly. If a secret was exposed, the contributor is contacted so they can rotate it,
+  and the history is rewritten if needed.
+- Unsafe procedures are corrected or marked `status: experimental` with a warning until they are fixed.
+- Credit to the reporter in the fix, unless they prefer to stay anonymous.
 
-## Scope
+## Vulnerabilities in OpenStack itself
 
-OzarLand code, container images, release artefacts and documentation.
-
-Vulnerabilities in **Kolla, Kolla Ansible or OpenStack** must be reported upstream to the
-[OpenStack Vulnerability Management Team](https://security.openstack.org/). We will help route them.
-
-## Supported versions
-
-OzarLand is pre-release (0.x). Until a first release exists, only `main` is supported.
+A vulnerability in OpenStack, Kolla, Kolla-Ansible or another upstream project is reported to the
+[OpenStack Vulnerability Management Team](https://security.openstack.org/), not here. We will help route it if you
+are unsure. Content in OzarLand that describes a workaround for a published upstream vulnerability links to the
+upstream advisory.

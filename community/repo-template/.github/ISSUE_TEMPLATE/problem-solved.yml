@@ -1,0 +1,104 @@
+name: Problem solved
+description: You fixed something that could become a runbook. Tell us how.
+labels: ["kind/problem-solved", "status/candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Once another operator confirms the fix, this becomes a runbook. If you prefer, skip the issue and
+        open a pull request with the runbook template directly.
+        **Never paste secrets, real hostnames, IP addresses, customer names or unredacted logs.**
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Symptom
+      description: What you saw. Exact messages and states, redacted.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What was affected, and how badly.
+    validations:
+      required: true
+  - type: input
+    id: releases
+    attributes:
+      label: OpenStack release(s)
+      placeholder: "2024.2"
+    validations:
+      required: true
+  - type: input
+    id: components
+    attributes:
+      label: Components involved
+      placeholder: "cinder, nova, ceph"
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment method
+      options:
+        - kolla-ansible
+        - openstack-ansible
+        - charmed
+        - vendor distribution
+        - manual / other
+        - any (API/CLI only)
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment conditions that matter
+      placeholder: "multinode, OVS, LVM, Rocky 9, ..."
+  - type: textarea
+    id: diagnosis
+    attributes:
+      label: How you found the cause
+      description: Commands, logs, what pointed you to it.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause
+      description: What was wrong. Say "we believe" if not confirmed.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Fix
+      description: The steps and commands that resolved it.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Highest risk level of the fix
+      options:
+        - read-only
+        - state-changing (reversible, bounded)
+        - destructive (data loss or outage possible)
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: How you verified it was fixed
+  - type: textarea
+    id: limits
+    attributes:
+      label: What you are not sure about / did not test
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction
+      options:
+        - label: I removed secrets, hostnames, IP addresses, customer and person names from this issue.
+          required: true
