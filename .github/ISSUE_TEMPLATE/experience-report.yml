@@ -1,0 +1,53 @@
+name: Experience report
+description: Offer a first-hand account of an upgrade, incident, migration or architecture choice.
+labels: ["kind/experience", "status/open"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Experience reports are narratives, not procedures. They are valuable because of their context. You can
+        also post one directly as an **Experience reports** discussion.
+  - type: input
+    id: title
+    attributes:
+      label: Working title
+      placeholder: "Upgrading 2024.1 to 2024.2 on a 40-node Kolla-Ansible cloud"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what you learned, in a few sentences.
+    validations:
+      required: true
+  - type: input
+    id: releases
+    attributes:
+      label: OpenStack release(s)
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment method
+      options:
+        - kolla-ansible
+        - openstack-ansible
+        - charmed
+        - vendor distribution
+        - manual / other
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment context (redacted)
+      placeholder: "purpose, scale, network, storage, OS"
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction
+      options:
+        - label: The report will contain no secrets, hostnames, IP addresses, customer or person names.
+          required: true

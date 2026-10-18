@@ -1,6 +1,6 @@
 # ADR-0006: Candidate cases in ozar-kb
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0008](0008-community-knowledge-sharing-space.md). Kept unchanged for the record; the content below describes the operator toolkit OzarLand was before it became a knowledge-sharing community.
 - **Date:** 2026-10-09
 - **Deciders:** @soufian-zaouam
 - **Amends:** ADR-0005, section 3 (reproduction is mandatory).

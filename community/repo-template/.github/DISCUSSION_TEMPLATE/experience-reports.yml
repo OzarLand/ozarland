@@ -1,0 +1,28 @@
+title: "[Experience] "
+labels: ["kind/experience"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell what happened, in your context. Upgrades, incidents, migrations, architecture decisions, things that
+        surprised you. Narratives are welcome; there is no required structure beyond the context fields.
+        **No secrets, real hostnames, IP addresses, customer names or unredacted logs.**
+  - type: input
+    id: releases
+    attributes:
+      label: OpenStack release(s)
+    validations:
+      required: true
+  - type: input
+    id: deployment
+    attributes:
+      label: Deployment method and key environment details
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Your report
+      description: Context, what happened, what you did, what you learned, what you would do differently, open questions.
+    validations:
+      required: true

@@ -1,6 +1,6 @@
 # ADR-0005: Reproducible knowledge base and lab repositories
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0008](0008-community-knowledge-sharing-space.md). Kept unchanged for the record; the content below describes the operator toolkit OzarLand was before it became a knowledge-sharing community.
 - **Date:** 2026-10-07
 - **Deciders:** @soufian-zaouam
 - **Amends:** ADR-0004, item 5 (the lab repository was deferred; this ADR creates it).

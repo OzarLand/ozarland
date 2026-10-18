@@ -1,0 +1,42 @@
+name: Community proposal
+description: Propose a change to the community itself, such as a new repository, a template or a convention.
+labels: ["kind/community", "status/open"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For an open-ended idea, an **Ideas** discussion is a good first step. Use this form when the proposal is
+        concrete enough to be decided. Structural decisions are recorded in `docs/adr/`.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - New repository
+        - Change to a shared template or issue form
+        - Change to a content convention
+        - Change to governance, labels or GitHub settings
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why, and what problem it solves for operators
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: For a new repository, the content that is ready to go into it
+      description: Repositories are created when there is content for them. List the pages that exist or that you will write.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

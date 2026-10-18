@@ -1,23 +1,19 @@
-## Summary
+## What this changes
 
-<!-- What does this change do, and why? -->
+<!-- One or two sentences. Link the discussion or issue it comes from, if any. -->
 
-Closes #
+## Kind of change
 
-## Type
-
-<!-- Conventional Commit type of the squash commit: feat, fix, docs, refactor, test, build, ci, chore, perf, revert -->
-
-## How it was verified
-
-<!-- Commands run, lab topology, OpenStack series, architecture. "Not tested" is an acceptable, honest answer. -->
+- [ ] Community documentation (mission, principles, governance, conventions, plans)
+- [ ] Shared templates or blueprints under `community/`
+- [ ] GitHub issue, pull request or discussion forms
+- [ ] Decision record in `docs/adr/`
+- [ ] Fix (typo, link, outdated statement)
 
 ## Checklist
 
-- [ ] The PR title follows Conventional Commits (it becomes the squash commit message).
-- [ ] Commits are signed off (`git commit -s`, DCO).
-- [ ] Serves an operator need and does not duplicate Kolla Ansible.
-- [ ] Documentation updated, or not needed.
-- [ ] ADR added or updated if an architectural decision changed.
-- [ ] No secrets, real hostnames, IP addresses or customer data.
-- [ ] Breaking change flagged (`!` in the title and a `BREAKING CHANGE:` note).
+- [ ] Consistent with the mission: no tool, distribution or architecture presented as the right one.
+- [ ] If a shared template changed, the copy under `.github/` or `community/repo-template/` is updated too.
+- [ ] If a repository was added or its status changed, the directory in `README.md` and `docs/repositories.md` agree.
+- [ ] No secrets, real hostnames, domains, IP addresses, customer, employer or person names.
+- [ ] Commits are signed off (`git commit -s`).

@@ -1,6 +1,6 @@
 # ADR-0004: Product naming and initial repositories
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0008](0008-community-knowledge-sharing-space.md). Kept unchanged for the record; the content below describes the operator toolkit OzarLand was before it became a knowledge-sharing community.
 - **Date:** 2026-10-04
 - **Deciders:** @soufian-zaouam
 

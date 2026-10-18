@@ -1,6 +1,6 @@
 # ADR-0001: Record architecture decisions
 
-- **Status:** Accepted
+- **Status:** Accepted (adjusted by [ADR-0008](0008-community-knowledge-sharing-space.md): records are kept for structural decisions only)
 - **Date:** 2026-10-04
 - **Deciders:** @soufian-zaouam
 
