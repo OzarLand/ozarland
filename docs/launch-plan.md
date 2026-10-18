@@ -50,8 +50,8 @@ Seed content is the standard the community will copy. It is worth writing carefu
 
 | Action | Who |
 |---|---|
-| Create `openstack-vm-runbooks` (the GitHub App used in this session cannot create organisation repositories) and `kolla-ansible-deployment-patterns` from the blueprints and the shared template files | Owner |
-| Move the seed content into them through pull requests, so the first pages show the expected workflow | Maintainer |
+| Create `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns` from the blueprints and the shared template files | Done 2026-10-18 |
+| Move the seed content into them through pull requests, so the first pages show the expected workflow | Done for the VM runbooks (PR open for review); Kolla-Ansible patterns still to write |
 | Enable Discussions and labels on each | Owner |
 | Update the directory in the main README from "Planned" to "Active" | Maintainer |
 
