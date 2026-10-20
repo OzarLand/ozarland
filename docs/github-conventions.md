@@ -48,6 +48,7 @@ Labels are shared across repositories so that cross-repository searches work.
 | Component | `component/nova`, `component/neutron`, `component/cinder`, `component/glance`, `component/keystone`, `component/placement`, `component/octavia`, `component/ceph`, `component/mariadb`, `component/rabbitmq`, `component/haproxy`, `component/other` | OpenStack or infrastructure component involved |
 | Deployment | `deploy/kolla-ansible`, `deploy/openstack-ansible`, `deploy/charmed`, `deploy/vendor`, `deploy/other`, `deploy/any` | Deployment method the content applies to |
 | Risk | `risk/destructive`, `risk/production-impact` | Content contains commands that need explicit warnings |
+| Review | `hold`, `needs-changes`, `needs-maintainer` | See the [review and merge policy](review-policy.md) |
 | Other | `good first contribution`, `help wanted`, `security`, `upstream` | Onboarding, calls for help, security review needed, upstream bug involved |
 
 Release-specific items use a milestone or the release name in the title (for example `[2025.1]`) rather than a label
@@ -62,7 +63,8 @@ per release, to keep the label set small.
 - Every commit carries a Developer Certificate of Origin sign-off (`git commit -s`). Web commits are signed off
   automatically by organization policy. This is the only legal formality; there is no contributor agreement.
 - Pull requests are squash-merged. One page, pattern or runbook per pull request keeps review easy.
-- A pull request needs one approval from a maintainer. A contribution that reports "I confirmed this in my
+- A content pull request is merged by a maintainer or by the automated operator reviewer, following the
+  [review and merge policy](review-policy.md); a structural one always needs a maintainer. A contribution that reports "I confirmed this in my
   environment" on an existing page is merged quickly: it is how content gets validated.
 
 ## Organization settings to apply

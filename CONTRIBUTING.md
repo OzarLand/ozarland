@@ -52,8 +52,11 @@ The templates ask for these fields so that you do not have to remember them. See
 - Sign off your commits (`git commit -s`) to certify the
   [Developer Certificate of Origin](https://developercertificate.org/). Web commits are signed off automatically.
   There is no contributor agreement.
-- Pull requests are **squash-merged** after one maintainer approval. Reviews focus on accuracy, safety and scope,
-  not on style.
+- Pull requests are **squash-merged**. Content pull requests that are clear and safe can be merged by the automated
+  operator reviewer; structural changes always go to a maintainer. See the [review and merge policy](docs/review-policy.md).
+  Reviews focus on accuracy, safety and scope, not on style.
+- Before opening a pull request, you can run the same checks the reviewer runs:
+  `python3 tools/check_content.py --root <your clone> <changed files>` (the script is in this repository).
 - Contributions are published under the Apache License 2.0, which covers all content, documentation and code alike
   (see [licensing](docs/conventions/licensing.md)).
 
