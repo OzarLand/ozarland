@@ -9,6 +9,7 @@ keep content trustworthy, without creating a bureaucracy.
 |---|---|---|
 | **Contributor** | Anyone | Asks questions, answers them, proposes or improves content, reviews pull requests, confirms procedures in their own environment |
 | **Maintainer** | Contributors trusted with write access to one or more repositories | Triage issues and discussions, review and merge pull requests, keep the structure and conventions consistent, protect the community from unsafe or sensitive content |
+| **Operator reviewer** (automated) | Reviews open pull requests as an experienced operator and merges clear, safe content pull requests within the [review and merge policy](review-policy.md); escalates everything else |
 | **Organization owner** | The founding maintainer today | Creates repositories, manages organization settings and membership, resolves conflicts that maintainers cannot |
 
 Today OzarLand has a single maintainer and organization owner, @soufian-zaouam. Becoming a maintainer is based on
