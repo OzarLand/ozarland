@@ -23,7 +23,7 @@ NON_PAGES = {"README.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md"
 NON_PAGE_DIRS = {".github", ".claude", "templates", "tools", "docs", "community"}
 
 KINDS = {"runbook", "pattern", "playbook", "experience-report", "diagnostic", "comparison"}
-STATUSES = {"draft", "validated", "experimental"}
+STATUSES = {"draft", "lab-verified", "validated", "experimental"}
 RISKS = {"read-only", "state-changing", "destructive"}
 REQUIRED_FIELDS = {
     "runbook": ["title", "kind", "status", "openstack_releases", "components", "deployment_methods", "risk", "confirmed_by", "last_verified"],
@@ -126,6 +126,13 @@ def check_page(root, rel):
     confirmed = fields.get("confirmed_by") or []
     if status == "validated" and not confirmed:
         errors.append(f"{rel}: status is 'validated' but confirmed_by is empty; a page is validated by someone other than its author")
+    def entry_type(e):
+        return str(e.get("type", "operator")) if isinstance(e, dict) else ("lab" if "type: lab" in str(e) else "operator")
+    types = [entry_type(e) for e in confirmed]
+    if status == "lab-verified" and "lab" not in types:
+        errors.append(f"{rel}: status is 'lab-verified' but no confirmed_by entry has type: lab")
+    if status == "validated" and confirmed and all(t == "lab" for t in types):
+        errors.append(f"{rel}: status is 'validated' but every confirmation is a lab check; validated needs an operator confirmation")
 
     headings = {h.strip() for h in re.findall(r"^##\s+(.+)$", body, flags=re.M)}
     for section in REQUIRED_SECTIONS[kind]:

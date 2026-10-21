@@ -7,7 +7,7 @@ platform, and how much it has been verified. It is written as YAML front matter,
 ---
 title: Instance stuck in deleting state
 kind: runbook                 # runbook | pattern | playbook | experience-report | diagnostic | comparison
-status: draft                 # draft | validated | experimental
+status: draft                 # draft | lab-verified | validated | experimental
 openstack_releases: [2024.2, 2025.1]   # releases where this was observed; use upstream names
 components: [nova, neutron]   # OpenStack and infrastructure components involved
 deployment_methods: [kolla-ansible]    # kolla-ansible | openstack-ansible | charmed | vendor | manual | any
@@ -18,7 +18,8 @@ environment:                  # only what matters for validity
   os: ubuntu-24.04
 risk: state-changing          # read-only | state-changing | destructive  (highest level present in the page)
 confirmed_by:                 # one entry per independent confirmation
-  - { who: "@handle", release: 2025.1, deployment: kolla-ansible, date: 2026-11-02, note: "also needed X" }
+  - { who: "@handle", type: operator, release: 2025.1, deployment: kolla-ansible, date: 2026-11-02, note: "also needed X" }
+  - { who: "agent:ozar-dev-lab", type: lab, release: 2025.1, deployment: kolla-ansible all-in-one, date: 2026-10-21, note: "read-only steps run; destructive steps reproduced on a disposable lab" }
 upstream_refs:                # bugs, docs, changes this page relates to
   - https://bugs.launchpad.net/nova/+bug/NNNNNNN
 last_verified: 2026-10-18
@@ -34,8 +35,12 @@ last_verified: 2026-10-18
   `ceph`, `ovn`, `ovs`, `libvirt`, `qemu`).
 - **`deployment_methods`** says where the procedure was applied. `any` is allowed only when the procedure uses
   OpenStack APIs and CLI alone and does not depend on how services are deployed.
-- **`status`** follows the [knowledge lifecycle](../knowledge-lifecycle.md): `draft` until someone else confirms,
-  `validated` once confirmed, `experimental` when unconfirmed, narrow or possibly outdated.
+- **`status`** follows the [knowledge lifecycle](../knowledge-lifecycle.md): `draft` until checked, `lab-verified`
+  once its steps were run on a lab (`type: lab` confirmation), `validated` once an operator other than the author
+  confirmed it (`type: operator`), `experimental` when unconfirmed, narrow or possibly outdated.
+- **`confirmed_by[].type`** is `operator` (a person who applied the page on a real platform; the default) or `lab`
+  (a lab run by a contributor or an agent). Lab entries say what was run: read-only steps only, or the full
+  procedure on a disposable lab.
 - **`confirmed_by`** is appended by reviewers or by the people who report back, never by the author for their own
   page. A confirmation on a new release adds the release to `openstack_releases`.
 - **`risk`** is the highest risk level of any command in the page, so that a reader knows before opening it. See

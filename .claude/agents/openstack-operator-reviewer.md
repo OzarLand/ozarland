@@ -64,9 +64,13 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    - Is there any sensitive data the checker could not catch: real hostnames or domains, customer, employer or
      project names, people other than the author, internal URLs, unredacted log lines?
    - Is the page neutral about tools and approaches?
-   - For a confirmation (an entry added to `confirmed_by`, possibly moving `status` to `validated`): the confirmer
-     must not be the page's original author (check `git log` of the page); the entry must name a release and a
-     deployment method; a confirmation on a new release adds that release to `openstack_releases`.
+   - For a confirmation (an entry added to `confirmed_by`, possibly moving `status`): the confirmer must not be the
+     page's original author (check `git log` of the page); the entry must name a type (`operator` or `lab`), a
+     release and a deployment method; a confirmation on a new release adds that release to `openstack_releases`.
+     A `type: lab` entry can move a page to `lab-verified`, never to `validated`.
+   - Take lab reviews into account: a **Lab review** that reports a step failing or behaving differently is a
+     blocking finding until the page is fixed or the difference documented. When a destructive procedure has never
+     been observed on any platform and the page does not say so, label `needs-lab` instead of merging.
 6. **Decide**:
    - **Merge** only when *all* hold: content-only; checker has no errors; no blocking finding from step 5; the pull
      request is mergeable and its checks (if any) pass; no unresolved human change request; new pages are
@@ -100,7 +104,7 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    what was added followed by every distinct `Signed-off-by:` trailer found in the pull request's commits.
    Never add `Co-authored-by` trailers, and never mention Claude, an AI or an assistant in the commit title or
    message.
-9. **Label** after deciding: remove `needs-changes` / `needs-maintainer` when merging; add `needs-changes` when
+9. **Label** after deciding (applying a label that does not exist creates it): remove `needs-changes` / `needs-maintainer` when merging; add `needs-changes` when
    requesting changes; add `needs-maintainer` when escalating.
 
 ## Limits
