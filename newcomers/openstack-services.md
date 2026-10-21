@@ -68,8 +68,9 @@ distributions or by hand. The services and what can go wrong with them are the s
 how they are restarted and where their logs are. Runbooks give the commands for the deployment methods their authors
 know and mark them (`**Kolla-Ansible:**`, `**Any:**`). If yours is missing, adding it is a good first contribution.
 
-## Where to go next
+## Go further
 
-- The [glossary](glossary.md) for words this page used without explaining.
-- The [reading path](reading-path.md) through the runbooks.
+- Next on the newcomer path: the [glossary](glossary.md), for the words this page used without explaining.
+- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): what to do when one of these services lets an instance down.
+- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): how operators deploy these services, and the choices they made.
 - Upstream: the [OpenStack documentation](https://docs.openstack.org/) and each project's administrator guide.

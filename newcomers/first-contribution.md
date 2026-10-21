@@ -45,3 +45,10 @@ python3 tools/check_content.py --root <your clone> <files you changed>
 
 Comment on the issue or the pull request and say where you are stuck. Someone will answer. Nobody is expected to know
 how everything works, including the people who wrote the runbooks.
+
+## Go further
+
+- Open tasks: [`good first contribution` across OzarLand](https://github.com/search?q=org%3AOzarLand+label%3A%22good+first+contribution%22+state%3Aopen&type=issues).
+- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): confirm a runbook, add a variant for your deployment method, or share a problem you solved.
+- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): describe how you deploy.
+- [CONTRIBUTING.md](../CONTRIBUTING.md): the full rules, short on purpose.
