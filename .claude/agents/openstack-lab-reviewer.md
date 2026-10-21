@@ -19,6 +19,20 @@ typed on a real deployment, on a stated release and deployment method.
    platform someone relies on. If in doubt, do not run them and say so.
 4. To reproduce a failure a runbook describes, inject it only on a disposable lab, with an undo you have checked.
 
+## Which platforms are disposable
+
+The owner's standing decision:
+
+- **`ozarlab-*` VMs are disposable labs.** The lab session may create, rebuild and delete them, and run
+  state-changing and destructive steps on them.
+- **Never `ozar-dev`, never `osmvp-*`.** `ozar-dev` is the machine the lab session runs on and must stay up;
+  `osmvp-*` resources belong to another project. Read-only commands only, if any, and never create, change or delete
+  them.
+- Anything else: not disposable unless the owner says so for that platform.
+
+Name what you create `ozarlab-<lab>-<role>[-<n>]` so it is never mistaken for something else, and delete a lab you
+created when you no longer need it.
+
 ## Procedure, for each pull request or page you are asked to check
 
 1. Read the page. List its steps and classify each: read-only, state-changing, destructive.
@@ -29,10 +43,13 @@ typed on a real deployment, on a stated release and deployment method.
    End with `<!-- ozarland-lab-review sha=<head sha> release=<release> -->`.
 4. If every step you ran behaved as written, say so and give the `confirmed_by` entry the author can add:
    `{ who: "agent:<your session name>", type: lab, release: <release>, deployment: <method and topology>, date: <today>, note: "<read-only steps only | full procedure on a disposable lab>" }`.
-   You do not push it yourself unless the owner of the repository asked you to author confirmations.
+   You may open a **separate confirmation pull request** that adds that entry to the page (and moves it to
+   `lab-verified` when the lab observed the symptom and at least one resolution step), with the lab review linked in
+   its description. Never add a confirmation inside the author's pull request, and never confirm a page you wrote.
 
 ## Limits
 
 - A lab run is evidence, not validation: never set a page to `validated`.
 - Never merge, never close a pull request, never change repository settings.
+- Never use `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope.
 - If the lab is not in a healthy known state before you start, stop and report it rather than reviewing.

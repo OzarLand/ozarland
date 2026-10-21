@@ -8,9 +8,12 @@ operator reviewer. The aim is to keep contributions flowing without letting an u
 | Reviewer | What they do |
 |---|---|
 | **Any contributor** | Reviews, confirms pages in their environment, suggests changes. Anyone can review. |
-| **Operator reviewer** (automated) | Runs a few times a day on open pull requests. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that are clear, safe and within this policy. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
+| **Operator reviewer** (automated) | Runs every 4 hours on open pull requests, and on request from the manager session or an author session. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that are clear, safe and within this policy. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
 | **Lab reviewer** (agent on a lab platform) | Runs the steps of a page on a lab OpenStack platform: read-only steps on any lab, state-changing and destructive steps only on a lab declared disposable. Reports in a review what it ran, on which release and deployment method, and what differed. Its findings are reviews like any other; a successful run can become a `type: lab` confirmation and move a page to `lab-verified`. |
 | **Maintainers** | Handle everything the automated reviewer escalates, all structural changes, and any pull request labelled `hold`. Can override any automated decision. |
+
+The manager agent checks every hour for pull requests waiting on a review and wakes the operator reviewer when
+needed, so a pull request rarely waits for the next scheduled run.
 
 Reviews by the automated reviewer start with **Operator review:**, reviews by a lab agent with **Lab review:**; both
 are clearly identified as automated. Agents are reviewers in their own right: their findings block a merge exactly
@@ -18,8 +21,9 @@ like a human reviewer's, and an author (human or agent) answers them by pushing 
 
 ## Agents as authors
 
-Agents can also write pages. An agent-authored pull request follows the same rules as any other. It cannot be
-reviewed by the agent that wrote it, and it says in its description where the content comes from (a contributor's
+Agents can also write pages ([author definition](../.claude/agents/ozarland-author.md)). An agent-authored pull
+request follows the same rules as any other. New pages are `draft`: an author never confirms its own work, and a lab
+confirmation is recorded by a lab reviewer in a separate pull request. It cannot be reviewed by the agent that wrote it, and it says in its description where the content comes from (a contributor's
 incident, a book, upstream documentation, a lab run). Content not observed on a real platform stays `draft` until a
 lab run or an operator confirms it.
 
