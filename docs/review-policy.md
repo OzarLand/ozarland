@@ -30,8 +30,7 @@ platform stays `draft` until a lab run or an operator confirms it.
 **Identification.** Every agent-authored pull request carries exactly one neutral line in its description naming the
 agent that wrote it, for example `Author: OzarLand author agent` or `Author: OzarLand lab reviewer agent`. Commit
 messages and published pages never mention an AI. A reviewer reads that line and never reviews or merges a pull request
-it wrote: the operator reviewer skips any pull request whose commits were written by its own session, and the lab
-reviewer never reviews a pull request that names it as author.
+it wrote: neither the operator reviewer nor the lab reviewer reviews a pull request that names it as author.
 
 **Sign-off (DCO).** Agents sign off their commits in the owner's name, with the owner's git configuration. The owner
 provides the material the agents write from and takes responsibility for the contribution under the
@@ -40,9 +39,8 @@ provides the material the agents write from and takes responsibility for the con
 ## What can be merged automatically
 
 Only **content** pull requests in `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns`: new or
-improved community pages, confirmations added to a page, and **README changes** in those two repositories
-(navigation links, the index table, the "Pages wanted next" list, short descriptive text). README changes go through
-the same checks as content. All of the following must hold:
+improved community pages, the index table of the README, and confirmations added to a page. All of the
+following must hold:
 
 1. The [content checker](../tools/check_content.py) reports no error on the changed files: front matter, required
    sections, risk markers consistent with the declared risk, no address or secret outside the documentation
@@ -60,9 +58,8 @@ the same checks as content. All of the following must hold:
 ## What is never merged automatically
 
 - Anything in `ozarland`.
-- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md` or
-  `CONTRIBUTING.md`.
-- Any pull request whose commits were written by the reviewing session itself.
+- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`,
+  `CONTRIBUTING.md`, or a README outside its index table.
 - Any pull request labelled `hold`.
 - Anything the reviewer is not confident about: it labels the pull request `needs-maintainer` and says why.
 

@@ -35,18 +35,16 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    - it carries the label `hold` (a maintainer wants to handle it personally);
    - your last review comment on it (marker `<!-- ozarland-operator-review sha=<sha> -->`) is for the current head
      SHA and nobody has commented since;
-   - its commits were written by your own session, or its description's identification line
-     (`Author: <agent>`) names you. You never review your own work; leave it for a maintainer.
+   - its description's identification line (`Author: <agent>`) names you. You never review your own work; leave it
+     for a maintainer.
 2. **Read** the pull request: title, description, changed files, full diff, existing reviews and comments.
    Unresolved change requests from a human reviewer block a merge.
 3. **Classify** the changed files:
    - *Content*: community pages (runbooks, diagnostics, patterns, playbooks, experience reports, comparisons),
-     confirmations added to a page's `confirmed_by`, and README changes in `openstack-vm-runbooks` and
-     `kolla-ansible-deployment-patterns` (navigation links, the index table, the "Pages wanted next" list, short
-     descriptive text). README changes get the same checks as content: links resolve, nothing sensitive, neutral.
-   - *Structural*: anything in `ozarland`; anything under `.github/`, `.claude/`, `tools/`, `community/`;
-     `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; templates; any workflow or script that
-     runs.
+     the index table of a repository README, and confirmations added to a page's `confirmed_by`.
+   - *Structural*: anything under `.github/`, `.claude/`, `tools/`, `community/`, `docs/` of `ozarland`; `LICENSE`,
+     `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; any change to a README other than its index table;
+     templates; any workflow or script that runs.
    - A pull request that touches anything *structural* is **never merged by you**: review it, comment, add the
      label `needs-maintainer`, stop.
 4. **Run the checker** on a checkout of the pull request head, on the changed files only:
