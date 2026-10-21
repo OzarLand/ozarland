@@ -9,7 +9,9 @@ technical. Harassment and personal attacks are not tolerated.
 
 ## Reporting
 
-Report unacceptable behaviour privately to the organization owners. Reports are handled
-confidentially. The enforcement guidelines of the Contributor Covenant 2.1 apply.
+Report unacceptable behaviour, and anything personal, privately to the organization owner by a message on
+LinkedIn: <https://www.linkedin.com/in/soufian-zaouam/>. Never in a public issue or discussion. Reports are handled confidentially. The
+enforcement guidelines of the Contributor Covenant 2.1 apply. OzarLand has no e-mail contact.
 
-A dedicated contact address will be published here before the first repository becomes public.
+Questions, errors in a page and proposals go in a GitHub issue. Security problems and sensitive data found in a
+page follow the [security policy](SECURITY.md).

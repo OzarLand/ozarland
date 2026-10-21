@@ -15,9 +15,12 @@ Two kinds of security issues can arise:
 
 **Do not open a public issue or discussion for either case.**
 
-- While the repositories are private: contact the organization owner directly on GitHub.
-- Once the repositories are public: use GitHub private vulnerability reporting ("Report a vulnerability" in the
-  Security tab). A dedicated contact address will be added here before any repository becomes public.
+Use GitHub private vulnerability reporting: "Report a vulnerability" in the Security tab of the repository
+concerned. Only you and the maintainers see the report. While the repositories are private, contact the
+organization owner directly on GitHub instead. OzarLand has no e-mail contact.
+
+Questions, errors in a page and proposals that involve nothing sensitive go in a GitHub issue. Anything about the
+code of conduct or a personal matter follows the [code of conduct](CODE_OF_CONDUCT.md#reporting).
 
 Tell us which repository and page, what you found, and, for an unsafe procedure, what could go wrong. Do not
 include the sensitive data itself in the report beyond what is needed to locate it.

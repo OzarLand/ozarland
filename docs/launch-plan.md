@@ -14,7 +14,7 @@ a repository contributor does not have.
 | Enable GitHub Discussions on `ozarland` and create the five categories listed in [github-conventions.md](github-conventions.md) | Owner | To do, manual |
 | Apply the shared label taxonomy | Owner | To do, manual |
 | Licence: Apache-2.0 for all content ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decided 2026-10-18 |
-| Set a working contact address in `SECURITY.md` and `CODE_OF_CONDUCT.md` | Owner | To do before going public |
+| Set the contact channels in `SECURITY.md` and `CODE_OF_CONDUCT.md`: GitHub issues for questions, errors and proposals; private vulnerability reporting for security problems and sensitive data; a LinkedIn message to the owner for the code of conduct and anything personal; no e-mail address | Owner | Done 2026-10-21 |
 | `ozarMVP` and `OzarBuild` stay private and outside the community scope | Owner | Decided 2026-10-18 |
 
 ## GitHub metadata
