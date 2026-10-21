@@ -58,6 +58,12 @@ conditions under which it was observed. A solution that worked in one environmen
 not as a universal truth. See [knowledge lifecycle](docs/knowledge-lifecycle.md) for how content matures from an
 open question to a procedure validated by several operators.
 
+## New to OpenStack?
+
+Start with the [newcomers space](newcomers/README.md): an introduction to the OpenStack services for operators, a
+glossary, a reading path through the runbooks, and a step-by-step guide to your first contribution. Tasks labelled
+**`good first contribution`** are chosen to be done in under an hour with the web editor.
+
 ## How to contribute?
 
 Any real experience is worth sharing. You can:

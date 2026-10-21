@@ -15,6 +15,9 @@ purpose: the goal is to make sharing easy, not to make it formal.
 | Fix a typo, a broken link, an outdated command | Open a pull request directly, no issue needed |
 | Propose a change to the community itself (templates, structure, a new repository) | Start an **Ideas** discussion in `ozarland` |
 
+New to OpenStack or to contributing? Start with [your first contribution](newcomers/first-contribution.md) and the
+tasks labelled `good first contribution`.
+
 If you are not sure where something goes, open a discussion. Someone will point you to the right place.
 
 ## What a good contribution contains
