@@ -26,7 +26,10 @@ entry point and links out to the content repositories; new pages are `draft` and
 no agent uses `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope; no mention of an AI in commits or pages,
 and one neutral identification line (`Author: <agent>`) in the description of every agent-authored pull request so
 no agent reviews its own; commits signed off in the owner's name, who takes responsibility for them (DCO);
-`ozarland` pull requests are merged by the owner.
+agents merge every pull request that passes review without reservation, in all three repositories, never their
+own; the owner validates only risky decisions (rules and agent roles, `LICENSE`, `SECURITY.md`,
+`CODE_OF_CONDUCT.md`, page deletions, making a repository public, GitHub settings), as listed in the
+[review and merge policy](review-policy.md).
 
 ## Tools the agents share
 

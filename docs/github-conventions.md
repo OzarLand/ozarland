@@ -63,8 +63,8 @@ per release, to keep the label set small.
 - Every commit carries a Developer Certificate of Origin sign-off (`git commit -s`). Web commits are signed off
   automatically by organization policy. This is the only legal formality; there is no contributor agreement.
 - Pull requests are squash-merged. One page, pattern or runbook per pull request keeps review easy.
-- A content pull request is merged by a maintainer or by the automated operator reviewer, following the
-  [review and merge policy](review-policy.md); a structural one always needs a maintainer. A contribution that reports "I confirmed this in my
+- A pull request is merged by a maintainer or by an agent once it passes review without reservation, following the
+  [review and merge policy](review-policy.md); the risky changes listed there are validated by the owner. A contribution that reports "I confirmed this in my
   environment" on an existing page is merged quickly: it is how content gets validated.
 
 ## Organization settings to apply
