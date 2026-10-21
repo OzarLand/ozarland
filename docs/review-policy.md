@@ -23,9 +23,18 @@ like a human reviewer's, and an author (human or agent) answers them by pushing 
 
 Agents can also write pages ([author definition](../.claude/agents/ozarland-author.md)). An agent-authored pull
 request follows the same rules as any other. New pages are `draft`: an author never confirms its own work, and a lab
-confirmation is recorded by a lab reviewer in a separate pull request. It cannot be reviewed by the agent that wrote it, and it says in its description where the content comes from (a contributor's
-incident, a book, upstream documentation, a lab run). Content not observed on a real platform stays `draft` until a
-lab run or an operator confirms it.
+confirmation is recorded by a lab reviewer in a separate pull request. It says in its description where the content
+comes from (a contributor's incident, a book, upstream documentation, a lab run). Content not observed on a real
+platform stays `draft` until a lab run or an operator confirms it.
+
+**Identification.** Every agent-authored pull request carries exactly one neutral line in its description naming the
+agent that wrote it, for example `Author: OzarLand author agent` or `Author: OzarLand lab reviewer agent`. Commit
+messages and published pages never mention an AI. A reviewer reads that line and never reviews or merges a pull request
+it wrote: neither the operator reviewer nor the lab reviewer reviews a pull request that names it as author.
+
+**Sign-off (DCO).** Agents sign off their commits in the owner's name, with the owner's git configuration. The owner
+provides the material the agents write from and takes responsibility for the contribution under the
+[Developer Certificate of Origin](https://developercertificate.org/), exactly as for a commit they wrote by hand.
 
 ## What can be merged automatically
 

@@ -23,8 +23,10 @@ contributors ([review and merge policy](review-policy.md)) and are always identi
 Every agent keeps these; only the owner changes them. They are spelled out in the
 [author definition](../.claude/agents/ozarland-author.md): content in English only; `ozarland` is the newcomers'
 entry point and links out to the content repositories; new pages are `draft` and never confirmed by their author;
-no agent uses `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope; no mention of an AI in commits, pull
-requests or pages; `ozarland` pull requests are merged by the owner.
+no agent uses `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope; no mention of an AI in commits or pages,
+and one neutral identification line (`Author: <agent>`) in the description of every agent-authored pull request so
+no agent reviews its own; commits signed off in the owner's name, who takes responsibility for them (DCO);
+`ozarland` pull requests are merged by the owner.
 
 ## Tools the agents share
 

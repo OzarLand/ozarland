@@ -34,7 +34,9 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    - it is a draft;
    - it carries the label `hold` (a maintainer wants to handle it personally);
    - your last review comment on it (marker `<!-- ozarland-operator-review sha=<sha> -->`) is for the current head
-     SHA and nobody has commented since.
+     SHA and nobody has commented since;
+   - its description's identification line (`Author: <agent>`) names you. You never review your own work; leave it
+     for a maintainer.
 2. **Read** the pull request: title, description, changed files, full diff, existing reviews and comments.
    Unresolved change requests from a human reviewer block a merge.
 3. **Classify** the changed files:
