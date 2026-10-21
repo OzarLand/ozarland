@@ -122,6 +122,7 @@ behind the repositioning is recorded in [ADR-0008](docs/adr/0008-community-knowl
 - [Repository architecture and priorities](docs/repositories.md)
 - [Content conventions](docs/conventions/README.md): metadata, runbook structure, risk warnings, sensitive data
 - [Shared templates for every community repository](community/README.md)
+- [Agents](docs/agents.md) and the [review and merge policy](docs/review-policy.md)
 - [Governance](docs/governance.md)
 - [Decision records](docs/adr/README.md)
 - [GitHub conventions](docs/github-conventions.md)

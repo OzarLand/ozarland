@@ -1,0 +1,33 @@
+# Topics each community repository aims to cover. Used by tools/coverage_report.py to show what is covered
+# and what is missing. A topic is covered by the pages in its directory. Edit freely: this is a planning aid,
+# not a rule.
+openstack-vm-runbooks:
+  lifecycle:
+    label: Instance lifecycle and stuck states (BUILD, ERROR, deleting, resize, shelve)
+  scheduling:
+    label: Scheduling and boot failures (No valid host, Placement, flavors, images, boot from volume)
+  migration:
+    label: Live and cold migration, evacuation, host maintenance
+  networking:
+    label: Instance connectivity (DHCP, metadata, floating IPs, security groups, port binding)
+  volumes:
+    label: Volumes (attach, detach, stale attachments, boot volumes)
+  diagnostics:
+    label: Cross-service diagnostics (request tracing, shared dependencies, logs)
+  recovery:
+    label: Recovery after incidents (compute, storage, control plane) and post-incident checks
+kolla-ansible-deployment-patterns:
+  topologies:
+    label: Reference topologies, from all-in-one lab to multinode production
+  networking:
+    label: Network designs (interfaces, VLANs, OVN vs OVS, MTU, bonding)
+  storage:
+    label: Storage designs (Ceph, LVM, NFS for Glance, Cinder, Nova)
+  configuration:
+    label: Inventory, globals.yml, overrides, environment separation, secrets handling
+  deployment-errors:
+    label: Errors met during deploy and reconfigure, with cause and fix
+  version-notes:
+    label: Release-specific changes that affect deployments
+  comparisons:
+    label: Side-by-side comparisons of choices

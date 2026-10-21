@@ -9,9 +9,19 @@ operator reviewer. The aim is to keep contributions flowing without letting an u
 |---|---|
 | **Any contributor** | Reviews, confirms pages in their environment, suggests changes. Anyone can review. |
 | **Operator reviewer** (automated) | Runs a few times a day on open pull requests. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that are clear, safe and within this policy. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
+| **Lab reviewer** (agent on a lab platform) | Runs the steps of a page on a lab OpenStack platform: read-only steps on any lab, state-changing and destructive steps only on a lab declared disposable. Reports in a review what it ran, on which release and deployment method, and what differed. Its findings are reviews like any other; a successful run can become a `type: lab` confirmation and move a page to `lab-verified`. |
 | **Maintainers** | Handle everything the automated reviewer escalates, all structural changes, and any pull request labelled `hold`. Can override any automated decision. |
 
-Reviews by the automated reviewer start with **Operator review:** and are clearly identified as automated.
+Reviews by the automated reviewer start with **Operator review:**, reviews by a lab agent with **Lab review:**; both
+are clearly identified as automated. Agents are reviewers in their own right: their findings block a merge exactly
+like a human reviewer's, and an author (human or agent) answers them by pushing fixes or by explaining why not.
+
+## Agents as authors
+
+Agents can also write pages. An agent-authored pull request follows the same rules as any other. It cannot be
+reviewed by the agent that wrote it, and it says in its description where the content comes from (a contributor's
+incident, a book, upstream documentation, a lab run). Content not observed on a real platform stays `draft` until a
+lab run or an operator confirms it.
 
 ## What can be merged automatically
 
@@ -28,8 +38,8 @@ following must hold:
    is never presented as officially supported without an upstream link.
 4. Nothing sensitive: see [sensitive data](conventions/sensitive-data.md).
 5. The page is neutral about tools and approaches.
-6. New pages are `draft` or `experimental`. A page becomes `validated` only through a confirmation by someone other
-   than its author.
+6. New pages are `draft` or `experimental`. A page becomes `lab-verified` through a `type: lab` confirmation that
+   says what was run, and `validated` only through a `type: operator` confirmation by someone other than its author.
 7. The pull request is mergeable, its checks pass, and no human reviewer has an unresolved change request.
 
 ## What is never merged automatically
@@ -47,6 +57,10 @@ following must hold:
 | `hold` | A maintainer handles this pull request personally. The automated reviewer skips it. |
 | `needs-changes` | The automated reviewer found blocking issues, listed in its review. Push fixes; it will review again. |
 | `needs-maintainer` | Structural change, or content the automated reviewer could not judge with confidence. |
+| `needs-lab` | The reviewer wants the steps run on a lab before merging (for example a destructive procedure with no observed run). |
+| `status/lab-verified` | The pull request records a lab run of a page. |
+
+Applying a label that does not exist yet creates it.
 
 ## Merging
 
