@@ -58,3 +58,9 @@ The words you will meet in runbooks and discussions, one line each. Missing a wo
 | **VIF** | The virtual network interface of an instance; Nova waits for Neutron's `network-vif-plugged` event before finishing a boot |
 | **VIP** | The virtual IP of the load balancer, held by one controller at a time and moved by keepalived |
 | **Volume** | A block device provided by Cinder, attached to an instance |
+
+## Go further
+
+- Next on the newcomer path: [how to read a runbook](how-to-read-a-runbook.md).
+- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): these words in context, in real diagnoses.
+- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): the deployment vocabulary in context.

@@ -48,8 +48,7 @@ Keep the [glossary](glossary.md) open while you read.
 More runbooks, many from failures reproduced on a lab, are in review in the repository's
 [open pull requests](https://github.com/OzarLand/openstack-vm-runbooks/pulls): instance networking (DHCP,
 metadata, routers, MTU, Open vSwitch), a full compute disk, `nova-compute` down. They will join this path once
-merged. Deployment patterns are collected in
-[kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns).
+merged.
 
 ## Practising safely
 
@@ -57,3 +56,9 @@ merged. Deployment patterns are collected in
 - For the rest, a lab: an all-in-one or small multinode deployment you can break and rebuild. The deployment
   patterns repository describes some.
 - When a runbook did not match what you saw, say so in an issue. That is a contribution, and an important one.
+
+## Go further
+
+- Next on the newcomer path: [your first contribution](first-contribution.md).
+- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index): the full index, including pages not in this path.
+- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index): labs and platforms you can practise on.
