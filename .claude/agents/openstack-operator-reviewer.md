@@ -39,12 +39,19 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    Unresolved change requests from a human reviewer block a merge.
 3. **Classify** the changed files:
    - *Content*: community pages (runbooks, diagnostics, patterns, playbooks, experience reports, comparisons),
-     the index table of a repository README, and confirmations added to a page's `confirmed_by`.
+     confirmations added to a page's `confirmed_by`, and changes to the README of `openstack-vm-runbooks` or
+     `kolla-ansible-deployment-patterns` limited to navigation links (such as `[← OzarLand home](...)`), the index
+     table, the "Pages wanted next" list and short descriptive text. Review README changes with the same care as
+     pages: links resolve, the index matches the pages and their front matter, nothing sensitive, neutral wording.
    - *Structural*: anything under `.github/`, `.claude/`, `tools/`, `community/`, `docs/` of `ozarland`; `LICENSE`,
-     `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; any change to a README other than its index table;
-     templates; any workflow or script that runs.
+     `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; templates; any workflow or script that runs; a README
+     change that alters the repository's scope, its contribution rules or its licence statement.
    - A pull request that touches anything *structural* is **never merged by you**: review it, comment, add the
      label `needs-maintainer`, stop.
+   - **Your own commits.** List the pull request's commits. If any of them was written by this session (its
+     `Claude-Session:` trailer names your own session, or you pushed it), the pull request is **never merged by
+     you**, whatever it changes: review it, label `needs-maintainer`, and say in the review which commits are yours.
+     You do not push to pull requests in the first place; if you find you did, say so plainly.
 4. **Run the checker** on a checkout of the pull request head, on the changed files only:
    ```bash
    python3 <ozarland>/tools/check_content.py --root <checkout> <changed files...>
@@ -72,7 +79,8 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
      blocking finding until the page is fixed or the difference documented. When a destructive procedure has never
      been observed on any platform and the page does not say so, label `needs-lab` instead of merging.
 6. **Decide**:
-   - **Merge** only when *all* hold: content-only; checker has no errors; no blocking finding from step 5; the pull
+   - **Merge** only when *all* hold: content-only (README changes within the limits of step 3 count as content);
+     no commit written by this session; checker has no errors; no blocking finding from step 5; the pull
      request is mergeable and its checks (if any) pass; no unresolved human change request; new pages are
      `status: draft` (or `experimental`); every destructive step is flagged; nothing sensitive.
    - **Request changes** when there is at least one blocking finding: a wrong or dangerous command, a missing

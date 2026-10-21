@@ -25,9 +25,15 @@ lab run or an operator confirms it.
 
 ## What can be merged automatically
 
-Only **content** pull requests in `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns`: new or
-improved community pages, the index table of the README, and confirmations added to a page. All of the
-following must hold:
+Only pull requests in `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns` that change:
+
+- **community pages**: new or improved runbooks, diagnostics, patterns, playbooks, experience reports, comparisons,
+  and confirmations added to a page;
+- **the repository README**, for navigation links (such as the link back to the OzarLand home), the index table,
+  the "Pages wanted next" list, and short descriptive text. A README change that alters the repository's scope, its
+  contribution rules or its licence statement is not descriptive text and goes to a maintainer.
+
+README changes get the same checks as pages. All of the following must hold:
 
 1. The [content checker](../tools/check_content.py) reports no error on the changed files: front matter, required
    sections, risk markers consistent with the declared risk, no address or secret outside the documentation
@@ -45,8 +51,11 @@ following must hold:
 ## What is never merged automatically
 
 - Anything in `ozarland`.
-- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`,
-  `CONTRIBUTING.md`, or a README outside its index table.
+- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md` or
+  `CONTRIBUTING.md`.
+- A README change beyond navigation links, the index table, the "Pages wanted next" list and short descriptive text.
+- Any pull request with a commit written by the reviewing session itself. The reviewer does not push to pull
+  requests; if a commit of its own is found in one, the pull request goes to a maintainer.
 - Any pull request labelled `hold`.
 - Anything the reviewer is not confident about: it labels the pull request `needs-maintainer` and says why.
 
