@@ -8,7 +8,7 @@ operator reviewer. The aim is to keep contributions flowing without letting an u
 | Reviewer | What they do |
 |---|---|
 | **Any contributor** | Reviews, confirms pages in their environment, suggests changes. Anyone can review. |
-| **Operator reviewer** (automated) | Runs every 4 hours on open pull requests, and on request from the manager session or an author session. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that are clear, safe and within this policy. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
+| **Operator reviewer** (automated) | Runs every 4 hours on open pull requests, and on request from the manager session or an author session. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that pass its review without reservation and touch nothing the owner validates. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
 | **Lab reviewer** (agent on a lab platform) | Runs the steps of a page on a lab OpenStack platform: read-only steps on any lab, state-changing and destructive steps only on a lab declared disposable. Reports in a review what it ran, on which release and deployment method, and what differed. Its findings are reviews like any other; a successful run can become a `type: lab` confirmation and move a page to `lab-verified`. |
 | **Maintainers** | Handle everything the automated reviewer escalates, all structural changes, and any pull request labelled `hold`. Can override any automated decision. |
 
@@ -36,11 +36,13 @@ it wrote: neither the operator reviewer nor the lab reviewer reviews a pull requ
 provides the material the agents write from and takes responsibility for the contribution under the
 [Developer Certificate of Origin](https://developercertificate.org/), exactly as for a commit they wrote by hand.
 
-## What can be merged automatically
+## What agents merge
 
-Only **content** pull requests in `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns`: new or
-improved community pages, the index table of the README, and confirmations added to a page. All of the
-following must hold:
+The owner's rule: **agents merge every pull request that passes review without reservation, in all three
+repositories** (`ozarland`, `openstack-vm-runbooks`, `kolla-ansible-deployment-patterns`). A session never merges
+its own work, and never merges a pull request whose description names it as author.
+
+A review passes without reservation when all of the following hold:
 
 1. The [content checker](../tools/check_content.py) reports no error on the changed files: front matter, required
    sections, risk markers consistent with the declared risk, no address or secret outside the documentation
@@ -53,15 +55,23 @@ following must hold:
 5. The page is neutral about tools and approaches.
 6. New pages are `draft` or `experimental`. A page becomes `lab-verified` through a `type: lab` confirmation that
    says what was run, and `validated` only through a `type: operator` confirmation by someone other than its author.
-7. The pull request is mergeable, its checks pass, and no human reviewer has an unresolved change request.
+7. The pull request is mergeable, its checks pass, and no reviewer (human or agent) has a blocking finding or an
+   unresolved change request.
 
-## What is never merged automatically
+This covers content pages, READMEs, `tools/`, `community/`, templates, `CONTRIBUTING.md` and the documentation in
+`docs/`, except the files listed below.
 
-- Anything in `ozarland`.
-- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`,
-  `CONTRIBUTING.md`, or a README outside its index table.
+## What only the owner validates
+
+Risky decisions are reviewed like anything else, but merged only after the owner validates them:
+
+- Changes to the rules and agent roles: `docs/review-policy.md`, `docs/governance.md`, `docs/agents.md`, and
+  anything under `.claude/`.
+- `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`.
+- Deleting a page.
+- Making a repository public, and GitHub settings (including anything under `.github/`).
 - Any pull request labelled `hold`.
-- Anything the reviewer is not confident about: it labels the pull request `needs-maintainer` and says why.
+- Anything a reviewer is not confident about: it labels the pull request `needs-maintainer` and says why.
 
 ## Labels
 
