@@ -22,6 +22,8 @@ are expected to be recruited from the first active contributors; see the [launch
   by review and discussion. Disagreement is documented in the content as a trade-off, not resolved by authority.
 - **Structural decisions** (a new repository, a change to templates or conventions, a licence change) are proposed
   as an issue or discussion in this repository and recorded as a short decision record in [`docs/adr/`](adr/README.md).
+  The pull request that applies one follows the [review and merge policy](review-policy.md): agents merge it after a
+  review without reservation, unless it is one of the risky changes the owner validates.
   Decision records exist so that newcomers can understand why things are the way they are; they are not a gate.
 - **Code of conduct matters** are handled by the maintainers in private, as described in
   [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md).

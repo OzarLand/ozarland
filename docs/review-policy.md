@@ -10,7 +10,7 @@ operator reviewer. The aim is to keep contributions flowing without letting an u
 | **Any contributor** | Reviews, confirms pages in their environment, suggests changes. Anyone can review. |
 | **Operator reviewer** (automated) | Runs every 4 hours on open pull requests, and on request from the manager session or an author session. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that pass its review without reservation and touch nothing the owner validates. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
 | **Lab reviewer** (agent on a lab platform) | Runs the steps of a page on a lab OpenStack platform: read-only steps on any lab, state-changing and destructive steps only on a lab declared disposable. Reports in a review what it ran, on which release and deployment method, and what differed. Its findings are reviews like any other; a successful run can become a `type: lab` confirmation and move a page to `lab-verified`. |
-| **Maintainers** | Handle everything the automated reviewer escalates, all structural changes, and any pull request labelled `hold`. Can override any automated decision. |
+| **Maintainers** | Handle everything the automated reviewer escalates and any pull request labelled `hold`. The owner validates the risky changes listed under [What only the owner validates](#what-only-the-owner-validates). Can override any automated decision. |
 
 The manager agent checks every hour for pull requests waiting on a review and wakes the operator reviewer when
 needed, so a pull request rarely waits for the next scheduled run.
@@ -67,6 +67,7 @@ Risky decisions are reviewed like anything else, but merged only after the owner
 
 - Changes to the rules and agent roles: `docs/review-policy.md`, `docs/governance.md`, `docs/agents.md`, and
   anything under `.claude/`.
+- `tools/check_content.py`, the checker that gates every merge.
 - `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`.
 - Deleting a page.
 - Making a repository public, and GitHub settings (including anything under `.github/`).
@@ -79,7 +80,7 @@ Risky decisions are reviewed like anything else, but merged only after the owner
 |---|---|
 | `hold` | A maintainer handles this pull request personally. The automated reviewer skips it. |
 | `needs-changes` | The automated reviewer found blocking issues, listed in its review. Push fixes; it will review again. |
-| `needs-maintainer` | Structural change, or content the automated reviewer could not judge with confidence. |
+| `needs-maintainer` | A change only the owner validates, or content the automated reviewer could not judge with confidence. |
 | `needs-lab` | The reviewer wants the steps run on a lab before merging (for example a destructive procedure with no observed run). |
 | `status/lab-verified` | The pull request records a lab run of a page. |
 

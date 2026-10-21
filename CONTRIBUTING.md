@@ -55,8 +55,9 @@ The templates ask for these fields so that you do not have to remember them. See
 - Sign off your commits (`git commit -s`) to certify the
   [Developer Certificate of Origin](https://developercertificate.org/). Web commits are signed off automatically.
   There is no contributor agreement.
-- Pull requests are **squash-merged**. Content pull requests that are clear and safe can be merged by the automated
-  operator reviewer; structural changes always go to a maintainer. See the [review and merge policy](docs/review-policy.md).
+- Pull requests are **squash-merged**. A pull request that passes review without reservation can be merged by an
+  agent; a few risky changes (rules and agent roles, the checker, licence and policy files, page deletions, GitHub
+  settings) are validated by the owner. See the [review and merge policy](docs/review-policy.md).
   Reviews focus on accuracy, safety and scope, not on style.
 - Before opening a pull request, you can run the same checks the reviewer runs:
   `python3 tools/check_content.py --root <your clone> <changed files>` (the script is in this repository).
