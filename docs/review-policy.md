@@ -23,15 +23,26 @@ like a human reviewer's, and an author (human or agent) answers them by pushing 
 
 Agents can also write pages ([author definition](../.claude/agents/ozarland-author.md)). An agent-authored pull
 request follows the same rules as any other. New pages are `draft`: an author never confirms its own work, and a lab
-confirmation is recorded by a lab reviewer in a separate pull request. It cannot be reviewed by the agent that wrote it, and it says in its description where the content comes from (a contributor's
-incident, a book, upstream documentation, a lab run). Content not observed on a real platform stays `draft` until a
-lab run or an operator confirms it.
+confirmation is recorded by a lab reviewer in a separate pull request. It says in its description where the content
+comes from (a contributor's incident, a book, upstream documentation, a lab run). Content not observed on a real
+platform stays `draft` until a lab run or an operator confirms it.
+
+**Identification.** Every agent-authored pull request carries exactly one neutral line in its description naming the
+agent that wrote it, for example `Author: OzarLand author agent` or `Author: OzarLand lab reviewer agent`. Commit
+messages and published pages never mention an AI. A reviewer reads that line and never reviews or merges a pull request
+it wrote: the operator reviewer skips any pull request whose commits were written by its own session, and the lab
+reviewer never reviews a pull request that names it as author.
+
+**Sign-off (DCO).** Agents sign off their commits in the owner's name, with the owner's git configuration. The owner
+provides the material the agents write from and takes responsibility for the contribution under the
+[Developer Certificate of Origin](https://developercertificate.org/), exactly as for a commit they wrote by hand.
 
 ## What can be merged automatically
 
 Only **content** pull requests in `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns`: new or
-improved community pages, the index table of the README, and confirmations added to a page. All of the
-following must hold:
+improved community pages, confirmations added to a page, and **README changes** in those two repositories
+(navigation links, the index table, the "Pages wanted next" list, short descriptive text). README changes go through
+the same checks as content. All of the following must hold:
 
 1. The [content checker](../tools/check_content.py) reports no error on the changed files: front matter, required
    sections, risk markers consistent with the declared risk, no address or secret outside the documentation
@@ -49,8 +60,9 @@ following must hold:
 ## What is never merged automatically
 
 - Anything in `ozarland`.
-- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`,
-  `CONTRIBUTING.md`, or a README outside its index table.
+- Any change to `.github/`, `.claude/`, `tools/`, templates, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md` or
+  `CONTRIBUTING.md`.
+- Any pull request whose commits were written by the reviewing session itself.
 - Any pull request labelled `hold`.
 - Anything the reviewer is not confident about: it labels the pull request `needs-maintainer` and says why.
 

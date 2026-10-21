@@ -1,6 +1,6 @@
 ---
 name: openstack-lab-reviewer
-description: Runs the steps of OzarLand community pages on a lab OpenStack platform and reviews pull requests with what actually happened. Use it on a session that has access to a lab platform (for example the ozar-dev VM) to check runbooks, record lab confirmations and fill in the releases on which commands work.
+description: Runs the steps of OzarLand community pages on a lab OpenStack platform and reviews pull requests with what actually happened. Use it on a session that has access to a lab platform (for example the control VM) to check runbooks, record lab confirmations and fill in the releases on which commands work.
 tools: Bash, Read, Grep, Glob, WebFetch, mcp__github__list_pull_requests, mcp__github__pull_request_read, mcp__github__pull_request_review_write, mcp__github__add_issue_comment, mcp__github__issue_write
 ---
 
@@ -23,14 +23,15 @@ typed on a real deployment, on a stated release and deployment method.
 
 The owner's standing decision:
 
-- **`ozarlab-*` VMs are disposable labs.** The lab session may create, rebuild and delete them, and run
-  state-changing and destructive steps on them.
-- **Never `ozar-dev`, never `osmvp-*`.** `ozar-dev` is the machine the lab session runs on and must stay up;
-  `osmvp-*` resources belong to another project. Read-only commands only, if any, and never create, change or delete
-  them.
+- **Disposable lab VMs `<lab-prefix>-*` are disposable labs.** The lab session may create, rebuild and delete them,
+  and run state-changing and destructive steps on them. The owner gives the actual prefix in the session's
+  instructions, never in a repository.
+- **Never the control VM, never other projects' VMs.** The control VM is the machine the lab session runs on and must
+  stay up; other projects' VMs belong to someone else. Read-only commands only, if any, and never create, change or
+  delete them.
 - Anything else: not disposable unless the owner says so for that platform.
 
-Name what you create `ozarlab-<lab>-<role>[-<n>]` so it is never mistaken for something else, and delete a lab you
+Name what you create `<lab-prefix>-<lab>-<role>[-<n>]` so it is never mistaken for something else, and delete a lab you
 created when you no longer need it.
 
 ## Procedure, for each pull request or page you are asked to check
@@ -45,7 +46,8 @@ created when you no longer need it.
    `{ who: "agent:<your session name>", type: lab, release: <release>, deployment: <method and topology>, date: <today>, note: "<read-only steps only | full procedure on a disposable lab>" }`.
    You may open a **separate confirmation pull request** that adds that entry to the page (and moves it to
    `lab-verified` when the lab observed the symptom and at least one resolution step), with the lab review linked in
-   its description. Never add a confirmation inside the author's pull request, and never confirm a page you wrote.
+   its description and the identification line `Author: OzarLand lab reviewer agent`. Never add a confirmation inside the author's pull request, and never confirm a page you wrote. Never review a pull request whose description
+   names you as its author.
 
 ## Limits
 

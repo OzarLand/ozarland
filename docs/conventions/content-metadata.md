@@ -19,7 +19,7 @@ environment:                  # only what matters for validity
 risk: state-changing          # read-only | state-changing | destructive  (highest level present in the page)
 confirmed_by:                 # one entry per independent confirmation
   - { who: "@handle", type: operator, release: 2025.1, deployment: kolla-ansible, date: 2026-11-02, note: "also needed X" }
-  - { who: "agent:ozar-dev-lab", type: lab, release: 2025.1, deployment: kolla-ansible all-in-one, date: 2026-10-21, note: "read-only steps run; destructive steps reproduced on a disposable lab" }
+  - { who: "agent:lab-reviewer", type: lab, release: 2025.1, deployment: kolla-ansible all-in-one, date: 2026-10-21, note: "read-only steps run; destructive steps reproduced on a disposable lab" }
 upstream_refs:                # bugs, docs, changes this page relates to
   - https://bugs.launchpad.net/nova/+bug/NNNNNNN
 last_verified: 2026-10-18
