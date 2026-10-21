@@ -20,7 +20,7 @@ import sys
 
 # Files that are not community pages.
 NON_PAGES = {"README.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "LICENSE", "CHANGELOG.md"}
-NON_PAGE_DIRS = {".github", ".claude", "templates", "tools", "docs", "community"}
+NON_PAGE_DIRS = {".github", ".claude", "templates", "tools", "docs", "community", "newcomers"}
 
 KINDS = {"runbook", "pattern", "playbook", "experience-report", "diagnostic", "comparison"}
 STATUSES = {"draft", "lab-verified", "validated", "experimental"}
