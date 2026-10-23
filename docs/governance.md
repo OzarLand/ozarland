@@ -36,6 +36,16 @@ are expected to be recruited from the first active contributors; see the [launch
 - Keep the maturity labels honest: a page is "validated" only when more than one operator has confirmed it.
 - Prefer merging an imperfect but correct contribution and improving it later over blocking it.
 
+## Conflicts of interest
+
+Links between a maintainer and a vendor, a product or a source of content are listed here, so that readers can judge
+the content with them in mind. Any future link between a maintainer and a vendor is listed here.
+
+| Link | What it means for the content |
+|---|---|
+| The maintainer has a professional connection with **Felcloud**. | Felcloud is the cloud on which [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) was first tested, and its first recommended variant, for one stated reason: it is prepaid, so spending cannot exceed the credit loaded ([ADR-0009](adr/0009-openstack-quick-lab-repository.md)). Nothing in OzarLand requires it, and variants for other providers are welcome on equal terms. |
+| The maintainer wrote the book *OpenStack, the Day After Tomorrow*. | Many runbooks are drawn from the incidents it describes. Each such page says so in its source, and is reviewed and lab-checked like any other page. |
+
 ## Independence
 
 OzarLand is independent of any vendor, employer or foundation. Content may describe commercial products when
