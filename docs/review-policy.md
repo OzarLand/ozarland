@@ -3,6 +3,18 @@
 How pull requests on the OzarLand community repositories are reviewed and merged, including by the automated
 operator reviewer. The aim is to keep contributions flowing without letting an unsafe procedure reach a reader.
 
+> **In short**
+>
+> - **Who reviews and merges today:** an AI reviewer, the *operator reviewer* agent, reads every pull request
+>   against the written rules on this page and the [content conventions](conventions/README.md). It merges the ones
+>   that pass without reservation, and never one it wrote. A second AI agent runs the commands of pages on a
+>   disposable OpenStack lab. Anyone, human or agent, can review too.
+> - **What the owner validates:** the risky changes, before they are merged: the rules and agent roles, the
+>   checker, the licence and policy files, page deletions, making a repository public and GitHub settings
+>   ([full list](#what-only-the-owner-validates)).
+> - **What "validated" means:** no page is `validated` until a human operator, other than its author, has confirmed
+>   it on a real platform. A review or a lab run is not a validation.
+
 ## Who reviews
 
 | Reviewer | What they do |
