@@ -44,8 +44,9 @@ of a surprise bill.* It is for people who want to experiment before they read.
 - **Felcloud is the first variant, and the one recommended to start with.** Felcloud is a prepaid cloud service
   built on OpenStack. Because spending cannot exceed the credit loaded, it is the recommended way to start without
   risk of a surprise bill. That reason is the only basis of the recommendation, and a reader can check it. The
-  variant must link to the provider's own terms that state it. Whoever runs a release of the lab scripts checks that the link still opens and still says so, and records the date in the variant's page. If the
-  reason stops being true, the recommendation is withdrawn.
+  variant must link to the provider's own terms that state it. Whoever runs a release of the lab scripts checks
+  that the link still opens and still says so, and records the date in the variant's page. If the reason stops
+  being true, the recommendation is withdrawn.
 - **Variants for other providers, and a personal-machine variant, are welcome on equal terms**: same structure,
   same safety section, same review.
 - **OzarLand stays independent.** No product or provider is required to follow the guide or the exercises.
