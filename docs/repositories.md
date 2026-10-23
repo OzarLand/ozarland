@@ -38,7 +38,7 @@ the rest of this page.
 Open questions and [discussions](https://github.com/OzarLand/ozarland/discussions) live in this repository until a
 dedicated space proves necessary. Initial READMEs
 and structures for the planned repositories are kept under [`community/blueprints/`](../community/blueprints/) so they
-can be created as soon as the first content is ready. Deploying with another tool than Kolla-Ansible? Your patterns
+can be created as soon as the first content is ready. Blueprints are removed once their repository exists. Deploying with another tool than Kolla-Ansible? Your patterns
 are welcome too: start an [*Ideas* discussion](https://github.com/OzarLand/ozarland/discussions/new?category=ideas).
 
 Earlier OzarLand repositories that developed operator tooling (`ozar-deploy`, `ozar-ops`, `ozar-kb`, `ozar-lab`)
@@ -142,3 +142,4 @@ which is why they are grouped first and split later.
    [`community/repo-template/`](../community/repo-template/).
 4. Enable Discussions, apply the shared labels, and add it to [current repositories](#current-repositories) and to the
    short list in the main README.
+5. Remove its blueprint from `community/blueprints/`: the repository is now the reference.
