@@ -35,6 +35,8 @@ flowchart LR
 - It says **where it was observed**: OpenStack release, components, deployment method.
 - It says **how much it was checked**: `draft`, then `lab-verified`, then `validated` by another operator.
   See the [knowledge lifecycle](docs/knowledge-lifecycle.md).
+- Pages are written and lab-tested with AI agents, reviewed independently, and validated only by human operators:
+  [how OzarLand is built](docs/how-ozarland-is-built.md).
 - Commands that change things are marked ⚠️, destructive ones 🛑.
 - No secrets, real hostnames or addresses, or unredacted logs, ever.
 

@@ -27,10 +27,13 @@ confirmation is recorded by a lab reviewer in a separate pull request. It says i
 comes from (a contributor's incident, a book, upstream documentation, a lab run). Content not observed on a real
 platform stays `draft` until a lab run or an operator confirms it.
 
-**Identification.** Every agent-authored pull request carries exactly one neutral line in its description naming the
-agent that wrote it, for example `Author: OzarLand author agent` or `Author: OzarLand lab reviewer agent`. Commit
-messages and published pages never mention an AI. A reviewer reads that line and never reviews or merges a pull request
-it wrote: neither the operator reviewer nor the lab reviewer reviews a pull request that names it as author.
+**Identification and disclosure.** AI use is disclosed openly. At repository level,
+[how OzarLand is built](how-ozarland-is-built.md) says what the agents do, the safeguards and the limits. In each
+agent-authored pull request, the description carries one `Author:` line that names the agent and says it is an AI
+agent, for example `Author: OzarLand author agent (AI agent)` or `Author: OzarLand lab reviewer agent (AI agent)`.
+Commit messages stay plain descriptions of the change. A reviewer reads the `Author:` line and never reviews or merges
+a pull request it wrote: neither the operator reviewer nor the lab reviewer reviews a pull request that names it as
+author.
 
 **Sign-off (DCO).** Agents sign off their commits in the owner's name, with the owner's git configuration. The owner
 provides the material the agents write from and takes responsibility for the contribution under the
