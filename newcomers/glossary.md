@@ -82,6 +82,20 @@ The words you will meet in runbooks and discussions, one line each. Missing a wo
 | **`virsh`** | libvirt's command line on a compute: shows what the hypervisor really runs, whatever Nova's records say |
 | **Volume** | A block device provided by Cinder, attached to an instance |
 
+## For managers
+
+The few ideas a manager or a decision-maker needs to follow a conversation about an OpenStack platform, without
+the technical detail.
+
+| Term | In plain words |
+|---|---|
+| **Operator** | The person or team that runs an OpenStack platform day to day: keeps it up, repairs it, upgrades it. Not the people who use the virtual machines |
+| **Deployment tool** | The software that installs OpenStack and changes its configuration: Kolla-Ansible, OpenStack-Ansible, a vendor distribution. Each one changes how operators work, not what OpenStack does |
+| **Control plane and data plane** | The control plane is the part that decides and records (the APIs, databases, schedulers); the data plane is the part that runs customers' workloads (servers, disks, networks). When the control plane fails, running machines usually keep running, but nothing new can be created or changed |
+| **Release cadence** | OpenStack publishes two releases a year, one in the first half and one in the second half. A platform that is not upgraded stops receiving upstream fixes after a while |
+| **Release names (2026.1)** | Releases are named by year and number: `2026.1` is the first release of 2026, `2026.2` the second. Each release also has a code name (`2023.1` was Antelope), and releases before 2023 were known by their code names only (Zed, Yoga…) |
+| **SLURP** | A rule that lets a platform upgrade once a year instead of twice: from one `.1` release directly to the next `.1` release (for example `2025.1` to `2026.1`), skipping the `.2` release in between |
+
 ## Go further
 
 - Next on the newcomer path: [how to read a runbook](how-to-read-a-runbook.md).
