@@ -35,6 +35,8 @@ Not sure? Start a discussion. Someone will move it to the right place if needed.
    - [New experience report](https://github.com/OzarLand/ozarland/discussions/new?category=experience-reports)
    - [New show and compare](https://github.com/OzarLand/ozarland/discussions/new?category=show-and-compare)
    - [New idea](https://github.com/OzarLand/ozarland/discussions/new?category=ideas)
+
+   If a link opens a blank form, pick the category by hand at the top of the page.
 3. **Write a title that names the symptom or the topic**, with the release and the component when they matter. A
    reader scanning the list should know whether it is their problem.
 4. **Fill in the form.** Q&A, Experience reports and Show and compare open with a short form whose fields are the
@@ -65,8 +67,8 @@ Discussions are public and indexed by search engines. Never post:
 
 Replace them with placeholders (`controller-1`, `<server-id>`, `192.0.2.10`); the
 [sensitive data rules](../docs/conventions/sensitive-data.md) show how. If you posted something by mistake, edit it
-out at once and follow [SECURITY.md](../SECURITY.md): an edited post keeps its history, so secrets must also be
-rotated.
+out at once, ask a maintainer to delete the post, and follow [SECURITY.md](../SECURITY.md): an edited post keeps its
+history, so secrets must also be rotated.
 
 ## How a good answer becomes a runbook
 

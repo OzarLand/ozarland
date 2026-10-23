@@ -6,7 +6,7 @@ The words you will meet in runbooks and discussions, one line each. Missing a wo
 | Term | Meaning |
 |---|---|
 | **Agent** (Neutron) | A process on a host that applies Neutron's decisions there: Open vSwitch agent, L3 agent (routers), DHCP agent, metadata agent |
-| **All-in-one** | A deployment where every service runs on a single host; for labs and learning, never for production |
+| **All-in-one** | A deployment where every service runs on a single host; for labs and learning, not designed for production |
 | **Allocation** | The resources Placement has reserved for one instance on one host |
 | **Allocation ratio** | How much of a resource Placement may hand out compared with what the host really has (overcommit), for CPU, RAM and disk |
 | **Attachment** (volume) | Cinder's record that a volume is connected to an instance on a host; Nova keeps its own record of the same disk, and both must agree |
@@ -60,7 +60,7 @@ The words you will meet in runbooks and discussions, one line each. Missing a wo
 | **Port binding** | The moment Neutron wires a port on a host; a failure leaves the instance stuck in BUILD |
 | **Project** | A tenant: the unit that owns resources and quotas |
 | **Provider network** | A network mapped directly to a physical network or VLAN, usually for external access |
-| **ProxySQL** | A database proxy that Kolla-Ansible puts in front of MariaDB by default since 2025.1, in place of HAProxy, for database connections |
+| **ProxySQL** | A database proxy that Kolla-Ansible puts in front of MariaDB by default in recent releases, in place of HAProxy, for database connections |
 | **Quorum** | A majority of members; Galera and RabbitMQ quorum queues stop accepting work without it |
 | **Quorum queue** | A RabbitMQ queue replicated on several nodes, available while a majority of them is up |
 | **RabbitMQ partition** | A split of the RabbitMQ cluster into sides that cannot see each other; services stop agreeing |
