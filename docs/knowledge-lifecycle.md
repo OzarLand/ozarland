@@ -24,7 +24,7 @@ The four statuses a published page can carry, with the same wording on every Oza
 | Status | What it means |
 |---|---|
 | `draft` | Written; its commands have not been run by anyone other than the author. |
-| `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page. |
+| `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page, and behaved as the page says. |
 | `validated` | Confirmed by a human operator, other than the author, on a real platform. |
 | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
 

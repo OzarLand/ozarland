@@ -35,12 +35,11 @@ More in [mission and principles](docs/vision.md).
   | Status | What it means |
   |---|---|
   | `draft` | Written; its commands have not been run by anyone other than the author. |
-  | `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page. |
+  | `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page, and behaved as the page says. |
   | `validated` | Confirmed by a human operator, other than the author, on a real platform. |
   | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
 
-  Today (2026-10-23, counted with [`tools/coverage_report.py`](tools/coverage_report.py)): **0 validated, 12 lab-verified, 21 draft,
-  0 experimental**, out of the 33 pages of the runbook and deployment-pattern repositories.
+  How many pages carry each status today: [page statuses](docs/knowledge-lifecycle.md#page-statuses).
 
 - Pages are written and lab-tested with AI agents, reviewed independently, and validated only by human operators:
   [how OzarLand is built](docs/how-ozarland-is-built.md).
