@@ -21,6 +21,8 @@ import sys
 # Files that are not community pages.
 NON_PAGES = {"README.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "LICENSE", "CHANGELOG.md"}
 NON_PAGE_DIRS = {".github", ".claude", "templates", "tools", "docs", "community", "newcomers"}
+# Files meant to be copied into another repository: their relative links resolve only there.
+NO_LINK_CHECK_DIRS = ("community/repo-template/", "community/blueprints/")
 
 KINDS = {"runbook", "pattern", "playbook", "experience-report", "diagnostic", "comparison"}
 STATUSES = {"draft", "lab-verified", "validated", "experimental"}
@@ -210,7 +212,7 @@ def main():
     for rel in sorted(files):
         if rel.endswith((".md", ".yml", ".yaml", ".txt", ".cfg", ".conf", ".ini", ".sh", ".py", ".j2")):
             errors += check_sensitive(root, rel)
-        if rel.endswith(".md"):
+        if rel.endswith(".md") and not rel.replace(os.sep, "/").startswith(NO_LINK_CHECK_DIRS):
             errors += check_links(root, rel)
         if is_page(rel):
             pages += 1

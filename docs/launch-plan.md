@@ -10,7 +10,7 @@ a repository contributor does not have.
 |---|---|---|
 | Merge the repositioning pull request into `main` | Maintainer | Done |
 | Update the repository description and topics (values below) | Owner | Done |
-| Update the organization description (value below) | Owner | To do, manual |
+| Update the organization description (value below) | Owner | Done 2026-10-21 |
 | Enable GitHub Discussions on `ozarland` and create the five categories listed in [github-conventions.md](github-conventions.md) | Owner | Discussions enabled; check that the five categories exist with the slugs used by the forms (`q-a`, `experience-reports`, `show-and-compare`, `ideas`, `announcements`) |
 | Apply the shared label taxonomy | Owner | To do, manual: the repositories still carry the labels of the earlier tooling (`area/*`, `type/*`, `priority/*`) and only part of the shared set |
 | Licence: Apache-2.0 for all content ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decided 2026-10-18 |
