@@ -3,7 +3,7 @@
 How a piece of operational knowledge moves from a question somebody asks to a procedure several operators trust,
 and how the community tells the difference at every step.
 
-## The five states
+## The states
 
 | State | What it means | Where it lives | Label |
 |---|---|---|---|
@@ -26,6 +26,11 @@ why. They carry the author's context instead of a status, and others add their o
         ▼                                        ▼                                     ▼
  stays open, pinned                       stays an issue with evidence            Page: status draft
  (community keeps looking)                (label status/needs-info)                     │
+                                                                          steps run on a lab (optional)
+                                                                                        │
+                                                                                        ▼
+                                                                             Page: status lab-verified
+                                                                                        │
                                                                           confirmed by another operator
                                                                                         │
                                                                                         ▼
@@ -62,7 +67,7 @@ why. They carry the author's context instead of a status, and others add their o
 | "Has anyone seen this?" | Discussion, Q&A | An issue: there is nothing to fix yet |
 | "I fixed this, here is how" | Issue, *Problem solved*, or directly a pull request with a draft runbook | A discussion only: it would get lost |
 | "Here is how we deploy, what do you think?" | Discussion, *Show and compare*, then optionally a pattern page | A runbook: there is no symptom to resolve |
-| "We upgraded from A to B, this is what happened" | Discussion, *Experience reports*, then an experience-report page in the upgrade repository | A runbook: it is a narrative, not a procedure |
+| "We upgraded from A to B, this is what happened" | Discussion, *Experience reports*, then an experience-report page (for Kolla-Ansible, in `version-notes/` of `kolla-ansible-deployment-patterns` until the upgrade repository exists) | A runbook: it is a narrative, not a procedure |
 | "This page is wrong for release X" | Issue, *Documentation proposal*, on the page's repository | A new page: the existing one should carry the difference |
 | "We should have a repository for Y" | Discussion, *Ideas*, in `ozarland` | Creating the repository: see [repositories.md](repositories.md) |
 

@@ -63,10 +63,10 @@ A domain gets its own repository when it has enough content and enough dedicated
 storage (Ceph) is the likeliest first split. The handbook content (health checks, maintenance practices) starts
 as a `maintenance/` and `health-checks/` section in the same repository.
 
-An alternative worth considering before phase 1 is complete: name the first runbook repository
-`openstack-runbooks` with `compute/` as its first domain, so that it can absorb the other domains without a
-later rename. The trade-off is a less specific name for the launch. The blueprint under
-`community/blueprints/openstack-vm-runbooks/` works unchanged as either a repository or a `compute/` directory.
+An alternative was considered before phase 1: name the first runbook repository `openstack-runbooks` with
+`compute/` as its first domain, so that it could absorb the other domains without a later rename. Phase 1 kept the
+more specific `openstack-vm-runbooks`, which is what people search for; runbooks outside the instance scope go to
+`openstack-operations-runbooks` as described above.
 
 ## Trade-offs: separate repositories versus grouped documentation
 

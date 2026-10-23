@@ -73,7 +73,8 @@ Reviewing is contributing. Useful review comments:
 - "This command also deletes X, it needs a destructive warning." (safety)
 - "I believe the cause is actually Y, because …" (accuracy, discussed in the thread, both views kept if unresolved)
 
-Reviewers do not need to be maintainers. Maintainers merge; anyone can review.
+Reviewers do not need to be maintainers: anyone can review. Merging follows the
+[review and merge policy](docs/review-policy.md).
 
 ## Conventions and templates
 

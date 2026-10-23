@@ -15,7 +15,7 @@ repositories consistent without a heavy process.
 # from a fresh clone of the new, empty repository
 cp -r <ozarland>/community/repo-template/. .
 cp -r <ozarland>/community/blueprints/<repo-name>/. .      # overwrites README.md with the blueprint's
-cp <ozarland>/LICENSE .                                     # Apache-2.0 for code
+cp <ozarland>/LICENSE .                                     # Apache-2.0 for all content
 cp <ozarland>/CODE_OF_CONDUCT.md <ozarland>/SECURITY.md .
 mkdir -p templates && cp <ozarland>/community/templates/<relevant templates> templates/
 git add . && git commit -s -m "Bootstrap <repo-name> from the OzarLand community template"

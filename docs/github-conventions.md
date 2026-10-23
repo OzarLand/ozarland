@@ -34,8 +34,10 @@ Discussion category forms are provided under `community/repo-template/.github/DI
 | Problem solved | A problem you fixed that could become a runbook | `kind/problem-solved`, `status/candidate` |
 | Documentation proposal | A new page, or a correction to an existing one | `kind/docs`, `status/open` |
 | Experience report | Offer an experience report to be written up | `kind/experience`, `status/open` |
+| Community proposal (`ozarland` only) | A concrete change to the community: a repository, a template, a convention | `kind/community`, `status/open` |
 
-Templates live under `community/repo-template/.github/ISSUE_TEMPLATE/` and are copied into each repository.
+Templates live under `community/repo-template/.github/ISSUE_TEMPLATE/` and are copied into each repository. The
+*Community proposal* form exists only in `ozarland`, where those decisions are made.
 
 ## Labels
 
@@ -44,7 +46,7 @@ Labels are shared across repositories so that cross-repository searches work.
 | Group | Labels | Meaning |
 |---|---|---|
 | Kind | `kind/question`, `kind/problem-solved`, `kind/docs`, `kind/experience`, `kind/community` | What the item is |
-| Status | `status/open`, `status/needs-info`, `status/candidate`, `status/in-review`, `status/validated`, `status/stale` | Where it is in the [knowledge lifecycle](knowledge-lifecycle.md) |
+| Status | `status/open`, `status/needs-info`, `status/candidate`, `status/in-review`, `status/lab-verified`, `status/validated`, `status/stale` | Where it is in the [knowledge lifecycle](knowledge-lifecycle.md) |
 | Component | `component/nova`, `component/neutron`, `component/cinder`, `component/glance`, `component/keystone`, `component/placement`, `component/octavia`, `component/ceph`, `component/mariadb`, `component/rabbitmq`, `component/haproxy`, `component/other` | OpenStack or infrastructure component involved |
 | Deployment | `deploy/kolla-ansible`, `deploy/openstack-ansible`, `deploy/charmed`, `deploy/vendor`, `deploy/other`, `deploy/any` | Deployment method the content applies to |
 | Risk | `risk/destructive`, `risk/production-impact` | Content contains commands that need explicit warnings |

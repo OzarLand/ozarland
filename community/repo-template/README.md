@@ -29,8 +29,8 @@ templates/          page templates for this repository
 
 Every page carries metadata (release, components, deployment method, status, confirmations) as described in the
 [content conventions](https://github.com/OzarLand/ozarland/blob/main/docs/conventions/README.md). A page's `status`
-tells you how much it has been verified: `draft` (one operator), `validated` (confirmed by someone else),
-`experimental` (unconfirmed or possibly outdated).
+tells you how much it has been verified: `draft` (one operator), `lab-verified` (its steps were run on a lab),
+`validated` (confirmed by another operator), `experimental` (unconfirmed or possibly outdated).
 
 ## Index
 
