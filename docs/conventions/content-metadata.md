@@ -23,7 +23,6 @@ confirmed_by:                 # one entry per independent confirmation
 upstream_refs:                # bugs, docs, changes this page relates to
   - https://bugs.launchpad.net/nova/+bug/NNNNNNN
 authored_by: agent:ozarland-author   # human (a GitHub handle such as "@handle") or agent:<name>
-reviewed_by: ["agent:openstack-operator-reviewer", "@handle"]   # one entry per reviewer, human or agent
 last_verified: 2026-10-18
 ---
 ```
@@ -50,17 +49,20 @@ last_verified: 2026-10-18
 - **`last_verified`** is updated whenever someone confirms the page still holds.
 - **`authored_by`** says who wrote the page: a person (`"@handle"`) or an agent (`agent:<name>`), so that readers
   know how it was made ([how OzarLand is built](../how-ozarland-is-built.md)).
-- **`reviewed_by`** lists who reviewed it before it was merged, people and agents alike. It is not a confirmation:
-  confirmations go in `confirmed_by`.
-- Both are recommended: the checker warns, but does not fail, when they are missing.
+- `authored_by` is recommended: the checker warns, but does not fail, when it is missing.
+- **Who reviewed a page** is not a front matter field: the author writes the page before anyone reviews it, and
+  reviewers do not edit pages. The reviews are in the page's pull request, which the page history links to.
 
 ## Provenance line
 
 Every page ends with a one-line summary of where it comes from, after a horizontal rule, so that a reader does not
 have to read the front matter:
 
-> *Provenance: written by agent:ozarland-author, from a lab run on 2026.1. Reviewed by
-> agent:openstack-operator-reviewer. Checked by a human operator: not yet.*
+> *Provenance: written by agent:ozarland-author, from a lab run on 2026.1. Reviewed in its pull request (see the
+> page history). Checked by a human operator: not yet.*
+
+The author writes the first two parts. The last part changes when a human operator confirms the page: whoever adds
+the operator's `confirmed_by` entry also replaces "not yet" with the operator's handle and the date.
 
 The templates under [`community/templates/`](../../community/templates/) end with it.
 
