@@ -23,7 +23,8 @@ git add . && git commit -s -m "Bootstrap <repo-name> from the OzarLand community
 
 Then, on GitHub: enable Discussions, create the categories listed in
 [docs/github-conventions.md](../docs/github-conventions.md), apply the shared labels, set the description and topics
-from the blueprint, and add the repository to the directory in the main README.
+from the blueprint, and add the repository to [current repositories](../docs/repositories.md#current-repositories) and to the
+short list in the main README.
 
 When these shared files change, the change is proposed here first and then propagated to the other repositories.
 A public `.github` organization repository can later host the issue and discussion forms centrally, which removes

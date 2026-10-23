@@ -2,6 +2,49 @@
 
 How the community's content is split across repositories, why, and in what order repositories are created.
 
+## What you will find
+
+Content is organised in thematic repositories (see [current repositories](#current-repositories)). Across them,
+you will find:
+
+| Kind of content | What it is |
+|---|---|
+| **Runbooks** | Symptom-driven procedures: what you see, what to check, what it usually means, what to do, how to confirm it is fixed. |
+| **Deployment patterns** | How operators actually deploy OpenStack: topologies, network and storage choices, inventory layouts, and the consequences of those choices. |
+| **Upgrade experiences** | Preparation, prerequisite checks, what went wrong, what worked, and how to roll back, per release and per deployment method. |
+| **Diagnostics** | Command sequences and log-reading guides for Nova, Neutron, Cinder, Glance, Keystone and the infrastructure services around them. |
+| **Experience reports** | First-hand accounts of an incident, a migration, a capacity problem or an architectural decision, with the context that makes them useful. |
+| **Open questions** | Problems the community has not solved yet, where several operators compare their observations. |
+
+Every piece of content states the OpenStack release, the components involved, the deployment method and the
+conditions under which it was observed. A solution that worked in one environment is documented as exactly that,
+not as a universal truth. See [knowledge lifecycle](knowledge-lifecycle.md) for how content matures from an
+open question to a procedure validated by several operators.
+
+## Current repositories
+
+OzarLand starts small and grows with the community. Repositories are created when there is content to put in them,
+not before. The reasoning, including the trade-offs between separate repositories and grouped documentation, is in
+the rest of this page.
+
+| Repository | Role | Status |
+|---|---|---|
+| [`ozarland`](https://github.com/OzarLand/ozarland) | Community home: mission, principles, contribution model, shared templates, repository blueprints, open questions | **Active** |
+| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**: lab topologies, networking, storage, configuration layout, a deployment error, version notes and an upgrade report, all `draft` |
+| [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**: more than twenty runbooks, most `draft`, a few `lab-verified`; confirmations wanted |
+| `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2. Until it exists, Kolla-Ansible version notes and upgrade reports are in `kolla-ansible-deployment-patterns` (`version-notes/`) |
+| `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
+
+Open questions and [discussions](https://github.com/OzarLand/ozarland/discussions) live in this repository until a
+dedicated space proves necessary. Initial READMEs
+and structures for the planned repositories are kept under [`community/blueprints/`](../community/blueprints/) so they
+can be created as soon as the first content is ready. Deploying with another tool than Kolla-Ansible? Your patterns
+are welcome too: start an [*Ideas* discussion](https://github.com/OzarLand/ozarland/discussions/new?category=ideas).
+
+Earlier OzarLand repositories that developed operator tooling (`ozar-deploy`, `ozar-ops`, `ozar-kb`, `ozar-lab`)
+are archived. They are not part of the community's scope and are kept read-only for reference. The reasoning
+behind the repositioning is recorded in [ADR-0008](adr/0008-community-knowledge-sharing-space.md).
+
 ## Guiding rule
 
 **A repository is created when there is content to put in it, not before.** An empty repository with a good name
@@ -97,4 +140,5 @@ which is why they are grouped first and split later.
 2. Record the decision in a short [decision record](adr/README.md).
 3. Create it from the blueprint under [`community/blueprints/`](../community/blueprints/) and the shared files under
    [`community/repo-template/`](../community/repo-template/).
-4. Enable Discussions, apply the shared labels, and add it to the directory in the main README.
+4. Enable Discussions, apply the shared labels, and add it to [current repositories](#current-repositories) and to the
+   short list in the main README.

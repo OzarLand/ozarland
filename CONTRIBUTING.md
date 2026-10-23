@@ -1,7 +1,7 @@
 # Contributing to OzarLand
 
 Thank you for sharing what you know. This guide applies to every OzarLand community repository. It is short on
-purpose: the goal is to make sharing easy, not to make it formal.
+purpose: the goal is to make sharing easy, not to make it formal. Any real experience is worth sharing.
 
 ## Ways to contribute
 
@@ -67,7 +67,8 @@ The templates ask for these fields so that you do not have to remember them. See
 
 ## Reviewing
 
-Reviewing is contributing. Useful review comments:
+Reviewing is contributing. Confirming that a procedure also works in your environment, or does not, is one of the
+most valuable contributions there is. Useful review comments:
 
 - "Confirmed on 2025.1 / Kolla-Ansible / OVN." (adds a confirmation and may move the page to validated)
 - "On OpenStack-Ansible the service is restarted with … instead." (adds a variant)

@@ -19,27 +19,17 @@ why. They carry the author's context instead of a status, and others add their o
 
 ## The flow
 
-```text
- Discussion (Q&A)  ──answer accepted──►  Issue: Problem solved  ──write-up──►  Pull request: Draft page
-        │                                        │                                     │
-        │ no answer                              │ cannot reproduce                    │ reviewed, merged
-        ▼                                        ▼                                     ▼
- stays open, pinned                       stays an issue with evidence            Page: status draft
- (community keeps looking)                (label status/needs-info)                     │
-                                                                          steps run on a lab (optional)
-                                                                                        │
-                                                                                        ▼
-                                                                             Page: status lab-verified
-                                                                                        │
-                                                                          confirmed by another operator
-                                                                                        │
-                                                                                        ▼
-                                                                               Page: status validated
-                                                                                        │
-                                                                     release changes, someone reports a difference
-                                                                                        │
-                                                                                        ▼
-                                                                    Page: status experimental (re-verify) or new version
+```mermaid
+flowchart TD
+    q["Open question<br/>Discussion (Q&A)"] -- "answer accepted" --> ps["Problem solved<br/>issue"]
+    q -- "no answer" --> qo["Stays open, pinned<br/>the community keeps looking"]
+    ps -- "cannot reproduce" --> ni["Stays an issue with evidence<br/>status/needs-info"]
+    ps -- "write-up" --> pr["Pull request<br/>draft page"]
+    pr -- "reviewed, merged" --> d["Page: draft"]
+    d -- "steps run on a lab (optional)" --> lv["Page: lab-verified"]
+    d -- "confirmed by another operator" --> v["Page: validated"]
+    lv -- "confirmed by another operator" --> v
+    v -- "a release changes, someone reports a difference" --> e["Page: experimental (re-verify)<br/>or new version"]
 ```
 
 ## Rules that keep the states honest
