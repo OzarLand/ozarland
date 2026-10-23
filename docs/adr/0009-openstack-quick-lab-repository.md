@@ -1,6 +1,6 @@
 # ADR-0009: A quick-lab repository to try OpenStack in about one hour
 
-- **Status:** Proposed
+- **Status:** Accepted (the `openstack-quick-lab` repository was created)
 - **Date:** 2026-10-23
 - **Deciders:** @soufian-zaouam
 - **Discussion:** to be opened in *Ideas* once this record is merged; until then, this pull request
