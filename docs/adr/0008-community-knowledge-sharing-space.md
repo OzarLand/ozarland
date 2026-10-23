@@ -1,6 +1,6 @@
 # ADR-0008: OzarLand becomes a knowledge-sharing community for OpenStack operators
 
-- **Status:** Proposed (becomes Accepted when the repositioning pull request is merged into `main`)
+- **Status:** Accepted (the repositioning pull request was merged into `main`)
 - **Date:** 2026-10-18
 - **Deciders:** @soufian-zaouam
 - **Supersedes:** ADR-0002, ADR-0004, ADR-0005, ADR-0006, ADR-0007. ADR-0001 (record decisions) and ADR-0003
