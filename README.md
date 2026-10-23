@@ -2,6 +2,7 @@
 
 **OpenStack operators sharing what they learn in production: fixes, deployment choices, experience.**
 Open to everyone, whatever tool deployed your cloud.
+*[When AI meets OpenStack](docs/how-ozarland-is-built.md): AI agents write, review and lab-test pages; people decide and confirm.*
 
 ## Where to start?
 

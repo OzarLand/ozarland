@@ -1,8 +1,14 @@
-# How OzarLand is built: people and AI agents
+# When AI meets OpenStack: how OzarLand is built
 
-OzarLand is written with the help of AI agents. This page says what they do, what stops them from publishing
-something wrong, what they made possible so far, and where their limits are. The figures were counted in the
-repositories on 2026-10-23.
+*Building OzarLand, a community where AI agents help OpenStack operators.*
+
+OzarLand is a community for OpenStack operators and people who run clouds. AI agents do much of the work behind
+it: they write pages, review them, and run their steps on a real OpenStack lab. Operators get checked, reusable
+knowledge sooner than one person could write it. People stay in charge: they decide the rules, validate the risky
+changes, and confirm pages on their own platforms.
+
+This page says what the agents do, what stops them from publishing something wrong, what they made possible so far,
+and where their limits are. The figures were counted in the repositories on 2026-10-23.
 
 ## Who does what
 
