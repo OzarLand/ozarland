@@ -9,27 +9,22 @@ Open to everyone, whatever tool deployed your cloud.
 | You are… | Go to |
 |---|---|
 | 🌱 **New to OpenStack** | [Newcomer path](newcomers/README.md): five short pages, read in order |
-| 🔧 **Fixing a problem with a VM** | [VM runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index): find your symptom |
-| 🏗️ **Deploying a platform** | [Deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index): how others built theirs |
+| 🧪 **Want to try OpenStack** | [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab): one VM, about one hour, one command to delete it |
+| 🔧 **Fixing a problem with a VM** | [VM runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) (step-by-step guides to diagnose and fix a known problem): find your symptom |
+| 🏗️ **Deploying a platform** | [Deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) (how real platforms were built, and what each choice implies): learn from others |
 | 🤝 **Ready to contribute** | [Your first contribution](newcomers/first-contribution.md): start with ten minutes |
 
-Nothing matches, or a question? [Start a discussion](newcomers/start-a-discussion.md).
+Nothing matches, or a question? [Start a discussion](newcomers/start-a-discussion.md) (the public question-and-answer
+forum of this repository).
 
-## How it fits together
+## What OzarLand does not do
 
-```mermaid
-flowchart LR
-    new([New to OpenStack]) --> path[Newcomer path]
-    vm([Problem with a VM]) --> runbooks[VM runbooks]
-    deploy([Deploying a platform]) --> patterns[Deployment patterns]
-    path --> runbooks
-    path --> patterns
-    runbooks -- "no answer" --> ask[Discussion]
-    patterns -- "no answer" --> ask
-    ask -- "answer found" --> page[New or improved page]
-    runbooks -- "it worked for me" --> confirm[Confirm the page]
-    confirm --> page
-```
+- It does not recommend one way, one tool or one architecture to run OpenStack.
+- It does not certify procedures: "validated" means confirmed by operators, nothing more.
+- It does not replace the upstream OpenStack documentation; it adds operational experience and links to it.
+- It is not a support service: people help each other when they can.
+
+More in [mission and principles](docs/vision.md).
 
 ## What makes a page trustworthy
 
@@ -57,7 +52,8 @@ flowchart LR
 | Repository | What it holds |
 |---|---|
 | [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks) | Symptom-driven runbooks for instance problems |
-| [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy with Kolla-Ansible, and what each choice implies |
+| [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy with Kolla-Ansible (one of the common tools that install OpenStack), and what each choice implies |
+| [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) | A disposable all-in-one OpenStack on one VM, with exercises that use the runbooks |
 | `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
@@ -70,7 +66,7 @@ Status, planned and archived repositories: [current repositories](docs/repositor
 - [Content conventions](docs/conventions/README.md) and [shared templates](community/README.md)
 - [Glossary](newcomers/glossary.md)
 - [Governance](docs/governance.md), [agents](docs/agents.md) and the [review and merge policy](docs/review-policy.md)
-- [GitHub conventions](docs/github-conventions.md), [decision records](docs/adr/README.md), [launch plan](docs/launch-plan.md)
+- [GitHub conventions](docs/github-conventions.md) and [decision records](docs/adr/README.md)
 
 ## License
 

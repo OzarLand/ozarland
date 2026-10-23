@@ -3,6 +3,22 @@
 Thank you for sharing what you know. This guide applies to every OzarLand community repository. It is short on
 purpose: the goal is to make sharing easy, not to make it formal. Any real experience is worth sharing.
 
+## How the paths fit together
+
+```mermaid
+flowchart LR
+    new([New to OpenStack]) --> path[Newcomer path]
+    vm([Problem with a VM]) --> runbooks[VM runbooks]
+    deploy([Deploying a platform]) --> patterns[Deployment patterns]
+    path --> runbooks
+    path --> patterns
+    runbooks -- "no answer" --> ask[Discussion]
+    patterns -- "no answer" --> ask
+    ask -- "answer found" --> page[New or improved page]
+    runbooks -- "it worked for me" --> confirm[Confirm the page]
+    confirm --> page
+```
+
 ## Ways to contribute
 
 | You want to… | Do this |
