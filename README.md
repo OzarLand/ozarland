@@ -36,7 +36,7 @@ flowchart LR
 - It says **how much it was checked**: `draft`, then `lab-verified`, then `validated` by another operator.
   See the [knowledge lifecycle](docs/knowledge-lifecycle.md).
 - Commands that change things are marked ⚠️, destructive ones 🛑.
-- No secrets, real hostnames or addresses, ever.
+- No secrets, real hostnames or addresses, or unredacted logs, ever.
 
 ## Repositories
 
