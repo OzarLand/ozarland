@@ -17,6 +17,20 @@ and how the community tells the difference at every step.
 Experience reports and architecture comparisons do not go through validation: they describe what one team did and
 why. They carry the author's context instead of a status, and others add their own perspective in the discussion.
 
+## Page statuses
+
+The four statuses a published page can carry, with the same wording on every OzarLand page that explains them:
+
+| Status | What it means |
+|---|---|
+| `draft` | Written; its commands have not been run by anyone other than the author. |
+| `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page. |
+| `validated` | Confirmed by a human operator, other than the author, on a real platform. |
+| `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
+
+Today (2026-10-23, counted with [`tools/coverage_report.py`](../tools/coverage_report.py)): **0 validated, 12 lab-verified, 21 draft,
+0 experimental**, out of the 33 pages of the runbook and deployment-pattern repositories.
+
 ## The flow
 
 ```mermaid

@@ -21,12 +21,19 @@ not as a recipe.
 
 ## What the status means
 
-| Status | Meaning | How much to trust it |
-|---|---|---|
-| `draft` | Written by one person from their experience or from documentation | A good lead; check each step |
-| `lab-verified` | Its steps were run on a lab platform and behaved as written | The commands work; production may differ |
-| `validated` | Confirmed by another operator on another platform | The strongest level; still check the release |
-| `experimental` | Unconfirmed, narrow, or possibly outdated | Read the page's warnings carefully |
+| Status | What it means |
+|---|---|
+| `draft` | Written; its commands have not been run by anyone other than the author. |
+| `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page. |
+| `validated` | Confirmed by a human operator, other than the author, on a real platform. |
+| `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
+
+Today (2026-10-23, counted with [`tools/coverage_report.py`](../tools/coverage_report.py)): **0 validated, 12 lab-verified, 21 draft,
+0 experimental**, out of the 33 pages of the runbook and deployment-pattern repositories.
+
+How much to trust each one: a `draft` is a good lead, so check each step; a `lab-verified` page's commands work, but
+production may differ; a `validated` page is the strongest level, but still check the release; an `experimental`
+page needs its warnings read carefully.
 
 Many pages are written and lab-tested by AI agents, then reviewed independently; `validated` always means a human
 operator confirmed it. [How OzarLand is built](../docs/how-ozarland-is-built.md) explains who does what.
