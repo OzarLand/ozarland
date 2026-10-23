@@ -43,12 +43,14 @@ of a surprise bill.* It is for people who want to experiment before they read.
   is documented on equal terms, with its requirements and its limits.
 - **Felcloud is the first variant, and the one recommended to start with.** Felcloud is a prepaid cloud service
   built on OpenStack. Because spending cannot exceed the credit loaded, it is the recommended way to start without
-  risk of a surprise bill. That reason is the only basis of the recommendation, and a reader can check it. The variant must link to the provider's own terms that state it. Whoever runs a release of the lab
-  scripts checks that the link still opens and still says so, and records the date in the variant's page. If the
+  risk of a surprise bill. That reason is the only basis of the recommendation, and a reader can check it. The
+  variant must link to the provider's own terms that state it. Whoever runs a release of the lab scripts checks that the link still opens and still says so, and records the date in the variant's page. If the
   reason stops being true, the recommendation is withdrawn.
 - **Variants for other providers, and a personal-machine variant, are welcome on equal terms**: same structure,
   same safety section, same review.
 - **OzarLand stays independent.** No product or provider is required to follow the guide or the exercises.
+- **Disclosure.** This record states, and the `openstack-quick-lab` README repeats near the top: *"The OzarLand
+  maintainer has a professional connection with Felcloud."*
 
 ### Safety built in
 
@@ -88,7 +90,7 @@ of a surprise bill.* It is for people who want to experiment before they read.
 
 - **Tension with tool neutrality, and how it is handled.** The [principles](../vision.md) say no vendor is promoted.
   Recommending a provider as the starting point is an exception. It is limited to one checkable property that
-  protects newcomers from a surprise bill. Other providers can be added on
+  protects newcomers from a surprise bill. It comes with the disclosure above. Other providers can be added on
   equal terms. Reviewers check every page of the repository against this limit.
 - The newcomer path and the README's newcomer door get a link to the lab once it works end to end.
 - The lab's scripts need maintenance for each OpenStack and Kolla-Ansible release. Each page states the releases on
