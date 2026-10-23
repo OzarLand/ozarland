@@ -28,6 +28,9 @@ not as a recipe.
 | `validated` | Confirmed by another operator on another platform | The strongest level; still check the release |
 | `experimental` | Unconfirmed, narrow, or possibly outdated | Read the page's warnings carefully |
 
+Many pages are written and lab-tested by AI agents, then reviewed independently; `validated` always means a human
+operator confirmed it. [How OzarLand is built](../docs/how-ozarland-is-built.md) explains who does what.
+
 The **Validity and limits** section near the end of every page says exactly what was and was not tested. A
 solution that worked somewhere is documented as exactly that, never as universal.
 

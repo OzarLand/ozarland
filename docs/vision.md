@@ -63,6 +63,9 @@ place to learn from one another and to build a common body of operational knowle
 8. **Lightweight governance.** Templates and conventions exist to make content findable and trustworthy. They are
    kept as small as possible, and they change when they get in the way.
 9. **Knowledge must survive people.** Content is written so that someone who was not there can use it.
+10. **Open about AI.** AI agents write, review and lab-test pages. This is said openly, every agent-authored pull
+    request names its agent, and only a human operator can make a page `validated`. See
+    [how OzarLand is built](how-ozarland-is-built.md).
 
 The [code of conduct](../CODE_OF_CONDUCT.md) applies everywhere in the organisation.
 

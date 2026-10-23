@@ -46,7 +46,7 @@ created when you no longer need it.
    `{ who: "agent:<your session name>", type: lab, release: <release>, deployment: <method and topology>, date: <today>, note: "<read-only steps only | full procedure on a disposable lab>" }`.
    You may open a **separate confirmation pull request** that adds that entry to the page (and moves it to
    `lab-verified` when the lab observed the symptom and at least one resolution step), with the lab review linked in
-   its description and the identification line `Author: OzarLand lab reviewer agent`. Never add a confirmation inside the author's pull request, and never confirm a page you wrote. Never review a pull request whose description
+   its description and the identification line `Author: OzarLand lab reviewer agent (AI agent)`. Never add a confirmation inside the author's pull request, and never confirm a page you wrote. Never review a pull request whose description
    names you as its author.
 
 ## Limits
