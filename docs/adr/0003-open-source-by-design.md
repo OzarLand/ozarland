@@ -24,7 +24,7 @@ Decisions taken during the private phase must not make opening the projects diff
 5. **Independence:** using OzarLand must never require a commercial product, a SaaS, or a specific company's
    infrastructure.
 6. **Progressive opening:** each repository goes public individually after the go-public review described in
-   [governance](../governance.md).
+   the [launch plan](../launch-plan.md#going-public-checklist).
 
 ## Options considered
 
