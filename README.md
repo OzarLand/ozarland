@@ -53,12 +53,13 @@ is in [docs/repositories.md](docs/repositories.md).
 | Repository | Role | Status |
 |---|---|---|
 | [`ozarland`](https://github.com/OzarLand/ozarland) | Community home: mission, principles, contribution model, shared templates, repository blueprints, open questions | **Active** |
-| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**, awaiting first patterns |
-| [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**, seed runbooks under review |
-| `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2 |
+| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**: lab topologies, networking, storage, configuration layout, a deployment error, version notes and an upgrade report, all `draft` |
+| [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**: more than twenty runbooks, most `draft`, a few `lab-verified`; confirmations wanted |
+| `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2. Until it exists, Kolla-Ansible version notes and upgrade reports are in `kolla-ansible-deployment-patterns` (`version-notes/`) |
 | `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
 
-Open questions and discussions live in this repository until a dedicated space proves necessary. Initial READMEs
+Open questions and [discussions](https://github.com/OzarLand/ozarland/discussions) live in this repository until a
+dedicated space proves necessary. Initial READMEs
 and structures for the planned repositories are kept under [`community/blueprints/`](community/blueprints/) so they
 can be created as soon as the first content is ready.
 

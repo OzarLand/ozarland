@@ -8,11 +8,11 @@ a repository contributor does not have.
 
 | Action | Who | Status |
 |---|---|---|
-| Merge the repositioning pull request into `main` | Maintainer | Pending review |
-| Update the repository description and topics (values below) | Owner | To do, manual |
+| Merge the repositioning pull request into `main` | Maintainer | Done |
+| Update the repository description and topics (values below) | Owner | Done |
 | Update the organization description (value below) | Owner | To do, manual |
-| Enable GitHub Discussions on `ozarland` and create the five categories listed in [github-conventions.md](github-conventions.md) | Owner | To do, manual |
-| Apply the shared label taxonomy | Owner | To do, manual |
+| Enable GitHub Discussions on `ozarland` and create the five categories listed in [github-conventions.md](github-conventions.md) | Owner | Discussions enabled; check that the five categories exist with the slugs used by the forms (`q-a`, `experience-reports`, `show-and-compare`, `ideas`, `announcements`) |
+| Apply the shared label taxonomy | Owner | To do, manual: the repositories still carry the labels of the earlier tooling (`area/*`, `type/*`, `priority/*`) and only part of the shared set |
 | Licence: Apache-2.0 for all content ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decided 2026-10-18 |
 | Set the contact channels in `SECURITY.md` and `CODE_OF_CONDUCT.md`: GitHub issues for questions, errors and proposals; private vulnerability reporting for security problems and sensitive data; a LinkedIn message to the owner for the code of conduct and anything personal; no e-mail address | Owner | Done 2026-10-21 |
 | `ozarMVP` and `OzarBuild` stay private and outside the community scope | Owner | Decided 2026-10-18 |
@@ -39,10 +39,10 @@ A community with empty repositories does not start. Before announcing anything:
 
 | Action | Target |
 |---|---|
-| Write 5 to 10 VM runbooks from real incidents, anonymised, using the runbook template | Done: 10 seed runbooks in the `openstack-vm-runbooks` blueprint, derived from the incidents in *OpenStack, the Day After Tomorrow* |
-| Write 2 to 3 Kolla-Ansible deployment patterns from real platforms (for example: all-in-one lab, three-controller production with OVN, separated storage network) | `kolla-ansible-deployment-patterns` blueprint |
-| Write 1 upgrade experience report | `openstack-upgrade-playbooks` blueprint, or a Discussion |
-| Open 3 to 5 genuine open questions in Discussions to show what the Q&A space is for | `ozarland` Discussions |
+| Write 5 to 10 VM runbooks from real incidents, anonymised, using the runbook template | Done: more than twenty runbooks in [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks#index), from the incidents in *OpenStack, the Day After Tomorrow* and from failures reproduced on a lab |
+| Write 2 to 3 Kolla-Ansible deployment patterns from real platforms (for example: all-in-one lab, three-controller production with OVN, separated storage network) | Done for labs: two lab topologies plus networking, storage, configuration and deployment-error pages in [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index); a production topology is still wanted |
+| Write 1 upgrade experience report | Done: a 2025.1 to 2026.1 all-in-one lab upgrade report in `kolla-ansible-deployment-patterns/version-notes/` |
+| Open 3 to 5 genuine open questions in Discussions to show what the Q&A space is for | Five questions opened as issues in `ozarland` ([#26 to #30](https://github.com/OzarLand/ozarland/issues?q=is%3Aissue+label%3Akind%2Fquestion)); to be mirrored as Discussions |
 
 Seed content is the standard the community will copy. It is worth writing carefully.
 
@@ -51,9 +51,9 @@ Seed content is the standard the community will copy. It is worth writing carefu
 | Action | Who |
 |---|---|
 | Create `openstack-vm-runbooks` and `kolla-ansible-deployment-patterns` from the blueprints and the shared template files | Done 2026-10-18 |
-| Move the seed content into them through pull requests, so the first pages show the expected workflow | Done for the VM runbooks (PR open for review); Kolla-Ansible patterns still to write |
-| Enable Discussions and labels on each | Owner |
-| Update the directory in the main README from "Planned" to "Active" | Maintainer |
+| Move the seed content into them through pull requests, so the first pages show the expected workflow | Done |
+| Enable Discussions and labels on each | Owner: Discussions enabled; shared labels still to apply |
+| Update the directory in the main README from "Planned" to "Active" | Done |
 
 ## Step 3: go public
 
