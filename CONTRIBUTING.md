@@ -19,6 +19,7 @@ New to OpenStack or to contributing? Start with [your first contribution](newcom
 tasks labelled `good first contribution`.
 
 If you are not sure where something goes, open a discussion. Someone will point you to the right place.
+[Start a discussion](newcomers/start-a-discussion.md) explains which category to pick and what to include.
 
 ## What a good contribution contains
 

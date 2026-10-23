@@ -6,7 +6,7 @@ learning: they see what is unclear, what is missing, and which word nobody expla
 ## Ten-minute contributions
 
 - **Ask a question** in the Q&A discussions. A good question with context (release, deployment method, what you
-  checked) is a contribution.
+  checked) is a contribution. [Start a discussion](start-a-discussion.md) shows how, step by step.
 - **Report a gap**: a runbook that did not match what you saw, a command that failed, a word you had to look up.
   Open a *Documentation proposal* issue.
 - **Confirm a page**: you ran the read-only checks of a runbook on your platform and they behaved as written. Say so
@@ -48,6 +48,7 @@ how everything works, including the people who wrote the runbooks.
 
 ## Go further
 
+- [Start a discussion](start-a-discussion.md): ask, share an experience or compare approaches.
 - Open tasks: [`good first contribution` across OzarLand](https://github.com/search?q=org%3AOzarLand+label%3A%22good+first+contribution%22+state%3Aopen&type=issues).
 - [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): confirm a runbook, add a variant for your deployment method, or share a problem you solved.
 - [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): describe how you deploy.
