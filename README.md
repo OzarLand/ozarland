@@ -13,14 +13,17 @@ troubleshoot them, and to turn what they learn in production into knowledge that
 - 🌱 **I'm new to OpenStack.** Follow the [newcomer path](newcomers/README.md): five short pages, read in order, from
   what the services are to your first contribution. Keep the [glossary](newcomers/glossary.md) open as you go.
 - 🔧 **I have a problem with a VM.** Go to [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and find your symptom: stuck states,
-  scheduling, migration, networking, recovery. Every runbook starts with read-only checks. Nothing matches? Ask in
-  the Q&A discussions, with your release and deployment method.
+  scheduling, migration, networking, recovery. Every runbook starts with read-only checks. Nothing matches?
+  [Ask in the Q&A discussions](newcomers/start-a-discussion.md), with your release and deployment method.
 - 🏗️ **I'm deploying a platform.** Go to [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index): topologies, network and
   storage choices, errors met during real deployments, each with its context and limits. Using another deployment
-  tool? Your patterns are welcome too: start an *Ideas* discussion.
+  tool? Your patterns are welcome too: start an [*Ideas* discussion](https://github.com/OzarLand/ozarland/discussions/new?category=ideas).
 - 🤝 **I want to contribute.** Read [your first contribution](newcomers/first-contribution.md), then pick a task
   labelled [`good first contribution`](https://github.com/search?q=org%3AOzarLand+label%3A%22good+first+contribution%22+state%3Aopen&type=issues).
   The full rules are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Whichever door you take, questions are welcome: [start a discussion](newcomers/start-a-discussion.md) explains which
+category to pick, what to include and what never to post.
 
 ## What can you find here?
 

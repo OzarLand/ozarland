@@ -30,3 +30,8 @@ body:
     attributes:
       label: What you already checked
       render: shell
+  - type: textarea
+    id: pages
+    attributes:
+      label: Pages you already read
+      description: Links to the runbooks, patterns or upstream pages you followed, and where they stopped matching what you see.

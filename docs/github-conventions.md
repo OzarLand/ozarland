@@ -24,7 +24,10 @@ Discussions should be enabled on every community repository. In the first phase,
 | **Ideas** | Open discussion | Proposals about the community itself: structure, templates, new repositories |
 | **Announcements** | Announcement | Maintainer updates |
 
-Discussion category forms are provided under `community/repo-template/.github/DISCUSSION_TEMPLATE/`.
+Discussion category forms for Q&A, Experience reports and Show and compare live in this repository's
+`.github/DISCUSSION_TEMPLATE/`, with a copy for new repositories under `community/repo-template/.github/DISCUSSION_TEMPLATE/`.
+A form file is named after its category slug (`q-a.yml`, `experience-reports.yml`, `show-and-compare.yml`).
+For readers, [Start a discussion](../newcomers/start-a-discussion.md) explains how to use the categories.
 
 ### Issue templates
 

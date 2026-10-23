@@ -15,7 +15,8 @@ Then pick a task labelled **`good first contribution`** in any OzarLand reposito
 and how you will know it is done.
 
 Questions are welcome at every level. Ask in the **Q&A** discussions: "I don't understand why…" is a perfectly good
-question, and the answer often becomes a page that helps the next newcomer.
+question, and the answer often becomes a page that helps the next newcomer. [Start a discussion](start-a-discussion.md)
+shows how.
 
 ## Go further
 
