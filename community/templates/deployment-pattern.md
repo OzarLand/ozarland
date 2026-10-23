@@ -14,6 +14,8 @@ environment:
 risk: read-only
 confirmed_by: []
 upstream_refs: []
+authored_by: <"@handle" or agent:name>      # who wrote the page
+reviewed_by: []                             # who reviewed it: <@handle> or agent:<name>, one entry each
 last_verified: <YYYY-MM-DD>
 ---
 
@@ -82,3 +84,8 @@ inventory/
 ## Related
 
 <!-- Other patterns to compare with, discussions, upstream docs. -->
+
+---
+
+*Provenance: written by <@handle or agent:name>, from <source: an incident, a lab run, upstream documentation>.
+Reviewed by <@handle or agent:name>. Checked by a human operator: not yet / <@handle>, <YYYY-MM-DD>.*

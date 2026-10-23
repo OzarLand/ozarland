@@ -13,6 +13,8 @@ environment:
 risk: <read-only | state-changing | destructive>
 confirmed_by: []
 upstream_refs: []
+authored_by: <"@handle" or agent:name>      # who wrote the page
+reviewed_by: []                             # who reviewed it: <@handle> or agent:<name>, one entry each
 last_verified: <YYYY-MM-DD>
 ---
 
@@ -86,3 +88,8 @@ openstack server show <server-id>
 ## Related
 
 <!-- Other runbooks, upstream bugs and docs, the discussion where this was investigated. -->
+
+---
+
+*Provenance: written by <@handle or agent:name>, from <source: an incident, a lab run, upstream documentation>.
+Reviewed by <@handle or agent:name>. Checked by a human operator: not yet / <@handle>, <YYYY-MM-DD>.*

@@ -18,10 +18,12 @@ environment:                  # only what matters for validity
   os: ubuntu-24.04
 risk: state-changing          # read-only | state-changing | destructive  (highest level present in the page)
 confirmed_by:                 # one entry per independent confirmation
-  - { who: "@handle", type: operator, release: 2025.1, deployment: kolla-ansible, date: 2026-11-02, note: "also needed X" }
+  - { who: "@handle", type: operator, release: 2025.1, deployment: kolla-ansible, date: 2026-10-20, note: "also needed X" }
   - { who: "agent:lab-reviewer", type: lab, release: 2025.1, deployment: kolla-ansible all-in-one, date: 2026-10-21, note: "read-only steps run; destructive steps reproduced on a disposable lab" }
 upstream_refs:                # bugs, docs, changes this page relates to
   - https://bugs.launchpad.net/nova/+bug/NNNNNNN
+authored_by: agent:ozarland-author   # human (a GitHub handle such as "@handle") or agent:<name>
+reviewed_by: ["agent:openstack-operator-reviewer", "@handle"]   # one entry per reviewer, human or agent
 last_verified: 2026-10-18
 ---
 ```
@@ -46,6 +48,21 @@ last_verified: 2026-10-18
 - **`risk`** is the highest risk level of any command in the page, so that a reader knows before opening it. See
   [risk warnings](risk-warnings.md).
 - **`last_verified`** is updated whenever someone confirms the page still holds.
+- **`authored_by`** says who wrote the page: a person (`"@handle"`) or an agent (`agent:<name>`), so that readers
+  know how it was made ([how OzarLand is built](../how-ozarland-is-built.md)).
+- **`reviewed_by`** lists who reviewed it before it was merged, people and agents alike. It is not a confirmation:
+  confirmations go in `confirmed_by`.
+- Both are recommended: the checker warns, but does not fail, when they are missing.
+
+## Provenance line
+
+Every page ends with a one-line summary of where it comes from, after a horizontal rule, so that a reader does not
+have to read the front matter:
+
+> *Provenance: written by agent:ozarland-author, from a lab run on 2026.1. Reviewed by
+> agent:openstack-operator-reviewer. Checked by a human operator: not yet.*
+
+The templates under [`community/templates/`](../../community/templates/) end with it.
 
 ## Stating validity in prose
 

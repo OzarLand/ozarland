@@ -15,6 +15,8 @@ confirmed_by: []
 upstream_refs:
   - <release notes of the target release>
   - <deployment tool upgrade guide>
+authored_by: <"@handle" or agent:name>      # who wrote the page
+reviewed_by: []                             # who reviewed it: <@handle> or agent:<name>, one entry each
 last_verified: <YYYY-MM-DD>
 ---
 
@@ -71,3 +73,8 @@ last_verified: <YYYY-MM-DD>
 <!-- This platform's specifics; what someone with a different setup should expect to differ. -->
 
 ## Related
+
+---
+
+*Provenance: written by <@handle or agent:name>, from <source: an incident, a lab run, upstream documentation>.
+Reviewed by <@handle or agent:name>. Checked by a human operator: not yet / <@handle>, <YYYY-MM-DD>.*

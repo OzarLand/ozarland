@@ -9,6 +9,8 @@ environment:
   network: <...>
   storage: <...>
 date_of_events: <YYYY-MM>
+authored_by: <"@handle" or agent:name>      # who wrote the page
+reviewed_by: []                             # who reviewed it: <@handle> or agent:<name>, one entry each
 last_verified: <YYYY-MM-DD>
 ---
 
@@ -45,3 +47,8 @@ last_verified: <YYYY-MM-DD>
 ## Related
 
 <!-- Runbooks that came out of this, discussions, upstream bugs. -->
+
+---
+
+*Provenance: written by <@handle or agent:name>, from <source: an incident, a lab run, upstream documentation>.
+Reviewed by <@handle or agent:name>. Checked by a human operator: not yet / <@handle>, <YYYY-MM-DD>.*
