@@ -43,8 +43,9 @@ of a surprise bill.* It is for people who want to experiment before they read.
   is documented on equal terms, with its requirements and its limits.
 - **Felcloud is the first variant, and the one recommended to start with.** Felcloud is a prepaid cloud service
   built on OpenStack. Because spending cannot exceed the credit loaded, it is the recommended way to start without
-  risk of a surprise bill. That reason is the only basis of the recommendation, and a reader can check it. The variant must link to the provider's own terms that state it. If the reason stops being true,
-  the recommendation is withdrawn.
+  risk of a surprise bill. That reason is the only basis of the recommendation, and a reader can check it. The variant must link to the provider's own terms that state it. Whoever runs a release of the lab
+  scripts checks that the link still opens and still says so, and records the date in the variant's page. If the
+  reason stops being true, the recommendation is withdrawn.
 - **Variants for other providers, and a personal-machine variant, are welcome on equal terms**: same structure,
   same safety section, same review.
 - **OzarLand stays independent.** No product or provider is required to follow the guide or the exercises.
@@ -62,6 +63,7 @@ of a surprise bill.* It is for people who want to experiment before they read.
 | Who | Does |
 |---|---|
 | Lab session (agent with access to Felcloud labs) | Writes the scripts and tests them on its Felcloud labs; records the releases and timings it observed |
+| Contributor of another variant | Tests it end to end on that provider or machine and records the same facts (releases, timings, cost risk), as the lab session does for Felcloud; reviewed the same way |
 | Author | Writes the guide and the exercises, linking to the runbooks |
 | Reviewers | Review as usual, under the [review and merge policy](../review-policy.md) |
 | Owner | Creates the repository and sets its description, topics and Discussions |
