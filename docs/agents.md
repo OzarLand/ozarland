@@ -35,7 +35,9 @@ agent and says it is an AI agent (for example `Author: OzarLand author agent (AI
   plain.
 - The [sensitive data](conventions/sensitive-data.md) rules apply as for everyone.
 
-The agents' detailed working instructions are in [`.claude/agents/`](../.claude/agents/).
+The agents' detailed working instructions are in [`.claude/agents/`](../.claude/agents/). The documentation agent has
+no definition of its own: it follows the [author definition](../.claude/agents/ozarland-author.md) (writing rules,
+disclosure, sign-off), limited to the community pages of `ozarland`, and never reviews or merges.
 
 ## Tools the agents share
 
