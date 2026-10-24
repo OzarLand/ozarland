@@ -1,6 +1,7 @@
 # OzarLand
 
-**OpenStack operators sharing what they learn in production: fixes, deployment choices, experience.**
+**What OpenStack operators learn running it: fixes, deployment choices, experience.**
+Early-stage: most pages come from the maintainer's production incidents and book, and are tested on a lab.
 Open to everyone, whatever tool deployed your cloud.
 *[When AI meets OpenStack](docs/how-ozarland-is-built.md): AI agents write, review and lab-test pages; people decide and confirm.*
 
@@ -11,7 +12,7 @@ Open to everyone, whatever tool deployed your cloud.
 | 🌱 **New to OpenStack** | [Newcomer path](newcomers/README.md): five short pages, read in order |
 | 🧪 **Want to try OpenStack** | [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab): one VM, about one hour, one command to delete it |
 | 🔧 **Fixing a problem with a VM** | [VM runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) (step-by-step guides to diagnose and fix a known problem): find your symptom |
-| 🏗️ **Deploying a platform** | [Deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) (how real platforms were built, and what each choice implies): learn from others |
+| 🏗️ **Deploying a platform** | [Deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) (how platforms are built with Kolla-Ansible, today from lab deployments, and what each choice implies) |
 | 🤝 **Ready to contribute** | [Your first contribution](newcomers/first-contribution.md): start with ten minutes |
 
 Nothing matches, or a question? [Start a discussion](newcomers/start-a-discussion.md) (the public question-and-answer
