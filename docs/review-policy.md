@@ -39,6 +39,12 @@ confirmation is recorded by a lab reviewer in a separate pull request. It says i
 comes from (a contributor's incident, a book, upstream documentation, a lab run). Content not observed on a real
 platform stays `draft` until a lab run or an operator confirms it.
 
+**Corrections in a lab confirmation** (owner decision, 2026-10-24). In the same pull request as its `type: lab`
+confirmation, a lab reviewer may correct the page with what it observed during that run: commands that needed a
+change, the messages it observed, the *Lab observations* and *Validity and limits* sections. The confirmation stands
+once an independent operator review has checked those corrections. Anything beyond what the run observed (a new
+cause, a procedure that was not run) still goes in a separate content pull request.
+
 **Identification and disclosure.** AI use is disclosed openly. At repository level,
 [how OzarLand is built](how-ozarland-is-built.md) says what the agents do, the safeguards and the limits. In each
 agent-authored pull request, the description carries one `Author:` line that names the agent and says it is an AI
@@ -75,6 +81,11 @@ A review passes without reservation when all of the following hold:
 
 This covers content pages, READMEs, `tools/`, `community/`, templates, `CONTRIBUTING.md` and the documentation in
 `docs/`, except the files listed below.
+
+**README index rows are content** (owner decision, 2026-10-24). A content pull request that adds a row for a page to
+a repository README's index or to its "Start from what you see" section, or removes an item from "First pages to
+write" because that page now exists, is ordinary content, not a structural change: the reviewer merges it like the
+page itself.
 
 ## What only the owner validates
 
