@@ -1,7 +1,7 @@
 # OzarLand
 
 **What OpenStack operators learn running it: fixes, deployment choices, experience.**
-Early-stage: most pages come from the maintainer's production incidents and book, and are tested on a lab.
+Early-stage: most pages come from the maintainer's production incidents and book, and many are tested on a lab.
 Open to everyone, whatever tool deployed your cloud.
 *[When AI meets OpenStack](docs/how-ozarland-is-built.md): AI agents write, review and lab-test pages; people decide and confirm.*
 
