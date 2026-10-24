@@ -67,7 +67,7 @@ personal capacity, independent of any employer or vendor (see [conflicts of inte
 ## Project status (October 2026)
 
 33 pages are published: 25 runbooks and 8 deployment pages. 3 runbooks are `validated`, confirmed by one human
-operator in production, and 9 are `lab-verified`. Read every other page as a well-documented lead, not as a
+operator in production, and 9 are `lab-verified`. Read every page as a well-documented lead, not as a
 proven procedure, and check its *Validity and limits* section.
 
 ## Learn more
