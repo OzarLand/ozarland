@@ -62,7 +62,8 @@ Counted on 2026-10-23, five days after the first content repository was created:
 
 - **33 pages**: 25 runbooks in [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and 8
   pages in [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index).
-- **12 runbooks `lab-verified`**: their steps ran as written on the lab.
+- **12 runbooks `lab-verified`**: their steps ran as written on the lab. On 2026-10-24, 3 of them became `validated`,
+  confirmed by a human operator from production.
 - **39 lab reports and 40 operator reviews** on the pull requests of the two content repositories.
 - **At least 10 steps that failed or needed a change** when the lab ran them as written. Each one is recorded in its
   pull request. For example:
@@ -96,7 +97,7 @@ Counted on 2026-10-23, five days after the first content repository was created:
   page's *Validity and limits* section says what was and was not run.
 - **AI can be wrong.** An agent can misread documentation or generalise from one run. That is why pages start as
   `draft`, why the lab runs the steps instead of trusting them, and why only a human operator can make a page
-  `validated`. Today **no page is `validated`**: that step is yours.
+  `validated`. Today **3 runbooks are `validated`**, all by the same operator: more confirmations are yours.
 - **Agents write from the material they are given.** They do not have production experience of their own. The
   incidents come from people, and so must the confirmations.
 

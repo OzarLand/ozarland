@@ -28,7 +28,7 @@ The four statuses a published page can carry, with the same wording on every Oza
 | `validated` | Confirmed by a human operator, other than the author, on a real platform. |
 | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
 
-Today (2026-10-23, counted with [`tools/coverage_report.py`](../tools/coverage_report.py)): **0 validated, 12 lab-verified, 21 draft,
+Today (2026-10-24, counted with [`tools/coverage_report.py`](../tools/coverage_report.py)): **3 validated, 9 lab-verified, 21 draft,
 0 experimental**, out of the 33 pages of the runbook and deployment-pattern repositories.
 
 ## The flow
