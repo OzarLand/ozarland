@@ -61,7 +61,8 @@ Status, planned and archived repositories: [current repositories](docs/repositor
 
 OzarLand was started in October 2026 by Soufian Zaouam, OpenStack operator and author of
 [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), from which
-many runbooks are drawn. It has one maintainer today and is looking for its first contributors. It is run in a
+many runbooks are drawn. Today OzarLand is built by its maintainer with AI agents; it will open to contributors once
+the knowledge base is ready. How it is built: [When AI meets OpenStack](docs/how-ozarland-is-built.md). It is run in a
 personal capacity, independent of any employer or vendor (see [conflicts of interest](docs/governance.md#conflicts-of-interest)).
 
 ## Project status (October 2026)
