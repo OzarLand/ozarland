@@ -8,13 +8,13 @@ knowledge sooner than one person could write it. People stay in charge: they dec
 changes, and confirm pages on their own platforms.
 
 This page says what the agents do, what stops them from publishing something wrong, what they made possible so far,
-and where their limits are. The figures were counted in the repositories on 2026-10-23.
+and where their limits are. The figures were counted in the repositories on 2026-10-24.
 
 ## Who does what
 
 | Who | Does | Never does |
 |---|---|---|
-| **The owner** (a person) | Provides the source material: incidents from production, the book *OpenStack, the Day After Tomorrow*, lab platforms. Decides the rules. Validates the risky changes: rules and agent roles, the checker, licence and policy files, page deletions, GitHub settings. Signs off every commit and takes responsibility for it ([DCO](https://developercertificate.org/)) | |
+| **The owner**, Soufian Zaouam (a person) | Provides the source material: incidents from production, the owner's book [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), lab platforms. Decides the rules. Validates the risky changes: rules and agent roles, the checker, licence and policy files, page deletions, GitHub settings. Signs off every commit and takes responsibility for it ([DCO](https://developercertificate.org/)) | |
 | **Author agent** | Writes runbooks and deployment pages from that material and opens pull requests | Confirms its own pages |
 | **Documentation agent** | Writes and clarifies the community pages of `ozarland` | Reviews or merges |
 | **Operator reviewer agent** | Reviews each pull request as an experienced operator, runs the [content checker](../tools/check_content.py), merges what passes without reservation, escalates the rest | Reviews a pull request it wrote |
@@ -56,38 +56,40 @@ flowchart LR
   request.
 - **The owner keeps the risky decisions**, listed in the [review and merge policy](review-policy.md).
 
-## What the agents made possible
+## What has been done so far (counted on 2026-10-24)
 
-Counted on 2026-10-23, five days after the first content repository was created:
+Six days after the first content repository was created:
 
-- **33 pages**: 25 runbooks in [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and 8
-  pages in [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index).
-- **12 runbooks `lab-verified`**: their steps ran as written on the lab.
-- **39 lab reports and 40 operator reviews** on the pull requests of the two content repositories.
+- **33 pages**: 25 runbooks in [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and 8 pages in
+  [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index).
+- **12 runbooks `lab-verified`**: their steps ran as written on the lab. **None is `validated`**: that needs a human
+  operator.
+- **39 lab reports and 47 operator reviews** on the pull requests of the two content repositories.
 - **At least 10 steps that failed or needed a change** when the lab ran them as written. Each one is recorded in its
-  pull request. For example:
-  - `docker exec openvswitch_db ovs-appctl -t ovs-vswitchd version` fails on Kolla-Ansible 2026.1 with a stale
-    pidfile while ovs-vswitchd is running. A reader would have concluded that a healthy switch was down. Fixed: the
-    pages now run `ovs-appctl` in the `openvswitch_vswitchd` container.
-  - `openstack port list` has no `device_id` column and refuses it. Fixed: the check now uses `port show`.
-  - `openstack port list` also has no `Binding Host` or `VNIC Type` column; the client drops them silently, so the
-    check prints less than it seems to. **Not fixed yet** in two runbooks (the `vif_plugging_timeout` and the
-    maintenance pages).
-  - On Kolla-Ansible 2026.1, `docker stop` is undone within about a minute, because each container runs from a
-    systemd unit with `Restart=always`: the unit must be stopped instead. **Not fixed yet** in the runbook on
-    reopening provisioning after an incident.
-
-  Errors found but not yet fixed are the normal state of a knowledge base under review. They are listed here so that
-  this page does not claim more than was done.
-- **Behaviour observed on 2026.1, not assumed.** Neutron refuses with a 409 to remove a router's path while a
-  floating IP depends on it, and refuses to associate a floating IP with no path (`not reachable from subnet`). The
-  [unreachable-from-outside runbook](https://github.com/OzarLand/openstack-vm-runbooks/blob/main/networking/instance-unreachable-from-outside.md)
+  pull request, and the examples below are fixed in the pages: a health check that reported a healthy switch as
+  down[^1], three checks that asked the client for columns it does not have[^2], and a way of stopping the APIs that
+  the platform undid within a minute[^3].
+- **Behaviour observed on 2026.1, not assumed.** Neutron refuses some router changes while a floating IP depends on
+  them[^4]; the [unreachable-from-outside runbook](https://github.com/OzarLand/openstack-vm-runbooks/blob/main/networking/instance-unreachable-from-outside.md)
   was corrected to match.
-- **A full upgrade, measured.** A Kolla-Ansible all-in-one lab went from 2025.1 to 2026.1. `kolla-ansible upgrade`
-  ran in 24 minutes with no failed task. The running instances never stopped (same qemu processes before and after),
-  and each floating IP lost about 2 s of traffic when the Open vSwitch container was recreated. The
+- **A full upgrade, measured.** A Kolla-Ansible all-in-one lab went from 2025.1 to 2026.1 in 24 minutes of
+  `kolla-ansible upgrade`, with no failed task. The running instances never stopped, and each floating IP lost
+  about 2 s of traffic. The
   [upgrade report](https://github.com/OzarLand/kolla-ansible-deployment-patterns/blob/main/version-notes/upgrade-report-2025.1-to-2026.1-all-in-one-lab.md)
-  tells the rest, including three failures before the upgrade command and their causes.
+  tells the rest.
+- **Human contributions so far:** none outside the maintainer. We are looking for the first operators: a confirmation
+  of one page on your platform is the most useful first contribution.
+
+[^1]: `docker exec openvswitch_db ovs-appctl -t ovs-vswitchd version` fails on Kolla-Ansible 2026.1 with a stale
+    pidfile while ovs-vswitchd is running. The pages now run `ovs-appctl` in the `openvswitch_vswitchd` container.
+[^2]: `openstack port list` has no `device_id`, `Binding Host` or `VNIC Type` column: the client refuses the first
+    and silently drops the other two. The checks now read these fields with `port show`
+    ([openstack-vm-runbooks#32](https://github.com/OzarLand/openstack-vm-runbooks/pull/32) for the last two).
+[^3]: On Kolla-Ansible 2026.1, each container runs from a systemd unit with `Restart=always`, so `docker stop` is
+    undone within about a minute. The reopening-provisioning runbook now stops the units
+    ([openstack-vm-runbooks#32](https://github.com/OzarLand/openstack-vm-runbooks/pull/32)).
+[^4]: A 409 when removing a router's path while a floating IP depends on it, and `not reachable from subnet` when
+    associating a floating IP with no path.
 
 ## The limits
 
@@ -96,7 +98,7 @@ Counted on 2026-10-23, five days after the first content repository was created:
   page's *Validity and limits* section says what was and was not run.
 - **AI can be wrong.** An agent can misread documentation or generalise from one run. That is why pages start as
   `draft`, why the lab runs the steps instead of trusting them, and why only a human operator can make a page
-  `validated`. Today **no page is `validated`**: that step is yours.
+  `validated`. No page is `validated` yet: that step is yours.
 - **Agents write from the material they are given.** They do not have production experience of their own. The
   incidents come from people, and so must the confirmations.
 
