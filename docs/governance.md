@@ -51,15 +51,3 @@ the content with them in mind. Any future link between a maintainer and a vendor
 OzarLand is independent of any vendor, employer or foundation. Content may describe commercial products when
 operators use them, with the same neutrality as any other approach. No company's product is required to take part
 or to use the content.
-
-## Going public
-
-The repositories are private while the repositioning is completed. Before a repository becomes public:
-
-1. A full-history scan confirms no secret was ever committed.
-2. A content review confirms no customer, employer or project names, no real hostnames, domains, addresses or
-   personal paths.
-3. `SECURITY.md` and `CODE_OF_CONDUCT.md` carry a working contact address.
-4. Every file is covered by the Apache-2.0 `LICENSE` and the README states it (see [conventions/licensing.md](conventions/licensing.md)).
-5. GitHub Discussions, issue templates and labels are in place.
-6. Branch protection on `main` (pull request required, no force push) and secret scanning are enabled.

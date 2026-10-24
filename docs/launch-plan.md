@@ -59,10 +59,22 @@ Seed content is the standard the community will copy. It is worth writing carefu
 
 | Action | Who |
 |---|---|
-| Run the go-public checklist in [governance.md](governance.md) on `ozarland` and the two phase 1 repositories | Maintainer, Owner |
+| Run the [go-public checklist](#going-public-checklist) on `ozarland` and the content repositories | Maintainer, Owner |
 | Make the three repositories public | Owner |
 | Create the public `.github` organization repository with the organization profile README and the shared community files | Owner |
 | Enable branch protection, secret scanning, push protection | Owner |
+
+## Going public: checklist
+
+The repositories are private while the repositioning is completed. Before a repository becomes public:
+
+1. A full-history scan confirms no secret was ever committed.
+2. A content review confirms no customer, employer or project names, no real hostnames, domains, addresses or
+   personal paths.
+3. `SECURITY.md` and `CODE_OF_CONDUCT.md` carry a working contact address.
+4. Every file is covered by the Apache-2.0 `LICENSE` and the README states it (see [conventions/licensing.md](conventions/licensing.md)).
+5. GitHub Discussions, issue templates and labels are in place.
+6. Branch protection on `main` (pull request required, no force push) and secret scanning are enabled.
 
 ## Step 4: invite the first contributors
 
