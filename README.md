@@ -66,7 +66,8 @@ OzarLand was started in October 2026 by Soufian Zaouam, OpenStack operator and a
 [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), from which
 many runbooks are drawn. Today OzarLand is built by its maintainer with AI agents. Corrections, confirmations of a
 page on your platform and questions are welcome now; wider contributions will open once the knowledge base is ready.
-How it is built: [When AI meets OpenStack](docs/how-ozarland-is-built.md). It is run in a personal capacity, independent of any employer or vendor (see [conflicts of interest](docs/governance.md#conflicts-of-interest)).
+How it is built: [When AI meets OpenStack](docs/how-ozarland-is-built.md). It is run in a personal capacity,
+independent of any employer or vendor.
 
 ## Project status (October 2026)
 
@@ -87,5 +88,4 @@ well-documented lead, not as a proven procedure, and check its *Validity and lim
 ## License
 
 Apache License 2.0 for all content ([LICENSE](LICENSE), [licensing](docs/conventions/licensing.md)). OzarLand is an
-independent community initiative, not affiliated with or endorsed by the OpenInfra Foundation or any vendor; the
-maintainer's links are listed under [conflicts of interest](docs/governance.md#conflicts-of-interest).
+independent community initiative, not affiliated with or endorsed by the OpenInfra Foundation or any vendor.

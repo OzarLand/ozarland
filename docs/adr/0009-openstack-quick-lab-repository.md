@@ -50,8 +50,8 @@ of a surprise bill.* It is for people who want to experiment before they read.
 - **Variants for other providers, and a personal-machine variant, are welcome on equal terms**: same structure,
   same safety section, same review.
 - **OzarLand stays independent.** No product or provider is required to follow the guide or the exercises.
-- **Disclosure.** This record states, and the `openstack-quick-lab` README repeats near the top: *"The OzarLand
-  maintainer has a professional connection with Felcloud."*
+- **Why Felcloud** (owner decision, 2026-10-23): *"Felcloud was used to build and test OzarLand's labs because its
+  prepaid model fits a lab with no surprise bill."*
 
 ### Safety built in
 
@@ -91,7 +91,7 @@ of a surprise bill.* It is for people who want to experiment before they read.
 
 - **Tension with tool neutrality, and how it is handled.** The [principles](../vision.md) say no vendor is promoted.
   Recommending a provider as the starting point is an exception. It is limited to one checkable property that
-  protects newcomers from a surprise bill. It comes with the disclosure above. Other providers can be added on
+  protects newcomers from a surprise bill. Other providers can be added on
   equal terms. Reviewers check every page of the repository against this limit.
 - The newcomer path and the README's newcomer door get a link to the lab once it works end to end.
 - The lab's scripts need maintenance for each OpenStack and Kolla-Ansible release. Each page states the releases on
