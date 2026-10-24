@@ -5,6 +5,9 @@ git history and the pull requests of the four repositories (`ozarland`, `opensta
 `kolla-ansible-deployment-patterns`, `openstack-quick-lab`). Days are UTC dates. The roles and safeguards are
 described in [When AI meets OpenStack](how-ozarland-is-built.md).
 
+The journal gets one entry a day. The last row of the summary can be a day still in progress: its entry says until
+when it was counted, and the next update completes it.
+
 How each number is counted:
 
 | Metric | Counted as |
@@ -27,7 +30,7 @@ How each number is counted:
 | 21 Oct | 25 | 0 | 18 | 24 | 13 | 0 | 0 |
 | 22 Oct | 33 | 6 | 15 | 17 | 4 | 14 | 6 |
 | 23 Oct | 33 | 12 | 23 | 44 | 17 | 20 | 4 |
-| 24 Oct (to 06:00) | 33 | 12 | 10 | 3 | 0 | 0 | 0 |
+| 24 Oct (until 06:00 UTC, in progress) | 33 | 12 | 10 | 3 | 0 | 0 | 0 |
 
 ## 18 October: the repositioning
 
