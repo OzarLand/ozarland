@@ -125,6 +125,9 @@ def check_page(root, rel):
         errors.append(f"{rel}: openstack_releases must name releases, not 'latest', 'master' or 'any'")
     if any(r.strip().lower() == "unrecorded" for r in releases):
         warnings.append(f"{rel}: openstack_releases is 'unrecorded'; add the release when known")
+    for f in ("authored_by",):
+        if f not in fields:
+            warnings.append(f"{rel}: front matter field '{f}' is missing (provenance; see docs/conventions/content-metadata.md)")
     confirmed = fields.get("confirmed_by") or []
     if status == "validated" and not confirmed:
         errors.append(f"{rel}: status is 'validated' but confirmed_by is empty; a page is validated by someone other than its author")

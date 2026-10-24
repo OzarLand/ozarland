@@ -14,6 +14,7 @@ environment:
 risk: read-only
 confirmed_by: []
 upstream_refs: []
+authored_by: <"@handle" or agent:name>      # who wrote the page
 last_verified: <YYYY-MM-DD>
 ---
 
@@ -82,3 +83,8 @@ inventory/
 ## Related
 
 <!-- Other patterns to compare with, discussions, upstream docs. -->
+
+---
+
+*Provenance: written by <@handle or agent:name>, from <source: an incident, a lab run, upstream documentation>.
+Reviewed in its pull request (see the page history). Checked by a human operator: not yet / <@handle>, <YYYY-MM-DD>.*
