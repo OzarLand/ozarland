@@ -29,8 +29,18 @@ More in [mission and principles](docs/vision.md).
 ## What makes a page trustworthy
 
 - It says **where it was observed**: OpenStack release, components, deployment method.
-- It says **how much it was checked**: `draft`, then `lab-verified`, then `validated` by another operator.
-  See the [knowledge lifecycle](docs/knowledge-lifecycle.md).
+- It says **how much it was checked**, with one of four statuses
+  ([knowledge lifecycle](docs/knowledge-lifecycle.md)):
+
+  | Status | What it means |
+  |---|---|
+  | `draft` | Written; its commands have not been run by anyone other than the author. |
+  | `lab-verified` | Its commands were run on a lab by someone other than the author, on the release stated in the page, and behaved as the page says. |
+  | `validated` | Confirmed by a human operator, other than the author, on a real platform. |
+  | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
+
+  How many pages carry each status today: [page statuses](docs/knowledge-lifecycle.md#page-statuses).
+
 - Pages are written and lab-tested with AI agents, reviewed independently, and validated only by human operators:
   [how OzarLand is built](docs/how-ozarland-is-built.md).
 - Commands that change things are marked ⚠️, destructive ones 🛑.
