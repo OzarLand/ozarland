@@ -23,7 +23,8 @@ and where their limits are. The figures were counted in the repositories on 2026
 | **Human operators** (you) | Confirm a page on their own platform, report a difference, ask and answer in the Discussions | |
 
 The agents and their rules are listed in [agents](agents.md). The [review and merge policy](review-policy.md) applies
-to agents and people alike.
+to agents and people alike. What was built each day, and what review and the lab caught: the
+[build journal](build-journal.md).
 
 ## The flow
 
