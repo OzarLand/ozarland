@@ -83,4 +83,5 @@ well-documented lead, not as a proven procedure, and check its *Validity and lim
 ## License
 
 Apache License 2.0 for all content ([LICENSE](LICENSE), [licensing](docs/conventions/licensing.md)). OzarLand is an
-independent community initiative, not affiliated with or endorsed by the OpenInfra Foundation or any vendor.
+independent community initiative, not affiliated with or endorsed by the OpenInfra Foundation or any vendor; the
+maintainer's links are listed under [conflicts of interest](docs/governance.md#conflicts-of-interest).
