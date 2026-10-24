@@ -30,7 +30,7 @@ How each number is counted:
 | 21 Oct | 25 | 0 | 18 | 24 | 13 | 0 | 0 |
 | 22 Oct | 33 | 6 | 15 | 17 | 4 | 14 | 6 |
 | 23 Oct | 33 | 12 | 23 | 44 | 17 | 20 | 4 |
-| 24 Oct (until 06:00 UTC, in progress) | 33 | 12 | 10 | 3 | 0 | 0 | 0 |
+| 24 Oct | 35 | 15 | 26 | 26 | 21 | 5 | 6 |
 
 ## 18 October: the repositioning
 
@@ -92,11 +92,31 @@ on, every pull request has an independent review.
 - **Review caught:** 44 operator reviews, 9 requesting changes, 17 blocking findings, among them a decision record
   whose disclosure the reviewer asked to restore before merge, and a pull request that had to wait for the owner.
 
-## 24 October, until 06:00 UTC
+## 24 October: production feedback, a comparison page, and five more lab runs
 
-- **Built:** 10 pull requests merged: in `ozarland`, one status table used everywhere, provenance in the templates,
-  an "In short" box in the review policy, who is behind OzarLand, and the removal of blueprints whose repository
-  exists; in the content repositories, READMEs that start from what the reader sees.
-- **Agents:** documentation (5), author (5).
-- **Review:** 3 operator reviews. Two cleared `ozarland#41` and `#42`, whose blocking findings of the evening before
-  (a status definition that dropped a condition, and a metadata field nobody could fill truthfully) had been fixed.
+Counted at 21:30 UTC.
+
+- **Built:** 26 pull requests merged. In the content repositories: a runbook on instances that stay `SHUTOFF` or lose
+  their network after a compute reboot, the first comparison page in `kolla-ansible-deployment-patterns` (ML2/OVS
+  versus ML2/OVN with Kolla-Ansible), the 2025.1 to 2026.1 version notes rewritten as an upgrade playbook with a
+  go / no-go checklist, provenance on every page, and READMEs that start from what the reader sees. In
+  `openstack-quick-lab`: the scripts refuse to start without a cost estimate. In `ozarland`: one status table,
+  provenance in the templates, who is behind OzarLand, the build journal, and the Felcloud wording, recorded as
+  [ADR-0010](adr/0010-felcloud-wording.md).
+- **The owner's production report:** the owner reported that the behaviour of three runbooks (restarting
+  `nova_libvirt`, `nova-compute` down with instances running, restarting the Open vSwitch agent) matches what they
+  observed in production on an earlier Kolla-Ansible release. It is recorded on each page as an operator entry. After
+  the operator review, the three pages stay `lab-verified`: the steps were not re-run, and the exact release is not
+  recorded.
+- **Agents:** author (11), documentation (11), lab reviewer (4).
+- **The lab:** 5 lab runs, on 5 runbooks; 6 steps failed or needed a change. Three confirmations were merged (15
+  runbooks `lab-verified` in all), one is in review, and one page stays `draft` with fixes in review. The most useful
+  finding: `openstack volume attachment list --volume-id` in python-openstackclient 9.0.0 ignores the filter and
+  lists every attachment of the cloud. A quick check built on it would have shown an operator the wrong volumes.
+  The volume-stuck runbook now uses `cinder attachment-list --volume-id`, which filters correctly. The same fix for
+  the stale-attachment runbook is in review; the stale-records runbook still uses the command, and is next.
+- **Review:** 26 operator reviews, 10 requesting changes, 21 blocking findings, among them the reasons why the
+  production report does not make the pages `validated`.
+- **Owner decisions:** in the same pull request as its lab confirmation, a lab reviewer may correct a page with what
+  its run observed, once an independent operator review has checked the corrections; and README index rows for a
+  page are ordinary content. Both are being recorded in the [review policy](review-policy.md).
