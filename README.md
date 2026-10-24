@@ -57,6 +57,19 @@ More in [mission and principles](docs/vision.md).
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
 
+## Who is behind OzarLand
+
+OzarLand was started in October 2026 by Soufian Zaouam, OpenStack operator and author of
+[*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), from which
+many runbooks are drawn. It has one maintainer today and is looking for its first contributors. It is run in a
+personal capacity, independent of any employer or vendor (see [conflicts of interest](docs/governance.md#conflicts-of-interest)).
+
+## Project status (October 2026)
+
+33 pages are published: 25 runbooks and 8 deployment pages. 12 runbooks are `lab-verified` and none is `validated`
+yet: no human operator other than the author has confirmed a page on a real platform. Read every page as a
+well-documented lead, not as a proven procedure, and check its *Validity and limits* section.
+
 ## Learn more
 
 - [Mission, principles and who OzarLand is for](docs/vision.md)
