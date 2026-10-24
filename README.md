@@ -1,8 +1,9 @@
 # OzarLand
 
 **What OpenStack operators learn running it: fixes, deployment choices, experience.**
-Early-stage: of the 25 runbooks, 14 come from failures reproduced on a lab and 11 from the maintainer's book (some
-from both, 3 from upstream documentation); the deployment pages come from lab builds and release notes.
+Early-stage, and every page names its source: of the 25 runbooks, 14 draw on a failure reproduced on a lab, 11 on the
+maintainer's book and 3 on upstream documentation (some on two); the deployment pages come from lab builds and
+release notes.
 Open to everyone, whatever tool deployed your cloud.
 *[When AI meets OpenStack](docs/how-ozarland-is-built.md): AI agents write, review and lab-test pages; people decide and confirm.*
 
