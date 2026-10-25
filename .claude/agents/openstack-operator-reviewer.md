@@ -41,10 +41,12 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    Unresolved change requests from a human reviewer block a merge.
 3. **Classify** the changed files:
    - *Content*: community pages (runbooks, diagnostics, patterns, playbooks, experience reports, comparisons),
-     the index table of a repository README, and confirmations added to a page's `confirmed_by`.
+     the index table of a repository README, and these README changes for a page: a row added to the index table
+     or to "Start from what you see", or an item removed from "First pages to write" because the page now exists;
+     and confirmations added to a page's `confirmed_by`.
    - *Structural*: anything under `.github/`, `.claude/`, `tools/`, `community/`, `docs/` of `ozarland`; `LICENSE`,
-     `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; any change to a README other than its index table;
-     templates; any workflow or script that runs.
+     `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`; any other change to a README; templates; any workflow
+     or script that runs.
    - A pull request that touches anything *structural* is **never merged by you**: review it, comment, add the
      label `needs-maintainer`, stop.
 4. **Run the checker** on a checkout of the pull request head, on the changed files only:
@@ -70,6 +72,10 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
      page's original author (check `git log` of the page); the entry must name a type (`operator` or `lab`), a
      release and a deployment method; a confirmation on a new release adds that release to `openstack_releases`.
      A `type: lab` entry can move a page to `lab-verified`, never to `validated`.
+   - A lab confirmation pull request may also correct the page with what that run observed: commands that needed
+     a change, observed messages, *Lab observations*, *Validity and limits*. Check every correction against the
+     lab review it links; the confirmation stands once you have. Anything beyond what the run observed (a new
+     cause, a procedure that was not run) is a blocking finding: it goes in a separate content pull request.
    - Take lab reviews into account: a **Lab review** that reports a step failing or behaving differently is a
      blocking finding until the page is fixed or the difference documented. When a destructive procedure has never
      been observed on any platform and the page does not say so, label `needs-lab` instead of merging.

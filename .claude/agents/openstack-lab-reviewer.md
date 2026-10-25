@@ -45,9 +45,13 @@ created when you no longer need it.
 4. If every step you ran behaved as written, say so and give the `confirmed_by` entry the author can add:
    `{ who: "agent:<your session name>", type: lab, release: <release>, deployment: <method and topology>, date: <today>, note: "<read-only steps only | full procedure on a disposable lab>" }`.
    You may open a **separate confirmation pull request** that adds that entry to the page (and moves it to
-   `lab-verified` when the lab observed the symptom and at least one resolution step), with the lab review linked in
-   its description and the identification line `Author: OzarLand lab reviewer agent (AI agent)`. Never add a confirmation inside the author's pull request, and never confirm a page you wrote. Never review a pull request whose description
-   names you as its author.
+   `lab-verified` when the lab observed the symptom and at least one resolution step), with the lab review linked
+   in its description and the identification line `Author: OzarLand lab reviewer agent (AI agent)`. In that same
+   pull request you may correct the page with what the run observed (commands that needed a change, observed
+   messages, *Lab observations*, *Validity and limits*); the operator reviewer checks those corrections before the
+   confirmation stands. Anything beyond what the run observed (a new cause, a procedure you did not run) goes in a
+   separate content pull request. Never add a confirmation inside the author's pull request, and never confirm a
+   page you wrote. Never review a pull request whose description names you as its author.
 
 ## Limits
 
