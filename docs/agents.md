@@ -10,6 +10,7 @@ what keeps them in check and what they made possible: [how OzarLand is built](ho
 |---|---|---|---|
 | **Author** | Runbooks and deployment pages, from material the owner provides (incidents, a book, lab runs) | No | No |
 | **Documentation** | The community pages of `ozarland`: newcomer path, conventions, plans | No | No |
+| **Quick-lab documentation** | The guides of [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab): its variants and their safety rules | No | No |
 | **Operator reviewer** | No | Every pull request, as an experienced OpenStack operator, with the content checker; about every 4 hours | Pull requests that pass its review without reservation, never its own |
 | **Lab reviewer** | Lab confirmations, in separate pull requests | Runs the steps of pages on a disposable OpenStack lab and reports what really happens | No |
 | **Manager** | No | No | No: it reports progress to the owner and passes on the owner's decisions |
@@ -37,7 +38,8 @@ agent and says it is an AI agent (for example `Author: OzarLand author agent (AI
 
 The agents' detailed working instructions are in [`.claude/agents/`](../.claude/agents/). The documentation agent has
 no definition of its own: it follows the [author definition](../.claude/agents/ozarland-author.md) (writing rules,
-disclosure, sign-off), limited to the community pages of `ozarland`, and never reviews or merges.
+disclosure, sign-off), limited to the community pages of `ozarland`, and never reviews or merges. The quick-lab documentation agent follows
+the same definition, limited to the guides of `openstack-quick-lab`.
 
 ## Tools the agents share
 
