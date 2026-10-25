@@ -31,6 +31,7 @@ How each number is counted:
 | 22 Oct | 33 | 6 | 15 | 17 | 4 | 14 | 6 |
 | 23 Oct | 33 | 12 | 23 | 44 | 17 | 20 | 4 |
 | 24 Oct | 35 | 15 | 26 | 26 | 21 | 5 | 6 |
+| 25 Oct (in progress) | to be counted | | | | | | |
 
 ## 18 October: the repositioning
 
@@ -120,3 +121,14 @@ Counted at 21:30 UTC.
 - **Owner decisions:** in the same pull request as its lab confirmation, a lab reviewer may correct a page with what
   its run observed, once an independent operator review has checked the corrections; and README index rows for a
   page are ordinary content. Both are being recorded in the [review policy](review-policy.md).
+
+## 25 October (in progress)
+
+Started at 07:30 UTC; the numbers are counted at the end of the day.
+
+- **Owner decision:** a multinode variant of [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab),
+  starting with one controller and two computes (three VMs), designed to grow to three controllers and two computes
+  (five VMs) with the same scripts and one setting. The documentation comes first, before the scripts.
+- **A new agent:** a quick-lab documentation agent, with access to `openstack-quick-lab`, writes that variant's guide.
+  The documentation agent of `ozarland` could not take the task: this session is not allowed to give itself write
+  access to another repository, and the task was handed over.
