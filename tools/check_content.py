@@ -8,8 +8,8 @@ Without files, every page of the repository is checked. With files (paths relati
 example the files changed by a pull request), only those are checked. Exit code 1 if any error is found.
 
 Checks: front matter fields and values, required sections per kind, risk markers consistent with the
-declared risk, validated pages carrying confirmations, relative links, and sensitive data (IP and MAC
-addresses outside the documentation ranges, secrets). It does not judge technical accuracy: that is
+declared risk, validated pages carrying confirmations, code fences that close cleanly, relative links,
+and sensitive data (IP and MAC addresses outside the documentation ranges, secrets). It does not judge technical accuracy: that is
 the reviewer's job.
 """
 import argparse
@@ -97,6 +97,36 @@ def code_free(body):
     return re.sub(r"```.*?```", "", body, flags=re.S)
 
 
+FENCE = re.compile(r"^\s*(`{3,}|~{3,})(.*)$")
+
+
+def check_fences(text, body):
+    """Return errors for code fences that never close, or whose closing line carries text after the fence.
+
+    In Markdown a fence followed by text on the same line is not a closing fence: the block stays open and swallows
+    the rest of the page.
+    """
+    errors = []
+    offset = text[:len(text) - len(body)].count("\n")
+    opening = None  # (fence characters, line number)
+    for i, line in enumerate(body.split("\n")):
+        number = offset + 1 + i
+        m = FENCE.match(line)
+        if not m:
+            continue
+        fence, rest = m.group(1), m.group(2)
+        if opening is None:
+            opening = (fence, number)
+        elif fence[0] == opening[0][0] and len(fence) >= len(opening[0]):
+            if rest.strip():
+                errors.append(f"line {number}: closing code fence followed by text ('{line.strip()[:40]}'); "
+                              f"put the fence alone on its line")
+            opening = None  # take it as the intended close, so that one mistake is reported once
+    if opening is not None:
+        errors.append(f"line {opening[1]}: code fence opened here is never closed")
+    return errors
+
+
 def check_page(root, rel):
     errors, warnings = [], []
     text = open(os.path.join(root, rel), encoding="utf-8").read()
@@ -138,6 +168,8 @@ def check_page(root, rel):
         errors.append(f"{rel}: status is 'lab-verified' but no confirmed_by entry has type: lab")
     if status == "validated" and confirmed and all(t == "lab" for t in types):
         errors.append(f"{rel}: status is 'validated' but every confirmation is a lab check; validated needs an operator confirmation")
+
+    errors.extend(f"{rel}: {e}" for e in check_fences(text, body))
 
     headings = {h.strip() for h in re.findall(r"^##\s+(.+)$", body, flags=re.M)}
     for section in REQUIRED_SECTIONS[kind]:
