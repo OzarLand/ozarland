@@ -16,6 +16,7 @@ things are the way they are. They are not required for content decisions, which 
 | [0008](0008-community-knowledge-sharing-space.md) | OzarLand becomes a knowledge-sharing community for OpenStack operators | Accepted |
 | [0009](0009-openstack-quick-lab-repository.md) | A quick-lab repository to try OpenStack in about one hour | Accepted; the Felcloud disclosure point superseded by 0010 |
 | [0010](0010-felcloud-wording.md) | Felcloud wording | Accepted |
+| [0011](0011-variant-specific-exercises.md) | Variant-specific exercises in the quick lab | Accepted |
 
 Records 0002 to 0007 describe the operator toolkit OzarLand was during its first two weeks. They are kept unchanged,
 as 0001 requires, and 0008 explains the transition.

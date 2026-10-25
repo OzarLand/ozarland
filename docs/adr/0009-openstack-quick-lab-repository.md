@@ -1,7 +1,8 @@
 # ADR-0009: A quick-lab repository to try OpenStack in about one hour
 
 - **Status:** Accepted (the `openstack-quick-lab` repository was created). Superseded on this point (Felcloud
-  disclosure) by [ADR-0010](0010-felcloud-wording.md).
+  disclosure) by [ADR-0010](0010-felcloud-wording.md). Amended on this point (exercises and variants) by
+  [ADR-0011](0011-variant-specific-exercises.md).
 - **Date:** 2026-10-23
 - **Deciders:** @soufian-zaouam
 - **Discussion:** to be opened in *Ideas* once this record is merged; until then, this pull request
