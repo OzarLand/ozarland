@@ -6,17 +6,22 @@ what keeps them in check and what they made possible: [how OzarLand is built](ho
 
 ## Who writes, who reviews, who merges
 
+OzarLand runs four agents, one per role, across all four repositories (`ozarland`, `openstack-vm-runbooks`,
+`kolla-ansible-deployment-patterns`, `openstack-quick-lab`).
+
 | Agent | Writes | Reviews | Merges |
 |---|---|---|---|
-| **Author** | Runbooks and deployment pages, from material the owner provides (incidents, a book, lab runs) | No | No |
-| **Documentation** | The community pages of `ozarland`: newcomer path, conventions, plans | No | No |
-| **Quick-lab documentation** | The guides of [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab): its variants and their safety rules | No | No |
-| **Operator reviewer** | No | Every pull request, as an experienced OpenStack operator, with the content checker; about every 4 hours | Pull requests that pass its review without reservation, never its own |
-| **Lab reviewer** | Lab confirmations, in separate pull requests | Runs the steps of pages on a disposable OpenStack lab and reports what really happens | No |
-| **Manager** | No | No | No: it reports progress to the owner and passes on the owner's decisions |
+| **Author** | Every page: runbooks, deployment patterns, the community pages of `ozarland` and the guides and exercises of [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab), from material the owner provides (incidents, a book, lab runs) | No | No |
+| **Operator reviewer** | No | Every pull request of the four repositories, as an experienced OpenStack operator, with the content checker; every hour | Pull requests that pass its review without reservation, never its own |
+| **Lab reviewer** | Lab confirmations, and the scripts of `openstack-quick-lab`, which only a lab can test | Runs the steps of pages on a disposable OpenStack lab and reports what really happens | No |
+| **Manager** | No content: it reports progress to the owner, passes on the owner's decisions and hands tasks to the other agents | No | Only changes the owner has validated |
 
 No agent reviews or merges a pull request it wrote: the `Author:` line of each agent-authored pull request names the
 agent and says it is an AI agent (for example `Author: OzarLand author agent (AI agent)`).
+
+**The author of a pull request carries it to the merge.** The agent that opened a pull request fixes what its
+reviews ask and resolves its merge conflicts, without waiting to be asked. Where it can, it subscribes to its pull
+request's activity so that a review wakes it.
 
 ## What people decide
 
@@ -36,10 +41,7 @@ agent and says it is an AI agent (for example `Author: OzarLand author agent (AI
   plain.
 - The [sensitive data](conventions/sensitive-data.md) rules apply as for everyone.
 
-The agents' detailed working instructions are in [`.claude/agents/`](../.claude/agents/). The documentation agent has
-no definition of its own: it follows the [author definition](../.claude/agents/ozarland-author.md) (writing rules,
-disclosure, sign-off), limited to the community pages of `ozarland`, and never reviews or merges. The quick-lab documentation agent follows
-the same definition, limited to the guides of `openstack-quick-lab`.
+The agents' detailed working instructions are in [`.claude/agents/`](../.claude/agents/), one file per agent.
 
 ## Tools the agents share
 

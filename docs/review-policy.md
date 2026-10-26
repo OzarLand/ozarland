@@ -20,12 +20,12 @@ operator reviewer. The aim is to keep contributions flowing without letting an u
 | Reviewer | What they do |
 |---|---|
 | **Any contributor** | Reviews, confirms pages in their environment, suggests changes. Anyone can review. |
-| **Operator reviewer** (automated) | Runs about every 4 hours on open pull requests, and on request. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that pass its review without reservation and touch nothing the owner validates. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
+| **Operator reviewer** (automated) | Runs every hour on the open pull requests of the four repositories, and on request. Reviews each one as an experienced OpenStack operator would, runs the content checker, and squash-merges the pull requests that pass its review without reservation and touch nothing the owner validates. Its definition is [`.claude/agents/openstack-operator-reviewer.md`](../.claude/agents/openstack-operator-reviewer.md). |
 | **Lab reviewer** (agent on a lab platform) | Runs the steps of a page on a lab OpenStack platform: read-only steps on any lab, state-changing and destructive steps only on a lab declared disposable. Reports in a review what it ran, on which release and deployment method, and what differed. Its findings are reviews like any other; a successful run can become a `type: lab` confirmation and move a page to `lab-verified`. |
 | **Maintainers** | Handle everything the automated reviewer escalates and any pull request labelled `hold`. The owner validates the risky changes listed under [What only the owner validates](#what-only-the-owner-validates). Can override any automated decision. |
 
-The manager agent checks every hour for pull requests waiting on a review and wakes the operator reviewer when
-needed, so a pull request rarely waits for the next scheduled run.
+A pull request waits at most an hour for its review. The agent that opened it fixes what the review asks and
+resolves its merge conflicts; the reviewer reviews the new head at its next pass.
 
 Reviews by the automated reviewer start with **Operator review:**, reviews by a lab agent with **Lab review:**; both
 are clearly identified as automated. Agents are reviewers in their own right: their findings block a merge exactly
@@ -59,8 +59,8 @@ provides the material the agents write from and takes responsibility for the con
 
 ## What agents merge
 
-The owner's rule: **agents merge every pull request that passes review without reservation, in all three
-repositories** (`ozarland`, `openstack-vm-runbooks`, `kolla-ansible-deployment-patterns`). A session never merges
+The owner's rule: **agents merge every pull request that passes review without reservation, in all four
+repositories** (`ozarland`, `openstack-vm-runbooks`, `kolla-ansible-deployment-patterns`, `openstack-quick-lab`). A session never merges
 its own work, and never merges a pull request whose description names it as author.
 
 A review passes without reservation when all of the following hold:

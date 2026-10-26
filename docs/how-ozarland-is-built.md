@@ -15,12 +15,10 @@ and where their limits are. The figures were counted in the repositories on 2026
 | Who | Does | Never does |
 |---|---|---|
 | **The owner**, Soufian Zaouam (a person) | Provides the source material: incidents from production, the owner's book [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), lab platforms. Decides the rules. Validates the risky changes: rules and agent roles, the checker, licence and policy files, page deletions, GitHub settings. Signs off every commit and takes responsibility for it ([DCO](https://developercertificate.org/)) | |
-| **Author agent** | Writes runbooks and deployment pages from that material and opens pull requests | Confirms its own pages |
-| **Documentation agent** | Writes and clarifies the community pages of `ozarland` | Reviews or merges |
-| **Quick-lab documentation agent** | Writes the guides of [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab): its variants and their safety rules | Reviews or merges |
+| **Author agent** | Writes every page from that material: runbooks, deployment pages, the community pages of `ozarland` and the guides of [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab). Opens pull requests and carries them to the merge | Confirms its own pages, reviews or merges |
 | **Operator reviewer agent** | Reviews each pull request as an experienced operator, runs the [content checker](../tools/check_content.py), merges what passes without reservation, escalates the rest | Reviews a pull request it wrote |
 | **Lab reviewer agent** | Runs the steps of a page on a disposable OpenStack lab and reports, step by step, what ran as written, what needed a change and what failed | Confirms a page it wrote |
-| **Manager agent** | Tells the owner where things stand and passes on the owner's decisions | Writes, reviews or merges |
+| **Manager agent** | Tells the owner where things stand, passes on the owner's decisions and hands tasks to the other agents | Writes or reviews content |
 | **Human operators** (you) | Confirm a page on their own platform, report a difference, ask and answer in the Discussions | |
 
 The agents and their rules are listed in [agents](agents.md). The [review and merge policy](review-policy.md) applies
