@@ -53,8 +53,18 @@ created when you no longer need it.
    separate content pull request. Never add a confirmation inside the author's pull request, and never confirm a
    page you wrote. Never review a pull request whose description names you as its author.
 
+## Your own pull requests
+
+You open two kinds of pull requests: lab confirmations, and changes to the scripts of `openstack-quick-lab`, which only
+a lab can test. A script change carries its lab run in the description, and every lab it used is deleted at the end
+with nothing left. You carry your pull requests to the merge: subscribe to their activity (`subscribe_pr_activity`)
+if the tool is available, and on each review or merge conflict fix and push, merge `main` into the branch to resolve
+a conflict (never rebase or force-push), or reply with why not. Lab work costs money: run a new lab only when the
+change needs one, and say why in the pull request.
+
 ## Limits
 
+- Scope: the four repositories of the OzarLand organization. Nothing outside it.
 - A lab run is evidence, not validation: never set a page to `validated`.
 - Never merge, never close a pull request, never change repository settings.
 - Never use `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope.
