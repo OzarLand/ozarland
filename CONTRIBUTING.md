@@ -1,7 +1,18 @@
 # Contributing to OzarLand
 
 Thank you for sharing what you know. This guide applies to every OzarLand community repository. It is short on
-purpose: the goal is to make sharing easy, not to make it formal. Any real experience is worth sharing.
+purpose: the goal is to make sharing easy, not to make it formal. Any real experience is worth sharing, and you do
+not need to be a maintainer or an OpenStack expert to take part.
+
+```mermaid
+flowchart LR
+    A["🔎 Find a problem"] --> B["💬 Share your<br/>experience"] --> C["✍️ Propose an<br/>improvement"] --> D["👥 Review<br/>together"] --> E["🌱 The knowledge<br/>grows"]
+    E -.-> A
+    classDef step fill:#f3f4f6,stroke:#9ca3af,color:#111827
+    classDef grow fill:#dcfce7,stroke:#16a34a,color:#14532d
+    class A,B,C,D step
+    class E grow
+```
 
 ## How the paths fit together
 
@@ -31,6 +42,9 @@ flowchart LR
 | Fix a typo, a broken link, an outdated command | Open a pull request directly, no issue needed |
 | Propose a change to the community itself (templates, structure, a new repository) | Start an **Ideas** discussion in `ozarland` |
 
+Small contributions count too: testing a procedure on a lab, reviewing someone else's pull request, suggesting a
+topic or a repository, or explaining a difficult concept to a newcomer in a discussion.
+
 New to OpenStack or to contributing? Start with [your first contribution](newcomers/first-contribution.md) and the
 tasks labelled `good first contribution`.
 
@@ -47,6 +61,10 @@ Operational knowledge is only reusable with its context. Whatever you share, giv
 - the **environment conditions that matter** (topology, network plugin, storage backend, OS);
 - what you **already checked** or **actually did**, with the commands;
 - what you **are not sure about**.
+
+Say also **how far it was checked**: run in production, tested on a lab, or an approach not yet tried. Pages
+record this as a status (`draft`, `lab-verified`, `validated`, `experimental`; see the
+[knowledge lifecycle](docs/knowledge-lifecycle.md)), and no page claims more checking than it has evidence for.
 
 The templates ask for these fields so that you do not have to remember them. See
 [content metadata](docs/conventions/content-metadata.md) for the full list.

@@ -80,8 +80,8 @@ Six days after the first content repository was created:
   [upgrade report](https://github.com/OzarLand/kolla-ansible-deployment-patterns/blob/main/version-notes/upgrade-report-2025.1-to-2026.1-all-in-one-lab.md)
   tells the rest.
 - **Human contributions so far:** none outside the maintainer. Today OzarLand is built by its maintainer with AI
-  agents. Corrections, confirmations of a page on your platform and questions are welcome now; wider contributions
-  will open once the knowledge base is ready.
+  agents. The project is open to everyone: corrections, confirmations of a page on your platform, questions, new
+  pages and reviews are all welcome now ([how to contribute](../CONTRIBUTING.md)).
 
 [^1]: `docker exec openvswitch_db ovs-appctl -t ovs-vswitchd version` fails on Kolla-Ansible 2026.1 with a stale
     pidfile while ovs-vswitchd is running. The pages now run `ovs-appctl` in the `openvswitch_vswitchd` container.
