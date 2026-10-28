@@ -13,8 +13,8 @@ experience.
   <img src="https://img.shields.io/badge/stage-early-orange.svg" alt="Stage: early">
 <!-- status-badges:start -->
   <img src="https://img.shields.io/badge/pages-111-informational.svg" alt="111 pages">
-  <img src="https://img.shields.io/badge/lab--verified-53-16a34a.svg" alt="53 pages lab-verified">
-  <img src="https://img.shields.io/badge/draft-58-9ca3af.svg" alt="58 pages draft">
+  <img src="https://img.shields.io/badge/lab--verified-52-16a34a.svg" alt="52 pages lab-verified">
+  <img src="https://img.shields.io/badge/draft-59-9ca3af.svg" alt="59 pages draft">
   <img src="https://img.shields.io/badge/validated-0-2563eb.svg" alt="0 pages validated">
 <!-- status-badges:end -->
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="License: Apache-2.0"></a>
@@ -133,14 +133,14 @@ Status, planned and archived repositories: [current repositories](docs/repositor
 %%{init: {"theme": "base", "themeVariables": {"pie1": "#d1d5db", "pie2": "#16a34a"}}}%%
 pie showData
     title Published pages by status
-    "draft" : 58
-    "lab-verified" : 53
+    "draft" : 59
+    "lab-verified" : 52
 ```
 
 | Repository | Progress | Lab-verified or validated |
 |---|---|---:|
 | 🔧 VM runbooks | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ | 44 / 72 |
-| 🏗️ Deployment patterns | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ | 9 / 39 |
+| 🏗️ Deployment patterns | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ | 8 / 39 |
 
 <sub>🟩 lab-verified · ⬜ draft · one square is about 10 % of the repository's pages</sub>
 <!-- status-progress:end -->
