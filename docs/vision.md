@@ -2,11 +2,46 @@
 
 ## Mission
 
-> **OzarLand is a collaborative knowledge-sharing space for OpenStack operators.**
+> **OzarLand is a community-driven space for OpenStack operators to share knowledge, solve operational challenges,
+> and make OpenStack operations better together.**
+
+*OzarLand: a shared land for better OpenStack operations.*
 
 OzarLand exists so that the people who run OpenStack platforms can learn from each other. It collects what
 operators know from experience: how they deploy, what breaks, how they diagnose it, how they fix it, how they
 upgrade, and what they would do differently next time.
+
+## What the name means
+
+OzarLand is a shared land for open source, where OpenStack operators help each other learn, troubleshoot and improve
+operations.
+
+| | |
+|---|---|
+| **Ozar** | The initiative's own name and identity. |
+| **Land** | A shared place: everyone can bring their experience, learn from others and help the community grow. |
+| **Open source** | Everything is public, under the Apache License 2.0, and improves through the contributions of the people who use it. |
+
+This is the meaning the project gives itself, not a claim about where the word "Ozar" comes from.
+
+## Where it comes from, and where it is going
+
+OzarLand started as a personal initiative by Soufian Zaouam to share practical OpenStack operational knowledge. The
+vision is to grow it into a collaborative space where OpenStack operators exchange experience, document solutions and
+help one another operate more reliable platforms. Its future should not depend on its original author: it should grow
+through the people who use it, improve it, question it and add their own experience. Today it is still small, built by
+its maintainer with AI agents ([how OzarLand is built](how-ozarland-is-built.md)), and open to everyone.
+
+## Core principles
+
+| | Principle | What it means in practice |
+|:-:|---|---|
+| 🤝 | **Community first** | The project belongs to the people who contribute to it, not to one person or one company. |
+| 📚 | **Knowledge sharing** | Practical experience is worth more when it is shared. |
+| ⚙️ | **Operational excellence** | Real-world operations: troubleshooting, maintenance, upgrades, reliability. |
+| 🔓 | **Open collaboration** | Anyone can contribute, whatever their experience. |
+| 🛠️ | **Practical knowledge** | Actionable pages, tested procedures and real lessons, with how much each was checked. |
+| 🌱 | **Collective improvement** | Every useful contribution can help another operator solve a problem. |
 
 ## The problem OzarLand addresses
 
@@ -45,7 +80,7 @@ place to learn from one another and to build a common body of operational knowle
 - It does not replace upstream documentation. It complements it with operational experience and links to it.
 - It is not a support channel with response-time commitments. People help each other when they can.
 
-## Principles
+## How the principles apply
 
 1. **Collaboration over authority.** Nobody owns the right answer. Content is improved by comparing experiences.
 2. **Openness.** Public discussions, public content, public decisions. Anyone can contribute, review and reuse.

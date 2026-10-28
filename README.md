@@ -1,8 +1,13 @@
 <div align="center">
 
+<img src="assets/ozarland-welcome-banner.jpg" alt="Welcome to OzarLand: signposts to the runbooks, deployment patterns, quick lab, operator skills and community, in front of an island city" width="720">
+
 # OzarLand
 
-**What OpenStack operators learn running it: fixes, deployment choices, experience.**
+**A shared land for better OpenStack operations.**
+
+A community-driven space where OpenStack operators share what they learn running it: fixes, deployment choices,
+experience.
 
 <p>
   <img src="https://img.shields.io/badge/stage-early-orange.svg" alt="Stage: early">
@@ -21,6 +26,7 @@
   <a href="#-what-makes-a-page-trustworthy"><b>Trust</b></a> ·
   <a href="#-repositories"><b>Repositories</b></a> ·
   <a href="#-project-status"><b>Status</b></a> ·
+  <a href="#-where-ozarland-comes-from"><b>Origins</b></a> ·
   <a href="CONTRIBUTING.md"><b>Contribute</b></a>
 </p>
 
@@ -28,7 +34,11 @@
 
 ---
 
-- 🧭 **Open to everyone**, whatever tool deployed your cloud.
+| 🏷️ **Ozar** | 🌍 **Land** | 🔓 **Open source** |
+|---|---|---|
+| The initiative's own name and identity | A shared place where operators gather, compare approaches and help each other | Everything is public and Apache-2.0, and improves through contributions |
+
+- 🧭 **Open to everyone**, whatever tool deployed your cloud, whatever your experience.
 - 🔎 **Every page names its source:** a failure reproduced on a lab, the maintainer's book, or upstream
   documentation and release notes.
 - 🤖 **[When AI meets OpenStack](docs/how-ozarland-is-built.md):** AI agents write, review and lab-test pages;
@@ -149,17 +159,21 @@ pie showData
 
 More in [mission and principles](docs/vision.md).
 
-## 👤 Who is behind OzarLand
+## 🌱 Where OzarLand comes from
 
-OzarLand was started in October 2026 by Soufian Zaouam, OpenStack operator and author of
-[*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), from which
-many runbooks are drawn. Today it is built by its maintainer with AI agents
-([When AI meets OpenStack](docs/how-ozarland-is-built.md)). Run in a personal capacity; no vendor funds or directs
-OzarLand.
+OzarLand started in October 2026 as a personal initiative by Soufian Zaouam, OpenStack operator and author of
+[*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow) (the source
+of many runbooks), to share practical OpenStack operational knowledge. So far it is built by its maintainer with AI
+agents ([When AI meets OpenStack](docs/how-ozarland-is-built.md)). It is run in a personal capacity, and no vendor
+funds or directs it.
+
+The aim is for it to grow into a space where operators exchange experience, document solutions and help each other
+run more reliable platforms. Its future should not depend on one person.
 
 > [!TIP]
-> Corrections, confirmations of a page on your platform and questions are welcome now; wider contributions will
-> open once the knowledge base is ready.
+> **OzarLand is open to everyone.** Your knowledge, questions, corrections and ideas are welcome now:
+> find a problem → share your experience → propose an improvement → review together → help the knowledge grow.
+> [Your first contribution](newcomers/first-contribution.md) starts with ten minutes.
 
 ## 📚 Learn more
 
