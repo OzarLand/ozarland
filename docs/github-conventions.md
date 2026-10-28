@@ -83,6 +83,6 @@ Settings that cannot be changed from a repository and need an organization owner
 | Discussions | Enabled on `ozarland` first, then on each community repository |
 | Default labels | The taxonomy above, applied organization-wide |
 | Visibility | Public, once the [go-public checklist](launch-plan.md#going-public-checklist) is complete |
-| Member repository creation | Owners only, to avoid repository sprawl; repositories are created from a decision record |
+| Member repository creation | Owners only, to avoid repository sprawl; repositories are created from an *Ideas* discussion |
 | Commit sign-off on web commits | Required (already set) |
 | Two-factor authentication | Required for members |

@@ -29,7 +29,7 @@ The four statuses a published page can carry, with the same wording on every Oza
 | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
 
 <!-- status-summary:start -->
-Today (counted from each page's `status:` field by `tools/status_blocks.py`): **0 validated, 53 lab-verified, 58 draft, 0 experimental**, out of the 111 pages of the runbook (72) and deployment-pattern (39) repositories.
+Today (counted from each page's `status:` field by `tools/status_blocks.py`): **0 validated, 52 lab-verified, 59 draft, 0 experimental**, out of the 111 pages of the runbook (72) and deployment-pattern (39) repositories.
 <!-- status-summary:end -->
 ## The flow
 

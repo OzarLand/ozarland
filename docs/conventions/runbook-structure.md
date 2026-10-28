@@ -34,7 +34,8 @@ same order, so that someone under pressure can find what they need without readi
 Steps that depend on the deployment method are marked with a label line:
 
 ```markdown
-**Kolla-Ansible:** `docker restart nova_compute`
+**Kolla-Ansible:** `sudo systemctl restart kolla-nova_compute-container.service` (since 2026.1, each container runs
+from a systemd unit that undoes a plain `docker stop`)
 **OpenStack-Ansible:** `systemctl restart nova-compute` inside the container
 **Any:** `openstack compute service set --enable <host> nova-compute`
 ```

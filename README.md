@@ -13,8 +13,8 @@ experience.
   <img src="https://img.shields.io/badge/stage-early-orange.svg" alt="Stage: early">
 <!-- status-badges:start -->
   <img src="https://img.shields.io/badge/pages-111-informational.svg" alt="111 pages">
-  <img src="https://img.shields.io/badge/lab--verified-53-16a34a.svg" alt="53 pages lab-verified">
-  <img src="https://img.shields.io/badge/draft-58-9ca3af.svg" alt="58 pages draft">
+  <img src="https://img.shields.io/badge/lab--verified-52-16a34a.svg" alt="52 pages lab-verified">
+  <img src="https://img.shields.io/badge/draft-59-9ca3af.svg" alt="59 pages draft">
   <img src="https://img.shields.io/badge/validated-0-2563eb.svg" alt="0 pages validated">
 <!-- status-badges:end -->
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="License: Apache-2.0"></a>
@@ -38,7 +38,8 @@ experience.
 |---|---|---|
 | The initiative's own name and identity | A shared place where operators gather, compare approaches and help each other | Everything is public and Apache-2.0, and improves through contributions |
 
-- 🧭 **Open to everyone**, whatever tool deployed your cloud, whatever your experience.
+- 🧭 **Open to everyone**, whatever tool deployed your cloud, whatever your experience. The pages so far come from
+  Kolla-Ansible labs; other deployment methods are welcome.
 - 🔎 **Every page names its source:** a failure reproduced on a lab, the maintainer's book, or upstream
   documentation and release notes.
 - 🤖 **[When AI meets OpenStack](docs/how-ozarland-is-built.md):** AI agents write, review and lab-test pages;
@@ -116,7 +117,7 @@ flowchart TB
 | Repository | What it holds |
 |---|---|
 | 🔧 [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks) | Symptom-driven runbooks for instance problems |
-| 🏗️ [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy with Kolla-Ansible (one of the common tools that install OpenStack), and what each choice implies |
+| 🏗️ [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | Ways to deploy with Kolla-Ansible (one of the common tools that install OpenStack), and what each choice implies. Written so far from upstream documentation and lab builds |
 | 🧪 [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) | A disposable all-in-one OpenStack on one VM, with exercises that use the runbooks |
 | 🤖 [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that bring the runbooks, deployment patterns and an operating method into incident analysis, change review and troubleshooting, with the validation status of every procedure |
 | `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
@@ -132,14 +133,14 @@ Status, planned and archived repositories: [current repositories](docs/repositor
 %%{init: {"theme": "base", "themeVariables": {"pie1": "#d1d5db", "pie2": "#16a34a"}}}%%
 pie showData
     title Published pages by status
-    "draft" : 58
-    "lab-verified" : 53
+    "draft" : 59
+    "lab-verified" : 52
 ```
 
 | Repository | Progress | Lab-verified or validated |
 |---|---|---:|
 | 🔧 VM runbooks | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ | 44 / 72 |
-| 🏗️ Deployment patterns | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ | 9 / 39 |
+| 🏗️ Deployment patterns | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ | 8 / 39 |
 
 <sub>🟩 lab-verified · ⬜ draft · one square is about 10 % of the repository's pages</sub>
 <!-- status-progress:end -->
@@ -164,8 +165,8 @@ More in [mission and principles](docs/vision.md).
 OzarLand started in October 2026 as a personal initiative by Soufian Zaouam, OpenStack operator and author of
 [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow) (the source
 of many runbooks), to share practical OpenStack operational knowledge. So far it is built by its maintainer with AI
-agents ([When AI meets OpenStack](docs/how-ozarland-is-built.md)). It is run in a personal capacity, and no vendor
-funds or directs it.
+agents ([When AI meets OpenStack](docs/how-ozarland-is-built.md)). It is run in a personal capacity and is free.
+Felcloud, OzarLand's first sponsor, provides the cloud credit for its labs; sponsors have no say over the content.
 
 The aim is for it to grow into a space where operators exchange experience, document solutions and help each other
 run more reliable platforms. Its future should not depend on one person.
@@ -181,7 +182,7 @@ run more reliable platforms. Its future should not depend on one person.
 |---|---|---|
 | [Mission, principles and who OzarLand is for](docs/vision.md) | [How to contribute](CONTRIBUTING.md), short on purpose | [Governance](docs/governance.md) |
 | [What you will find, and how repositories are organised](docs/repositories.md) | [Content conventions](docs/conventions/README.md) | [Agents](docs/agents.md) and the [review and merge policy](docs/review-policy.md) |
-| [Glossary](newcomers/glossary.md) | [Shared templates](community/README.md) | [GitHub conventions](docs/github-conventions.md) and [decision records](docs/adr/README.md) |
+| [Glossary](newcomers/glossary.md) | [Shared templates](community/README.md) | [GitHub conventions](docs/github-conventions.md) |
 
 ## ⚖️ License
 

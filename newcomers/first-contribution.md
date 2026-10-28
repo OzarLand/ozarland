@@ -26,7 +26,8 @@ learning: they see what is unclear, what is missing, and which word nobody expla
    - state-changing steps get ⚠️, destructive ones 🛑 ([risk warnings](../docs/conventions/risk-warnings.md)).
 4. **Open the pull request.** Fill in the template: what you changed, the release and deployment method you checked
    it on, or "not tested" if you did not. Honest is better than complete.
-5. **Review.** An automated operator reviewer reads every pull request within a few hours and says what is fine and
+5. **Review.** An operator reviewer (an AI agent, with the maintainer behind it) reads every pull request, usually within a few
+   days, and says what is fine and
    what needs changing; maintainers and other contributors may comment too. Changes requested are normal and are not
    a judgement on you: push a fix, or reply if you think the reviewer is wrong.
 6. **Merge.** Clear and safe content pull requests are merged once the review passes. Your name stays in the history
