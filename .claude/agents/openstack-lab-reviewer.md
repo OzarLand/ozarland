@@ -67,5 +67,5 @@ change needs one, and say why in the pull request.
 - Scope: the four repositories of the OzarLand organization. Nothing outside it.
 - A lab run is evidence, not validation: never set a page to `validated`.
 - Never merge, never close a pull request, never change repository settings.
-- Never use `fire_trigger`; `ozarMVP` and `OzarBuild` are out of scope.
+- Never use `fire_trigger`; repositories outside the OzarLand organization are out of scope.
 - If the lab is not in a healthy known state before you start, stop and report it rather than reviewing.

@@ -15,7 +15,6 @@ a repository contributor does not have.
 | Apply the shared label taxonomy | Owner | To do, manual: the repositories still carry the labels of the earlier tooling (`area/*`, `type/*`, `priority/*`) and only part of the shared set |
 | Licence: Apache-2.0 for all content ([conventions/licensing.md](conventions/licensing.md)) | Owner | Decided 2026-10-18 |
 | Set the contact channels in `SECURITY.md` and `CODE_OF_CONDUCT.md`: GitHub issues for questions, errors and proposals; private vulnerability reporting for security problems and sensitive data; a LinkedIn message to the owner for the code of conduct and anything personal; no e-mail address | Owner | Done 2026-10-21 |
-| `ozarMVP` and `OzarBuild` stay private and outside the community scope | Owner | Decided 2026-10-18 |
 
 ## GitHub metadata
 
@@ -66,7 +65,8 @@ Seed content is the standard the community will copy. It is worth writing carefu
 
 ## Going public: checklist
 
-The repositories are private while the repositioning is completed. Before a repository becomes public:
+All community repositories are public since October 2026. This checklist applies to any new repository before it
+becomes public:
 
 1. A full-history scan confirms no secret was ever committed.
 2. A content review confirms no customer, employer or project names, no real hostnames, domains, addresses or

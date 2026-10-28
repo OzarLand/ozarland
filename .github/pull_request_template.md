@@ -7,7 +7,7 @@
 - [ ] Community documentation (mission, principles, governance, conventions, plans)
 - [ ] Shared templates or blueprints under `community/`
 - [ ] GitHub issue, pull request or discussion forms
-- [ ] Decision record in `docs/adr/`
+- [ ] Decision and reasons recorded in the linked issue or discussion
 - [ ] Fix (typo, link, outdated statement)
 
 ## Checklist

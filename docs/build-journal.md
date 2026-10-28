@@ -35,8 +35,7 @@ How each number is counted:
 
 ## 18 October: the repositioning
 
-OzarLand had been, since 4 October, an operator toolkit project. On 18 October it became a knowledge-sharing space
-([ADR-0008](adr/0008-community-knowledge-sharing-space.md)). Three pull requests in `ozarland`: the repositioning,
+OzarLand had been, since 4 October, an operator toolkit project. On 18 October it became a knowledge-sharing space. Three pull requests in `ozarland`: the repositioning,
 ten seed runbooks written from the incidents of the owner's book *OpenStack, the Day After Tomorrow* (as a blueprint
 in `ozarland`), and the two content repositories created and marked active. No agent definition existed yet; these
 pull requests carry no `Author:` line.
@@ -102,8 +101,7 @@ Counted at 21:30 UTC.
   versus ML2/OVN with Kolla-Ansible), the 2025.1 to 2026.1 version notes rewritten as an upgrade playbook with a
   go / no-go checklist, provenance on every page, and READMEs that start from what the reader sees. In
   `openstack-quick-lab`: the scripts refuse to start without a cost estimate. In `ozarland`: one status table,
-  provenance in the templates, who is behind OzarLand, the build journal, and the Felcloud wording, recorded as
-  [ADR-0010](adr/0010-felcloud-wording.md).
+  provenance in the templates, who is behind OzarLand, the build journal, and the Felcloud wording.
 - **The owner's production report:** the owner reported that the behaviour of three runbooks (restarting
   `nova_libvirt`, `nova-compute` down with instances running, restarting the Open vSwitch agent) matches what they
   observed in production on an earlier Kolla-Ansible release. It is recorded on each page as an operator entry. After

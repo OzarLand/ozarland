@@ -30,9 +30,9 @@ the rest of this page.
 | Repository | Role | Status |
 |---|---|---|
 | [`ozarland`](https://github.com/OzarLand/ozarland) | Community home: mission, principles, contribution model, shared templates, repository blueprints, open questions | **Active**: see the [Discussions](https://github.com/OzarLand/ozarland/discussions) and the [newcomer path](../newcomers/README.md) |
-| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**: what it holds and each page's status are in its [index](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) |
+| [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | Ways to deploy OpenStack with Kolla-Ansible, written so far from upstream documentation and lab builds: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**: what it holds and each page's status are in its [index](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) |
 | [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**: what it holds and each page's status are in its [index](https://github.com/OzarLand/openstack-vm-runbooks#index) |
-| [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab) | Try OpenStack in about one hour: an all-in-one Kolla-Ansible lab on one VM, guided exercises that use the runbooks, one command to delete everything; see [ADR-0009](adr/0009-openstack-quick-lab-repository.md) | **Active**: variants and exercises are listed in its [README](https://github.com/OzarLand/openstack-quick-lab#readme) |
+| [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab) | Try OpenStack in about one hour: an all-in-one Kolla-Ansible lab on one VM, guided exercises that use the runbooks, one command to delete everything | **Active**: variants and exercises are listed in its [README](https://github.com/OzarLand/openstack-quick-lab#readme) |
 | [`openstack-operator-skills`](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that apply an operating method and this knowledge to incidents, changes, maintenance, VM troubleshooting and Kolla-Ansible work; every procedure states its validation status, and the skills never act on a platform themselves | **Active**: validation coverage per skill is in its [README](https://github.com/OzarLand/openstack-operator-skills#-validation-status) |
 | `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2. Until it exists, Kolla-Ansible version notes and upgrade reports are in `kolla-ansible-deployment-patterns` (`version-notes/`) |
 | `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
@@ -44,8 +44,8 @@ can be created as soon as the first content is ready. Blueprints are removed onc
 are welcome too: start an [*Ideas* discussion](https://github.com/OzarLand/ozarland/discussions/new?category=ideas).
 
 Earlier OzarLand repositories that developed operator tooling (`ozar-deploy`, `ozar-ops`, `ozar-kb`, `ozar-lab`)
-are archived. They are not part of the community's scope and are kept read-only for reference. The reasoning
-behind the repositioning is recorded in [ADR-0008](adr/0008-community-knowledge-sharing-space.md).
+were retired and deleted when OzarLand became a knowledge-sharing space in October 2026. They are not part of the
+community's scope.
 
 ## Guiding rule
 
@@ -139,7 +139,7 @@ which is why they are grouped first and split later.
 ## Creating a repository
 
 1. Propose it in a Discussion (*Ideas*) with the content that is ready to go into it.
-2. Record the decision in a short [decision record](adr/README.md).
+2. Record the decision and its reasons in that discussion.
 3. Create it from the blueprint under [`community/blueprints/`](../community/blueprints/) and the shared files under
    [`community/repo-template/`](../community/repo-template/).
 4. Enable Discussions, apply the shared labels, and add it to [current repositories](#current-repositories) and to the
