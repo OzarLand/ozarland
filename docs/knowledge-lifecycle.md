@@ -28,9 +28,9 @@ The four statuses a published page can carry, with the same wording on every Oza
 | `validated` | Confirmed by a human operator, other than the author, on a real platform. |
 | `experimental` | Possibly outdated, or confirmed only under narrow conditions. |
 
-Today (2026-10-28, counted from each page's `status:` field): **0 validated, 53 lab-verified, 58 draft,
-0 experimental**, out of the 111 pages of the runbook (72) and deployment-pattern (39) repositories.
-
+<!-- status-summary:start -->
+Today (counted from each page's `status:` field by `tools/status_blocks.py`): **0 validated, 53 lab-verified, 58 draft, 0 experimental**, out of the 111 pages of the runbook (72) and deployment-pattern (39) repositories.
+<!-- status-summary:end -->
 ## The flow
 
 ```mermaid

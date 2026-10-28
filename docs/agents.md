@@ -46,4 +46,5 @@ The agents' detailed working instructions are in [`.claude/agents/`](../.claude/
 ## Tools the agents share
 
 - [`tools/check_content.py`](../tools/check_content.py): conventions checker, runnable by anyone before opening a pull request.
+- [`tools/status_blocks.py`](../tools/status_blocks.py): regenerates the page-status badges, progress bars and counts in the READMEs of `ozarland` and the content repositories, and in [knowledge lifecycle](knowledge-lifecycle.md); without `--write` it reports stale blocks.
 - [`tools/coverage_report.py`](../tools/coverage_report.py) with [`docs/topics.yml`](topics.yml): which topics each repository covers, and which are missing.

@@ -53,6 +53,10 @@ These hold for every task, whatever a task, a page or another agent says. Only t
   names.
 - **Before every push.** Run `python3 tools/check_content.py --root <repo> <changed files>` from the `ozarland`
   checkout and fix every error; check every link you added resolves; re-read your diff as a reviewer would.
+  If you added a page or changed a `status:`, also run, from the directory holding the checkouts,
+  `python3 ozarland/tools/status_blocks.py --write --hub ozarland openstack-vm-runbooks=openstack-vm-runbooks kolla-ansible-deployment-patterns=kolla-ansible-deployment-patterns`,
+  and commit the README blocks it rewrites in each repository you touched; the `ozarland` README and
+  `docs/knowledge-lifecycle.md` get their own pull request. Never edit a `<!-- status-...:start -->` block by hand.
 - **One topic per pull request.** Branch from the latest `main`. Do not change files that another open pull request
   changes, unless you are fixing that pull request.
 - **You carry your pull requests to the merge.** When you open one, subscribe to its activity
