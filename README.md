@@ -1,9 +1,8 @@
 # OzarLand
 
 **What OpenStack operators learn running it: fixes, deployment choices, experience.**
-Early-stage, and every runbook names its source: of the 25 runbooks, 14 draw on a failure reproduced on a lab, 11 on the
-maintainer's book and 3 on upstream documentation (some on two); the deployment pages come from lab builds and
-release notes.
+Early-stage, and every page names its source: a failure reproduced on a lab, the maintainer's book, or upstream
+documentation and release notes.
 Open to everyone, whatever tool deployed your cloud.
 *[When AI meets OpenStack](docs/how-ozarland-is-built.md): AI agents write, review and lab-test pages; people decide and confirm.*
 
@@ -15,6 +14,7 @@ Open to everyone, whatever tool deployed your cloud.
 | 🧪 **Want to try OpenStack** | [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab): one VM, about one hour, one command to delete it |
 | 🔧 **Fixing a problem with a VM** | [VM runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) (step-by-step guides to diagnose and fix a known problem): find your symptom |
 | 🏗️ **Deploying a platform** | [Deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) (how platforms are built with Kolla-Ansible, today from lab deployments, and what each choice implies) |
+| 🤖 **Using an AI assistant on call** | [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills): Claude skills that apply this knowledge and say how well each procedure was tested |
 | 🤝 **Ready to contribute** | [Your first contribution](newcomers/first-contribution.md): start with ten minutes |
 
 Nothing matches, or a question? [Start a discussion](newcomers/start-a-discussion.md) (the public question-and-answer
@@ -56,6 +56,7 @@ More in [mission and principles](docs/vision.md).
 | [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks) | Symptom-driven runbooks for instance problems |
 | [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy with Kolla-Ansible (one of the common tools that install OpenStack), and what each choice implies |
 | [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) | A disposable all-in-one OpenStack on one VM, with exercises that use the runbooks |
+| [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that bring the runbooks, deployment patterns and an operating method into incident analysis, change review and troubleshooting, with the validation status of every procedure |
 | `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
@@ -71,8 +72,9 @@ funds or directs OzarLand.
 
 ## Project status (October 2026)
 
-33 pages are published: 25 runbooks and 8 deployment pages. 12 runbooks are `lab-verified` and none is `validated`
-yet: no human operator other than the author has confirmed a page on a real platform. Read every page as a
+111 pages are published: 72 in the VM runbooks (runbooks and log-reading guides) and 39 in the deployment patterns.
+53 are `lab-verified` (44 and 9), 58 are `draft`, and none is `validated` yet: no human operator other than the
+author has confirmed a page on a real platform. Lab verification is run by an AI lab agent, not by a person. Read every page as a
 well-documented lead, not as a proven procedure, and check its *Validity and limits* section.
 
 ## Learn more
