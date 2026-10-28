@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏝️ OzarLand
+# OzarLand
 
 **What OpenStack operators learn running it: fixes, deployment choices, experience.**
 
@@ -93,7 +93,7 @@ How many pages carry each status today: [page statuses](docs/knowledge-lifecycle
 
 ```mermaid
 flowchart TB
-    HUB["🏝️ ozarland (here)<br/>newcomer path · rules · templates · Discussions"]
+    HUB["ozarland (here)<br/>newcomer path · rules · templates · Discussions"]
     HUB --> KB
     subgraph KB ["Knowledge and tools"]
         direction LR
@@ -109,7 +109,7 @@ flowchart TB
 | 🏗️ [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy with Kolla-Ansible (one of the common tools that install OpenStack), and what each choice implies |
 | 🧪 [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) | A disposable all-in-one OpenStack on one VM, with exercises that use the runbooks |
 | 🤖 [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that bring the runbooks, deployment patterns and an operating method into incident analysis, change review and troubleshooting, with the validation status of every procedure |
-| 🏝️ `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
+| `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
 
