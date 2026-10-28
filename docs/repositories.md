@@ -19,7 +19,7 @@ you will find:
 Every piece of content states the OpenStack release, the components involved, the deployment method and the
 conditions under which it was observed. A solution that worked in one environment is documented as exactly that,
 not as a universal truth. See [knowledge lifecycle](knowledge-lifecycle.md) for how content matures from an
-open question to a procedure validated by several operators.
+open question to a procedure validated by a human operator other than its author.
 
 ## Current repositories
 
@@ -33,6 +33,7 @@ the rest of this page.
 | [`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | How operators deploy OpenStack with Kolla-Ansible: topologies, network and storage choices, inventories, configuration layout, common deployment errors, version differences | **Active**: what it holds and each page's status are in its [index](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) |
 | [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) | Diagnosing and resolving instance problems: stuck states, scheduling, boot, migration, networking, volume attachment, with Nova, Neutron, Glance and Cinder diagnostics | **Active**: what it holds and each page's status are in its [index](https://github.com/OzarLand/openstack-vm-runbooks#index) |
 | [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab) | Try OpenStack in about one hour: an all-in-one Kolla-Ansible lab on one VM, guided exercises that use the runbooks, one command to delete everything; see [ADR-0009](adr/0009-openstack-quick-lab-repository.md) | **Active**: variants and exercises are listed in its [README](https://github.com/OzarLand/openstack-quick-lab#readme) |
+| [`openstack-operator-skills`](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that apply an operating method and this knowledge to incidents, changes, maintenance, VM troubleshooting and Kolla-Ansible work; every procedure states its validation status, and the skills never act on a platform themselves | **Active**: validation coverage per skill is in its [README](https://github.com/OzarLand/openstack-operator-skills#-validation-status) |
 | `openstack-upgrade-playbooks` | Upgrade preparation, prerequisites, health checks, common problems, rollback limits and real upgrade reports, per release and per deployment method | Planned, priority 2. Until it exists, Kolla-Ansible version notes and upgrade reports are in `kolla-ansible-deployment-patterns` (`version-notes/`) |
 | `openstack-operations-runbooks` | Candidate umbrella for incident, networking, storage and performance runbooks once the first contributions show how they should be grouped | Under evaluation |
 

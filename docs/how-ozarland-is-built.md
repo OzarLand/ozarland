@@ -58,6 +58,8 @@ flowchart LR
 
 ## What has been done so far (counted on 2026-10-24)
 
+A snapshot of that date. Current counts: [page statuses](knowledge-lifecycle.md#page-statuses).
+
 Six days after the first content repository was created:
 
 - **33 pages**: 25 runbooks in [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and 8 pages in

@@ -33,7 +33,8 @@ are expected to be recruited from the first active contributors; see the [launch
 - Acknowledge new questions and contributions within a reasonable time, and say so when they cannot.
 - Review on substance (is it accurate, safe, well scoped) rather than on style.
 - Never merge content that contains secrets, identifiable infrastructure data or unflagged destructive commands.
-- Keep the maturity labels honest: a page is "validated" only when more than one operator has confirmed it.
+- Keep the maturity labels honest: a page is "validated" only when a human operator other than its author has
+  confirmed it on a real platform ([knowledge lifecycle](knowledge-lifecycle.md#page-statuses)).
 - Prefer merging an imperfect but correct contribution and improving it later over blocking it.
 
 ## Independence
