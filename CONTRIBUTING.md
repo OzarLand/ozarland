@@ -78,6 +78,10 @@ The templates ask for these fields so that you do not have to remember them. See
   Reviews focus on accuracy, safety and scope, not on style.
 - Before opening a pull request, you can run the same checks the reviewer runs:
   `python3 tools/check_content.py --root <your clone> <changed files>` (the script is in this repository).
+- The status badges, progress bars and counts in the READMEs are generated: after adding a page or changing a
+  `status:`, run `tools/status_blocks.py --write` from a directory holding the checkouts (usage at the top of the
+  script) and commit the README changes it makes. Never edit the text between `<!-- status-...:start -->` and
+  `<!-- status-...:end -->` by hand.
 - Contributions are published under the Apache License 2.0, which covers all content, documentation and code alike
   (see [licensing](docs/conventions/licensing.md)).
 

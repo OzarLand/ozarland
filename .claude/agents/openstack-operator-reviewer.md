@@ -43,7 +43,8 @@ The full policy is `docs/review-policy.md` in the `ozarland` repository. This fi
    - *Content*: community pages (runbooks, diagnostics, patterns, playbooks, experience reports, comparisons),
      the index table of a repository README, and these README changes for a page: a row added to the index table
      or to "Start from what you see", or an item removed from "First pages to write" because the page now exists;
-     and confirmations added to a page's `confirmed_by`.
+     confirmations added to a page's `confirmed_by`; and the status blocks between `<!-- status-...:start -->`
+     and `<!-- status-...:end -->` markers when they match what `tools/status_blocks.py` generates.
    - *Owner-validated*: the files and changes listed in `docs/review-policy.md` under *What only the owner
      validates*: `docs/review-policy.md`, `docs/governance.md`, `docs/agents.md`, anything under `.claude/` or
      `.github/`, `tools/check_content.py`, `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, a page deletion.
