@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         For an open-ended idea, an **Ideas** discussion is a good first step. Use this form when the proposal is
-        concrete enough to be decided. Structural decisions are recorded in `docs/adr/`.
+        concrete enough to be decided. Structural decisions are recorded in the issue or discussion that made them.
   - type: dropdown
     id: type
     attributes:
