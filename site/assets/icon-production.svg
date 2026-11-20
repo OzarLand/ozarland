@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="title">
+  <title id="title">Production Guide icon</title>
+  <g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 39h18L30 17H18zM18 17h12l-1-6h-10z"/>
+<path d="M21 11V7h6v4M20 24h8M21 31h6M24 17v22"/>
+<path d="M18 8 8 4M30 8l10-4" stroke="#F0B440"/>
+<circle cx="24" cy="7" r="2" fill="#F0B440"/>
+  </g>
+</svg>

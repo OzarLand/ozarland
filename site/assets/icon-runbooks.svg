@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="title">
+  <title id="title">VM Runbooks icon</title>
+  <g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 35h34M10 35c0-10 6-17 14-17s14 7 14 17M14 35c0-7 4-12 10-12s10 5 10 12"/>
+<path d="M24 8v7M20 8h8M20 15h8M21 11h6"/>
+<path d="M34 11l8-4M35 14l9 0" stroke="#F0B440"/>
+  </g>
+</svg>
