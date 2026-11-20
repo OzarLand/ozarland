@@ -51,6 +51,6 @@ how everything works, including the people who wrote the runbooks.
 
 - [Start a discussion](start-a-discussion.md): ask, share an experience or compare approaches.
 - Open tasks: [`good first contribution` across OzarLand](https://github.com/search?q=org%3AOzarLand+label%3A%22good+first+contribution%22+state%3Aopen&type=issues).
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): confirm a runbook, add a variant for your deployment method, or share a problem you solved.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): describe how you deploy.
+- [VM runbooks](https://academy.ozarland.com/runbooks/): confirm a runbook, add a variant for your deployment method, or share a problem you solved.
+- [Deployment patterns](https://academy.ozarland.com/deploy/): describe how you deploy.
 - [CONTRIBUTING.md](../CONTRIBUTING.md): the full rules, short on purpose.

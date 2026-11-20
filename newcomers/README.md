@@ -20,6 +20,6 @@ shows how.
 
 ## Go further
 
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): diagnosing and resolving instance problems.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): how operators deploy OpenStack with Kolla-Ansible.
+- [VM runbooks](https://academy.ozarland.com/runbooks/): diagnosing and resolving instance problems.
+- [Deployment patterns](https://academy.ozarland.com/deploy/): how operators deploy OpenStack with Kolla-Ansible.
 - [OzarLand home](../README.md): the community, its principles and every repository.

@@ -10,8 +10,8 @@ copy here would only drift from it.
 |---|---|---|
 | [`openstack-upgrade-playbooks/`](openstack-upgrade-playbooks/) | 2 | Create after the first upgrade reports arrive |
 
-The blueprints of [`openstack-vm-runbooks`](https://github.com/OzarLand/openstack-vm-runbooks) and
-[`kolla-ansible-deployment-patterns`](https://github.com/OzarLand/kolla-ansible-deployment-patterns) were removed
+The blueprints of [VM runbooks](https://academy.ozarland.com/runbooks/) and
+[Deployment patterns](https://academy.ozarland.com/deploy/) were removed
 when those repositories were created; they remain in the history of this repository.
 
 See [docs/repositories.md](../../docs/repositories.md) for the reasoning and [community/README.md](../README.md) for

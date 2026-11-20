@@ -73,7 +73,7 @@ the OpenStack CLI whatever deployed the platform.
 ## Go further
 
 - Next on the newcomer path: the [reading path through the runbooks](reading-path.md).
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): every runbook follows this structure.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): deployment patterns follow a similar structure, with context and choices
+- [VM runbooks](https://academy.ozarland.com/runbooks/): every runbook follows this structure.
+- [Deployment patterns](https://academy.ozarland.com/deploy/): deployment patterns follow a similar structure, with context and choices
   instead of symptoms.
 - The [content conventions](../docs/conventions/README.md) behind this page, for contributors.
