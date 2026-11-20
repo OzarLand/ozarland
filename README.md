@@ -127,7 +127,7 @@ Status, planned and archived repositories: [current repositories](docs/repositor
 ## 📊 Project status
 
 <!-- status-progress:start -->
-111 pages are published: 72 in the VM runbooks (runbooks and log-reading guides) and 39 in the deployment patterns.
+111 pages are published in OzarLand Academy: 72 in the VM runbooks (runbooks and log-reading guides) and 39 in the deployment patterns.
 
 ```mermaid
 %%{init: {"theme": "base", "themeVariables": {"pie1": "#d1d5db", "pie2": "#16a34a"}}}%%
@@ -137,12 +137,12 @@ pie showData
     "lab-verified" : 52
 ```
 
-| Repository | Progress | Lab-verified or validated |
+| Module | Progress | Lab-verified or validated |
 |---|---|---:|
 | 🔧 VM runbooks | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ | 44 / 72 |
 | 🏗️ Deployment patterns | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ | 8 / 39 |
 
-<sub>🟩 lab-verified · ⬜ draft · one square is about 10 % of the repository's pages</sub>
+<sub>🟩 lab-verified · ⬜ draft · one square is about 10 % of the module's pages</sub>
 <!-- status-progress:end -->
 > [!WARNING]
 > None is `validated` yet: no human operator other than the author has confirmed a page on a real platform. Lab

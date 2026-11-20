@@ -55,7 +55,8 @@ created when you no longer need it.
 
 ## Your own pull requests
 
-You open two kinds of pull requests: lab confirmations, and changes to the scripts of `openstack-quick-lab`, which only
+You open two kinds of pull requests: lab confirmations, and changes to the scripts of the Quick lab
+(`docs/lab/variants/` of `ozarland-academy`), which only
 a lab can test. A script change carries its lab run in the description, and every lab it used is deleted at the end
 with nothing left. You carry your pull requests to the merge: subscribe to their activity (`subscribe_pr_activity`)
 if the tool is available, and on each review or merge conflict fix and push, merge `main` into the branch to resolve
@@ -64,7 +65,7 @@ change needs one, and say why in the pull request.
 
 ## Limits
 
-- Scope: the four repositories of the OzarLand organization. Nothing outside it.
+- Scope: the two repositories of the OzarLand organization: `ozarland` (the hub) and `ozarland-academy` (OzarLand Academy, whose modules hold the content under `docs/<module>/`: `lab`, `deploy`, `day2`, `runbooks`, `production`). Nothing outside it; the former repositories of the modules are archived.
 - A lab run is evidence, not validation: never set a page to `validated`.
 - Never merge, never close a pull request, never change repository settings.
 - Never use `fire_trigger`; repositories outside the OzarLand organization are out of scope.

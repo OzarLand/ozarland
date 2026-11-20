@@ -2,17 +2,18 @@
 """Regenerate the page-status badges, progress bars and counts in the OzarLand READMEs.
 
 Usage:
-    python3 status_blocks.py [--write] --hub <ozarland checkout> <repo-name>=<checkout path> [...]
+    python3 status_blocks.py [--write] --hub <ozarland checkout> <module>=<module directory> [...]
 
-Example, from a directory holding the three checkouts:
+The content lives in the modules of OzarLand Academy (OzarLand/ozarland-academy, docs/<module>/). Example,
+from a directory holding the checkouts of ozarland and ozarland-academy:
     python3 ozarland/tools/status_blocks.py --write --hub ozarland \\
-        openstack-vm-runbooks=openstack-vm-runbooks \\
-        kolla-ansible-deployment-patterns=kolla-ansible-deployment-patterns
+        runbooks=ozarland-academy/docs/runbooks \\
+        deploy=ozarland-academy/docs/deploy
 
-Counts every page of each content repository by its `status:` front matter and by top-level folder, then
-rewrites the blocks between `<!-- status-<name>:start -->` and `<!-- status-<name>:end -->` markers:
-`badges` and `progress` in each content repository's README, `badges` and `progress` in the hub README, and
-`summary` in the hub's docs/knowledge-lifecycle.md. Without --write, it only reports stale blocks and exits
+Counts every page of each module by its `status:` front matter and by top-level folder, then rewrites the
+blocks between `<!-- status-<name>:start -->` and `<!-- status-<name>:end -->` markers: `progress` in the home
+page of each module (index.md), `badges` and `progress` in the hub README, and `summary` in the hub's
+docs/knowledge-lifecycle.md. Without --write, it only reports stale blocks and exits
 with code 1, so it can run as a check. Text outside the markers is never touched.
 """
 import argparse
@@ -29,9 +30,9 @@ SQUARES = {"validated": "🟦", "lab-verified": "🟩", "experimental": "🟧", 
 BADGE_COLORS = {"lab-verified": "16a34a", "draft": "9ca3af", "validated": "2563eb", "experimental": "d97706"}
 PIE_COLORS = {"draft": "#d1d5db", "lab-verified": "#16a34a", "validated": "#2563eb", "experimental": "#d97706"}
 
-# Display name of each repository in the hub, and of each folder in its own README.
+# Display name of each module in the hub, and of each folder in the home page of the module.
 REPOS = {
-    "openstack-vm-runbooks": {
+    "runbooks": {
         "label": "🔧 VM runbooks",
         "what": "in the VM runbooks (runbooks and log-reading guides)",
         "short": "runbook",
@@ -39,7 +40,7 @@ REPOS = {
                     "networking": "🌐 Networking", "volumes": "💾 Volumes", "diagnostics": "🩺 Diagnostics",
                     "logs": "📜 Logs", "recovery": "🚑 Recovery"},
     },
-    "kolla-ansible-deployment-patterns": {
+    "deploy": {
         "label": "🏗️ Deployment patterns",
         "what": "in the deployment patterns",
         "short": "deployment-pattern",
@@ -140,7 +141,6 @@ def repo_blocks(name, folders):
             if folders.get(f)]
     t = total(folders)
     return {
-        "badges": badges(t),
         "progress": (f"**Where things stand:** {status_sentence(t)}\n\n{progress_table(rows, 'Folder')}\n\n"
                      f"{legend(t, 'folder')}"),
     }
@@ -159,12 +159,12 @@ def hub_blocks(counts):
     return {
         "README.md": {
             "badges": badges(t),
-            "progress": (f"{n} pages are published: {' and '.join(parts)}.\n\n{pie(t)}\n\n"
-                         f"{progress_table(rows, 'Repository')}\n\n{legend(t, 'repository')}"),
+            "progress": (f"{n} pages are published in OzarLand Academy: {' and '.join(parts)}.\n\n{pie(t)}\n\n"
+                         f"{progress_table(rows, 'Module')}\n\n{legend(t, 'module')}"),
         },
         "docs/knowledge-lifecycle.md": {
             "summary": (f"Today (counted from each page's `status:` field by `tools/status_blocks.py`): "
-                        f"**{statuses}**, out of the {n} pages of the {breakdown} repositories."),
+                        f"**{statuses}**, out of the {n} pages of the {breakdown} modules of OzarLand Academy."),
         },
     }
 
@@ -198,16 +198,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--hub", required=True, help="path of the ozarland checkout")
     parser.add_argument("--write", action="store_true", help="rewrite stale blocks instead of reporting them")
-    parser.add_argument("repos", nargs="+", help="<repo-name>=<checkout path>")
+    parser.add_argument("repos", nargs="+", help="<module>=<module directory>, such as runbooks=ozarland-academy/docs/runbooks")
     args = parser.parse_args()
     counts, problems = {}, []
     for spec in args.repos:
         name, _, path = spec.partition("=")
         if name not in REPOS or not path:
-            parser.error(f"unknown repository or missing path: {spec} (known: {', '.join(REPOS)})")
+            parser.error(f"unknown module or missing path: {spec} (known: {', '.join(REPOS)})")
         counts[name] = count_pages(path)
         validated = total(counts[name])["validated"]
-        apply(os.path.join(path, "README.md"), repo_blocks(name, counts[name]), args.write, problems, validated)
+        apply(os.path.join(path, "index.md"), repo_blocks(name, counts[name]), args.write, problems, validated)
     all_validated = sum(total(f)["validated"] for f in counts.values())
     for rel, blocks in hub_blocks(counts).items():
         apply(os.path.join(args.hub, rel), blocks, args.write, problems, all_validated)
