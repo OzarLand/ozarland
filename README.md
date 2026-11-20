@@ -161,7 +161,7 @@ More in [mission and principles](docs/vision.md).
 ## 🌱 Where OzarLand comes from
 
 OzarLand started in October 2026 as a personal initiative by Soufian Zaouam, OpenStack operator and author of
-[*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow) (the source
+[*OpenStack, the Day After Tomorrow*](https://github.com/OzarLand/openstack-the-day-after-tomorrow) (the source
 of many runbooks), to share practical OpenStack operational knowledge. So far it is built by its maintainer with AI
 agents ([When AI meets OpenStack](docs/how-ozarland-is-built.md)). It is run in a personal capacity and is free.
 Felcloud, OzarLand's first sponsor, provides the cloud credit for its labs; sponsors have no say over the content.

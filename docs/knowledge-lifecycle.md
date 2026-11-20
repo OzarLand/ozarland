@@ -71,7 +71,7 @@ flowchart TD
 | "Has anyone seen this?" | Discussion, Q&A | An issue: there is nothing to fix yet |
 | "I fixed this, here is how" | Issue, *Problem solved*, or directly a pull request with a draft runbook | A discussion only: it would get lost |
 | "Here is how we deploy, what do you think?" | Discussion, *Show and compare*, then optionally a pattern page | A runbook: there is no symptom to resolve |
-| "We upgraded from A to B, this is what happened" | Discussion, *Experience reports*, then an experience-report page (for Kolla-Ansible, in `version-notes/` of `kolla-ansible-deployment-patterns` until the upgrade repository exists) | A runbook: it is a narrative, not a procedure |
+| "We upgraded from A to B, this is what happened" | Discussion, *Experience reports*, then an experience-report page (for Kolla-Ansible, in `docs/deploy/version-notes/` of `ozarland-academy` until the upgrade repository exists) | A runbook: it is a narrative, not a procedure |
 | "This page is wrong for release X" | Issue, *Documentation proposal*, on the page's repository | A new page: the existing one should carry the difference |
 | "We should have a repository for Y" | Discussion, *Ideas*, in `ozarland` | Creating the repository: see [repositories.md](repositories.md) |
 

@@ -32,8 +32,8 @@ operating OpenStack.
 - Rollback: what could be rolled back, what could not, recovery plans beyond that point.
 - Real upgrade reports, told first-hand.
 
-**Out of scope:** instance troubleshooting unrelated to an upgrade (see `openstack-vm-runbooks`), initial
-deployment (see `kolla-ansible-deployment-patterns`).
+**Out of scope:** instance troubleshooting unrelated to an upgrade (see the [VM runbooks](https://academy.ozarland.com/runbooks/)), initial
+deployment (see [Deployment patterns](https://academy.ozarland.com/deploy/)).
 
 ## How content is organised
 
