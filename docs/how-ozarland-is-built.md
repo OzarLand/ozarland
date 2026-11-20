@@ -15,7 +15,7 @@ and where their limits are. The figures were counted in the repositories on 2026
 | Who | Does | Never does |
 |---|---|---|
 | **The owner**, Soufian Zaouam (a person) | Provides the source material: incidents from production, the owner's book [*OpenStack, the Day After Tomorrow*](https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow), lab platforms. Decides the rules. Validates the risky changes: rules and agent roles, the checker, licence and policy files, page deletions, GitHub settings. Signs off every commit and takes responsibility for it ([DCO](https://developercertificate.org/)) | |
-| **Author agent** | Writes every page from that material: runbooks, deployment pages, the community pages of `ozarland` and the guides of [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab). Opens pull requests and carries them to the merge | Confirms its own pages, reviews or merges |
+| **Author agent** | Writes every page from that material: runbooks, deployment pages, the community pages of `ozarland` and the guides of [Quick lab](https://academy.ozarland.com/lab/). Opens pull requests and carries them to the merge | Confirms its own pages, reviews or merges |
 | **Operator reviewer agent** | Reviews each pull request as an experienced operator, runs the [content checker](../tools/check_content.py), merges what passes without reservation, escalates the rest | Reviews a pull request it wrote |
 | **Lab reviewer agent** | Runs the steps of a page on a disposable OpenStack lab and reports, step by step, what ran as written, what needed a change and what failed | Confirms a page it wrote |
 | **Manager agent** | Tells the owner where things stand, passes on the owner's decisions and hands tasks to the other agents | Writes or reviews content |
@@ -62,8 +62,8 @@ A snapshot of that date. Current counts: [page statuses](knowledge-lifecycle.md#
 
 Six days after the first content repository was created:
 
-- **33 pages**: 25 runbooks in [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index) and 8 pages in
-  [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index).
+- **33 pages**: 25 runbooks in [VM runbooks](https://academy.ozarland.com/runbooks/#index) and 8 pages in
+  [Deployment patterns](https://academy.ozarland.com/deploy/#index).
 - **12 runbooks `lab-verified`**: their steps ran as written on the lab. **None is `validated`**: that needs a human
   operator.
 - **39 lab reports and 47 operator reviews** on the pull requests of the two content repositories.
@@ -72,12 +72,12 @@ Six days after the first content repository was created:
   down[^1], three checks that asked the client for columns it does not have[^2], and a way of stopping the APIs that
   the platform undid within a minute[^3].
 - **Behaviour observed on 2026.1, not assumed.** Neutron refuses some router changes while a floating IP depends on
-  them[^4]; the [unreachable-from-outside runbook](https://github.com/OzarLand/openstack-vm-runbooks/blob/main/networking/instance-unreachable-from-outside.md)
+  them[^4]; the [unreachable-from-outside runbook](https://academy.ozarland.com/runbooks/networking/instance-unreachable-from-outside/)
   was corrected to match.
 - **A full upgrade, measured.** A Kolla-Ansible all-in-one lab went from 2025.1 to 2026.1 in 24 minutes of
   `kolla-ansible upgrade`, with no failed task. The running instances never stopped, and each floating IP lost
   about 2 s of traffic. The
-  [upgrade report](https://github.com/OzarLand/kolla-ansible-deployment-patterns/blob/main/version-notes/upgrade-report-2025.1-to-2026.1-all-in-one-lab.md)
+  [upgrade report](https://academy.ozarland.com/deploy/version-notes/upgrade-report-2025.1-to-2026.1-all-in-one-lab/)
   tells the rest.
 - **Human contributions so far:** none outside the maintainer. Today OzarLand is built by its maintainer with AI
   agents. The project is open to everyone: corrections, confirmations of a page on your platform, questions, new

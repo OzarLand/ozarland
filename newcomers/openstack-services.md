@@ -31,7 +31,7 @@ virtual machines.
 One fact explains much of what operators do: **the control plane and the data plane fail separately.** When the
 APIs, the database or the message bus are down, running instances keep running and keep their network; what stops
 is creating, changing or deleting things. See the runbook
-[Control plane down: what still works for running instances](https://github.com/OzarLand/openstack-vm-runbooks/blob/main/diagnostics/control-plane-down-what-still-works-for-instances.md).
+[Control plane down: what still works for running instances](https://academy.ozarland.com/runbooks/diagnostics/control-plane-down-what-still-works-for-instances/).
 
 ## The core services
 
@@ -71,6 +71,6 @@ know and mark them (`**Kolla-Ansible:**`, `**Any:**`). If yours is missing, addi
 ## Go further
 
 - Next on the newcomer path: the [glossary](glossary.md), for the words this page used without explaining.
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): what to do when one of these services lets an instance down.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): how operators deploy these services, and the choices they made.
+- [VM runbooks](https://academy.ozarland.com/runbooks/): what to do when one of these services lets an instance down.
+- [Deployment patterns](https://academy.ozarland.com/deploy/): how operators deploy these services, and the choices they made.
 - Upstream: the [OpenStack documentation](https://docs.openstack.org/) and each project's administrator guide.

@@ -99,5 +99,5 @@ the technical detail.
 ## Go further
 
 - Next on the newcomer path: [how to read a runbook](how-to-read-a-runbook.md).
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks): these words in context, in real diagnoses.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns): the deployment vocabulary in context.
+- [VM runbooks](https://academy.ozarland.com/runbooks/): these words in context, in real diagnoses.
+- [Deployment patterns](https://academy.ozarland.com/deploy/): the deployment vocabulary in context.

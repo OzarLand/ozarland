@@ -64,9 +64,7 @@ knowledge, questions and corrections are welcome.
 | | Repository | What it holds |
 |:-:|---|---|
 | | [ozarland](https://github.com/OzarLand/ozarland) | Start here: newcomer path, community rules, [Discussions](https://github.com/OzarLand/ozarland/discussions) |
-| 🔧 | [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks) | Symptom-driven runbooks for instance problems |
-| 🏗️ | [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns) | Ways to deploy with Kolla-Ansible, compared |
-| 🧪 | [openstack-quick-lab](https://github.com/OzarLand/openstack-quick-lab) | A disposable OpenStack lab to practise on |
+| 🎓 | [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | [OzarLand Academy](https://academy.ozarland.com/): lab, deployment patterns, day-2 operations, VM runbooks, production guide |
 | 🤖 | [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills) | Claude skills that apply this knowledge |
 
 ## License

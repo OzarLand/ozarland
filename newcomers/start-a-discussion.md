@@ -26,8 +26,8 @@ Not sure? Start a discussion. Someone will move it to the right place if needed.
 
 ## Open one, step by step
 
-1. **Search first.** Look in the [runbooks index](https://github.com/OzarLand/openstack-vm-runbooks#index), the
-   [deployment patterns index](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index) and the
+1. **Search first.** Look in the [runbooks index](https://academy.ozarland.com/runbooks/#index), the
+   [deployment patterns index](https://academy.ozarland.com/deploy/#index) and the
    [existing discussions](https://github.com/OzarLand/ozarland/discussions). If a discussion already covers your
    topic, reply there instead of opening a new one.
 2. **Pick the category** and open the form directly:
@@ -76,8 +76,8 @@ An answer that stays in a thread is knowledge the next operator will not find. W
 
 1. The author marks the answer and confirms, in one line, what fixed it and on which release.
 2. Someone, often the author, opens a *Problem solved* issue in the repository where the page belongs
-   ([VM runbooks](https://github.com/OzarLand/openstack-vm-runbooks/issues/new/choose) or
-   [deployment patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns/issues/new/choose)) and links
+   ([VM runbooks](https://github.com/OzarLand/ozarland-academy/issues/new/choose) or
+   [deployment patterns](https://github.com/OzarLand/ozarland-academy/issues/new/choose)) and links
    the discussion.
 3. A contributor writes the page from it with the [runbook template](../community/templates/runbook.md) and opens a
    pull request. The page starts as `draft`; confirmations from other operators move it to `validated`.
@@ -88,6 +88,6 @@ in the [knowledge lifecycle](../docs/knowledge-lifecycle.md).
 ## Go further
 
 - [Your first contribution](first-contribution.md): from a question to your first pull request.
-- [openstack-vm-runbooks](https://github.com/OzarLand/openstack-vm-runbooks#index): check whether your symptom already has a runbook.
-- [kolla-ansible-deployment-patterns](https://github.com/OzarLand/kolla-ansible-deployment-patterns#index): how others deploy, before you ask how they do it.
+- [VM runbooks](https://academy.ozarland.com/runbooks/#index): check whether your symptom already has a runbook.
+- [Deployment patterns](https://academy.ozarland.com/deploy/#index): how others deploy, before you ask how they do it.
 - [GitHub conventions](../docs/github-conventions.md): discussions, issues, labels and branches, for every repository.
