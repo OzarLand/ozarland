@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="title">
+  <title id="title">Quick Lab icon</title>
+  <g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 7h12M21 7v12l-9 15a3 3 0 0 0 2.6 4.5h18.8A3 3 0 0 0 36 34l-9-15V7"/>
+<path d="M16.6 27h16.8" stroke="#1F3A6B"/>
+<path d="M18.5 27h13l5.2 8.5a1 1 0 0 1-.9 1.5H13.2a1 1 0 0 1-.9-1.5z" fill="#1E9FB5" stroke="none"/>
+<path d="M20 13h8"/>
+  </g>
+</svg>

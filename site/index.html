@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OzarLand · A shared land for better OpenStack operations</title>
+<meta name="description" content="OzarLand is a community-driven space where OpenStack operators share what they learn running it: runbooks, deployment choices, a learning path and experience.">
+<link rel="canonical" href="https://ozarland.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OzarLand">
+<meta property="og:title" content="OzarLand · A shared land for better OpenStack operations">
+<meta property="og:description" content="A community-driven space where OpenStack operators share what they learn running it.">
+<meta property="og:url" content="https://ozarland.com/">
+<meta property="og:image" content="https://ozarland.com/assets/social.jpg">
+<meta property="og:image:alt" content="An island city above the sea with signposts to the OzarLand spaces.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  /* OzarLand palette (brand/academy/tokens/palette.css of ozarland-academy). */
+  :root {
+    color-scheme: light dark;
+    --canvas: #fbf4e4; --surface: #fffdf8; --raised: #f3e3c3; --text: #152a50; --muted: #4e5a6d;
+    --link: #0f62a6; --primary: #1f3a6b; --primary-text: #ffffff; --border: #c4904f;
+    --focus: #f0b440; --keyline: #152a50; --header: #152a50; --header-text: #fbf4e4;
+    --lab: #1e9fb5; --deploy: #2f6fd0; --day2: #c4904f; --runbooks: #2c7a43; --production: #b55a3a; --book: #6b4220;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #11151a; --surface: #1c2433; --raised: #202b3a; --text: #f3e3c3; --muted: #b2bdca;
+      --link: #74b7ee; --primary: #f0b440; --primary-text: #11151a; --border: #8b7355;
+      --keyline: #f3e3c3; --header: #142038; --header-text: #fbf4e4;
+      --lab: #4cc3d6; --deploy: #8fb0e6; --day2: #d9a865; --runbooks: #70c78a; --production: #e0825f; --book: #d9a865;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--canvas); color: var(--text);
+    font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  a { color: var(--link); text-underline-offset: 0.15em; }
+  :is(a, button):focus-visible { outline: 2px solid var(--focus); outline-offset: 0; box-shadow: 0 0 0 4px var(--keyline); }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1rem; }
+  header.top { background: var(--header); color: var(--header-text); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; }
+  header.top a { color: var(--header-text); text-decoration: none; font-weight: 700; display: inline-flex; gap: 0.5rem; align-items: center; }
+  header.top nav a { font-weight: 500; margin-left: 1rem; min-height: 44px; }
+  header.top img { width: 1.6rem; height: 1.6rem; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 2rem; align-items: center; padding: 2.5rem 0 2rem; }
+  .plate { background: var(--surface); border: 1px solid var(--border); border-radius: 1.25rem; padding: 1.5rem 1.6rem; box-shadow: 0 0.4rem 1.2rem rgb(21 42 80 / 12%); }
+  h1 { font-size: 2.5rem; line-height: 1.15; margin: 0 0 0.4rem; }
+  .tagline { font-size: 1.15rem; font-weight: 600; margin: 0 0 0.8rem; }
+  .lead { color: var(--muted); margin: 0 0 1.2rem; }
+  .art img { display: block; width: 100%; height: auto; border-radius: 1.25rem; border: 1px solid var(--border); }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; }
+  .cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1rem; border-radius: 0.5rem; font-weight: 650; text-decoration: none; border: 1px solid var(--border); color: var(--text); background: var(--surface); }
+  .cta.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-text); }
+  h2 { font-size: 1.875rem; line-height: 1.25; margin: 2.5rem 0 0.6rem; }
+  .intro { max-width: 46rem; }
+  .trail { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+  .stop { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: 0.875rem; padding: 0.9rem 1rem; }
+  .stop p { margin: 0.2rem 0; }
+  .step { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  .stop .name { display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 1.1rem; }
+  .stop img { width: 1.6rem; height: 1.6rem; flex: none; }
+  @media (prefers-color-scheme: dark) { .stop img, .card img { background: #f3e3c3; border-radius: 50%; padding: 2px; } }
+  .cards { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: 1rem; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.875rem; padding: 1rem 1.1rem; }
+  .card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; display: flex; gap: 0.5rem; align-items: center; }
+  .card img { width: 1.6rem; height: 1.6rem; }
+  .card p { margin: 0.3rem 0; }
+  footer { margin-top: 3rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+  @media (max-width: 52rem) {
+    .hero { grid-template-columns: minmax(0, 1fr); }
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.5rem; }
+    header.top nav a { margin-left: 0.5rem; font-size: 0.9rem; }
+    header.top .wrap { flex-wrap: wrap; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; transition: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="./"><img src="assets/favicon.svg" alt="" width="26" height="26">OzarLand</a>
+    <nav aria-label="Main">
+      <a href="https://academy.ozarland.com/">Academy</a>
+      <a href="https://github.com/OzarLand/ozarland/discussions">Discussions</a>
+      <a href="https://github.com/OzarLand">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div class="plate">
+      <h1 id="title">OzarLand</h1>
+      <p class="tagline">A shared land for better OpenStack operations.</p>
+      <p class="lead">A community-driven space where OpenStack operators share what they learn running it: fixes,
+      deployment choices, a learning path and first-hand experience. Open to everyone, whatever tool deployed your
+      cloud. Everything is public and Apache-2.0.</p>
+      <p class="actions">
+        <a class="cta primary" href="https://academy.ozarland.com/">Start learning</a>
+        <a class="cta" href="https://github.com/OzarLand/ozarland/discussions">Ask a question</a>
+      </p>
+    </div>
+    <div class="art">
+      <img src="assets/banner.webp" width="1600" height="665" alt="An island city above the sea, with signposts to the OzarLand spaces.">
+    </div>
+  </section>
+
+  <section aria-labelledby="academy">
+    <h2 id="academy">OzarLand Academy</h2>
+    <p class="intro">One learning path to run OpenStack, in five stops across one island: discover it on a
+    disposable lab, deploy it, operate it, intervene on instances and hypervisors, and take it to production.</p>
+    <ol class="trail">
+      <li class="stop" style="--accent: var(--lab)"><p class="step">Stop 1 · Discover</p><p class="name"><img src="assets/icon-lab.svg" alt=""><a href="https://academy.ozarland.com/lab/">Quick lab</a></p><p>A disposable OpenStack on cloud VMs in about an hour, with break-and-repair exercises.</p></li>
+      <li class="stop" style="--accent: var(--deploy)"><p class="step">Stop 2 · Deploy</p><p class="name"><img src="assets/icon-deploy.svg" alt=""><a href="https://academy.ozarland.com/deploy/">Deployment patterns</a></p><p>Ways to deploy OpenStack with Kolla-Ansible, compared rather than prescribed.</p></li>
+      <li class="stop" style="--accent: var(--day2)"><p class="step">Stop 3 · Operate</p><p class="name"><img src="assets/icon-day2.svg" alt=""><a href="https://academy.ozarland.com/day2/">Kolla-Ansible Academy</a></p><p>Day-2 operations learned from the source code, one study per OpenStack release.</p></li>
+      <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt=""><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Symptom-driven runbooks for instance and hypervisor problems.</p></li>
+      <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt=""><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>Visual memos for production: one operational lesson per page.</p></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="community">
+    <h2 id="community">The community</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Newcomer path</h3>
+        <p>Five short pages, read in order: what OpenStack is made of, how to read a runbook, where to ask.</p>
+        <p><a href="https://github.com/OzarLand/ozarland/tree/main/newcomers">Start the newcomer path</a></p>
+      </div>
+      <div class="card">
+        <h3>Discussions</h3>
+        <p>Questions, experience reports and ideas, answered in public by operators.</p>
+        <p><a href="https://github.com/OzarLand/ozarland/discussions">Open the Discussions</a></p>
+      </div>
+      <div class="card">
+        <h3>Contribute</h3>
+        <p>Confirm a page on your platform, share a problem you solved, describe how you deploy.</p>
+        <p><a href="https://github.com/OzarLand/ozarland/blob/main/newcomers/first-contribution.md">Your first contribution</a></p>
+      </div>
+      <div class="card" style="--accent: var(--book)">
+        <h3><img src="assets/icon-book.svg" alt="">Deeper reading</h3>
+        <p>The book behind many of the runbooks: <em>OpenStack, the Day After Tomorrow</em>.</p>
+        <p><a href="https://github.com/soufian-zaouam/openstack-the-day-after-tomorrow">Read the book</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="trust">
+    <h2 id="trust">What makes a page trustworthy</h2>
+    <p class="intro">Every page says where it was observed (OpenStack release, components, deployment method) and how
+    much it was checked: <strong>draft</strong>, <strong>lab-verified</strong> (run on a lab by someone else),
+    <strong>validated</strong> (confirmed by a human operator on a real platform). Pages are written and lab-tested
+    with AI agents, reviewed independently, and validated only by people:
+    <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>OzarLand is an independent community initiative, run in a personal capacity and free. Felcloud, its first
+    sponsor, provides the cloud credit for its labs and has no say over the content. OpenStack is a project of the
+    OpenInfra Foundation community; OzarLand is not affiliated with or endorsed by it.</p>
+    <p>Content licensed under the <a href="https://github.com/OzarLand/ozarland/blob/main/LICENSE">Apache License 2.0</a>.
+    Sources of this page: <a href="https://github.com/OzarLand/ozarland/tree/main/site">OzarLand/ozarland</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="title">
+  <title id="title">Deployment Patterns icon</title>
+  <g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13h10M28 13h10M24 16v16M10 35h10M28 35h10"/>
+<circle cx="10" cy="13" r="4" fill="#2F6FD0"/><circle cx="38" cy="13" r="4" fill="#C4904F"/>
+<circle cx="24" cy="35" r="4" fill="#1E9FB5"/>
+<path d="M24 8v6M20 13l4 4 4-4"/>
+  </g>
+</svg>
