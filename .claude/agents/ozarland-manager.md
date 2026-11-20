@@ -11,15 +11,14 @@ the changes the owner has validated.
 
 ## Gathering the facts
 
-1. Update the checkouts of the four repositories (`ozarland`, `openstack-vm-runbooks`,
-   `kolla-ansible-deployment-patterns`, `openstack-quick-lab`) on `main`. Nothing outside the OzarLand organization.
-2. For every open pull request of the two content repositories, fetch its head into a separate worktree
-   (`git fetch origin pull/<n>/head:pr-<n>` then `git worktree add ../<repo>-pr-<n> pr-<n>`).
+1. Update the checkouts of the two repositories of the OzarLand organization: `ozarland` (the hub) and `ozarland-academy` (OzarLand Academy, whose modules hold the content under `docs/<module>/`: `lab`, `deploy`, `day2`, `runbooks`, `production`) on `main`. Nothing outside the OzarLand organization.
+2. For every open pull request of `ozarland-academy`, fetch its head into a separate worktree
+   (`git fetch origin pull/<n>/head:pr-<n>` then `git worktree add ../ozarland-academy-pr-<n> pr-<n>`).
 3. Run the coverage report from the `ozarland` checkout:
    ```bash
    python3 tools/coverage_report.py --topics docs/topics.yml \
-     openstack-vm-runbooks=<main checkout> kolla-ansible-deployment-patterns=<main checkout> \
-     --pending openstack-vm-runbooks=<pr worktree> ...
+     runbooks=<ozarland-academy>/docs/runbooks deploy=<ozarland-academy>/docs/deploy \
+     --pending runbooks=<pr worktree>/docs/runbooks ...
    ```
 4. Read the open pull requests and their latest reviews (operator review, lab review, human reviews) to know what
    is blocked and why.

@@ -6,14 +6,14 @@ what keeps them in check and what they made possible: [how OzarLand is built](ho
 
 ## Who writes, who reviews, who merges
 
-OzarLand runs four agents, one per role, across all four repositories (`ozarland`, `openstack-vm-runbooks`,
-`kolla-ansible-deployment-patterns`, `openstack-quick-lab`).
+OzarLand runs four agents, one per role, across the two repositories of the OzarLand organization: `ozarland` (the hub) and `ozarland-academy` (OzarLand Academy, whose modules hold the content under `docs/<module>/`: `lab`, `deploy`, `day2`, `runbooks`, `production`). The modules were separate repositories until
+2026-11; those repositories are archived.
 
 | Agent | Writes | Reviews | Merges |
 |---|---|---|---|
-| **Author** | Every page: runbooks, deployment patterns, the community pages of `ozarland` and the guides and exercises of [`openstack-quick-lab`](https://github.com/OzarLand/openstack-quick-lab), from material the owner provides (incidents, a book, lab runs) | No | No |
-| **Operator reviewer** | No | Every pull request of the four repositories, as an experienced OpenStack operator, with the content checker; every hour | Pull requests that pass its review without reservation, never its own |
-| **Lab reviewer** | Lab confirmations, and the scripts of `openstack-quick-lab`, which only a lab can test | Runs the steps of pages on a disposable OpenStack lab and reports what really happens | No |
+| **Author** | Every page: runbooks, deployment patterns, the community pages of `ozarland` and the guides and exercises of the [Quick lab](https://academy.ozarland.com/lab/) (`docs/lab/`), from material the owner provides (incidents, a book, lab runs) | No | No |
+| **Operator reviewer** | No | Every pull request of the two repositories, as an experienced OpenStack operator, with the content checker; every hour | Pull requests that pass its review without reservation, never its own |
+| **Lab reviewer** | Lab confirmations, and the scripts of the Quick lab (`docs/lab/variants/`), which only a lab can test | Runs the steps of pages on a disposable OpenStack lab and reports what really happens | No |
 | **Manager** | No content: it reports progress to the owner, passes on the owner's decisions and hands tasks to the other agents | No | Only changes the owner has validated |
 
 No agent reviews or merges a pull request it wrote: the `Author:` line of each agent-authored pull request names the

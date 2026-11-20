@@ -2,8 +2,11 @@
 """Report which topics the OzarLand community repositories cover.
 
 Usage:
-    python3 coverage_report.py --topics docs/topics.yml <repo-name>=<checkout path> [...]
-        [--pending <repo-name>=<checkout path of a pull request head> ...] [--format markdown|json]
+    python3 coverage_report.py --topics docs/topics.yml <module>=<module directory> [...]
+        [--pending <module>=<module directory of a pull request head> ...] [--format markdown|json]
+
+The modules are those of OzarLand Academy (OzarLand/ozarland-academy, docs/<module>/), for example
+runbooks=ozarland-academy/docs/runbooks deploy=ozarland-academy/docs/deploy.
 
 For each repository: pages per topic with their status, components and releases mentioned, topics with no
 page yet. Pages found only in --pending checkouts are reported as "in review".
@@ -35,7 +38,9 @@ def scan(root):
         dirs[:] = [x for x in dirs if x != ".git"]
         for n in names:
             rel = os.path.relpath(os.path.join(d, n), root)
-            if not is_page(rel):
+            # index.md is the home page of a module of OzarLand Academy, or of one of its directories (the
+            # former README.md): not a community page.
+            if not is_page(rel) or n == "index.md":
                 continue
             fields, _ = parse_front_matter(open(os.path.join(root, rel), encoding="utf-8").read())
             fields = fields or {}

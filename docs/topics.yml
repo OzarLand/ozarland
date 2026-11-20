@@ -1,7 +1,7 @@
-# Topics each community repository aims to cover. Used by tools/coverage_report.py to show what is covered
-# and what is missing. A topic is covered by the pages in its directory. Edit freely: this is a planning aid,
+# Topics each module of OzarLand Academy aims to cover (OzarLand/ozarland-academy, docs/<module>/). Used by
+# tools/coverage_report.py to show what is covered and what is missing. A topic is covered by the pages in its directory. Edit freely: this is a planning aid,
 # not a rule.
-openstack-vm-runbooks:
+runbooks:
   lifecycle:
     label: Instance lifecycle and stuck states (BUILD, ERROR, deleting, resize, shelve)
   scheduling:
@@ -16,7 +16,7 @@ openstack-vm-runbooks:
     label: Cross-service diagnostics (request tracing, shared dependencies, logs)
   recovery:
     label: Recovery after incidents (compute, storage, control plane) and post-incident checks
-kolla-ansible-deployment-patterns:
+deploy:
   topologies:
     label: Reference topologies, from all-in-one lab to multinode production
   networking:
