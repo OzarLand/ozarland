@@ -49,8 +49,8 @@ experience.
 
 | You are… | Go to |
 |---|---|
-| 🌱 **New to OpenStack** | [Newcomer path](newcomers/README.md): five short pages, read in order |
-| 🎓 **Learning step by step** | [OzarLand Academy](https://academy.ozarland.com/): one learning path in eight stops, from a disposable lab to production and beyond |
+| 🌱 **New to OpenStack** | [LUMO's village](https://academy.ozarland.com/village/): the basic concepts told as a story, then the [newcomer path](newcomers/README.md): five short pages, read in order |
+| 🎓 **Learning step by step** | [OzarLand Academy](https://academy.ozarland.com/): one learning path that starts with a story (stop 0) and goes through eight stops, from a disposable lab to production and beyond |
 | 🧪 **Want to try OpenStack** | [Quick lab](https://academy.ozarland.com/lab/): one VM, about one hour, one command to delete it |
 | 🔧 **Fixing a problem with a VM** | [VM runbooks](https://academy.ozarland.com/runbooks/#index): step-by-step guides to diagnose and fix a known problem; find your symptom |
 | 🏗️ **Deploying a platform** | [Deployment patterns](https://academy.ozarland.com/deploy/#index): how platforms are built with Kolla-Ansible, today from lab deployments, and what each choice implies |
@@ -115,7 +115,7 @@ flowchart TB
 
 | Repository | What it holds |
 |---|---|
-| 🎓 [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | **[OzarLand Academy](https://academy.ozarland.com/)**, the learning path in eight stops: [Quick lab](https://academy.ozarland.com/lab/), [Deployment patterns](https://academy.ozarland.com/deploy/) with Kolla-Ansible (one of the common tools that install OpenStack), [Kolla-Ansible Academy](https://academy.ozarland.com/day2/) (day-2 operations), [VM runbooks](https://academy.ozarland.com/runbooks/) for instance problems, [Production guide](https://academy.ozarland.com/production/), [OKD OpenStack lab](https://academy.ozarland.com/okd/), [Upgrade journeys](https://academy.ozarland.com/upgrade/), [Operator skills](https://academy.ozarland.com/skills/) (Agent Skills for Claude, also a Claude Code plugin) |
+| 🎓 [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | **[OzarLand Academy](https://academy.ozarland.com/)**, the learning path: [LUMO's village](https://academy.ozarland.com/village/) (stop 0, the basic concepts as a story), then eight stops: [Quick lab](https://academy.ozarland.com/lab/), [Deployment patterns](https://academy.ozarland.com/deploy/) with Kolla-Ansible (one of the common tools that install OpenStack), [Kolla-Ansible Academy](https://academy.ozarland.com/day2/) (day-2 operations), [VM runbooks](https://academy.ozarland.com/runbooks/) for instance problems, [Production guide](https://academy.ozarland.com/production/), [OKD OpenStack lab](https://academy.ozarland.com/okd/), [Upgrade journeys](https://academy.ozarland.com/upgrade/), [Operator skills](https://academy.ozarland.com/skills/) (Agent Skills for Claude, also a Claude Code plugin) |
 | `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
