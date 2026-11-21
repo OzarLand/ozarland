@@ -49,7 +49,7 @@ knowledge, questions and corrections are welcome.
 | | Repository | What it holds |
 |:-:|---|---|
 | | [ozarland](https://github.com/OzarLand/ozarland) | Start here: newcomer path, community rules, [Discussions](https://github.com/OzarLand/ozarland/discussions) |
-| 🎓 | [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | [OzarLand Academy](https://academy.ozarland.com/): lab, deployment patterns, day-2 operations, VM runbooks, production guide, OKD lab, upgrade journeys, operator skills |
+| 🎓 | [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | [OzarLand Academy](https://academy.ozarland.com/): lab, deployment patterns, day-2 operations, VM runbooks, production guide, OKD lab, operator skills |
 ```
 
 When a repository is created or archived, update this block in every repository in the same round of pull requests.
