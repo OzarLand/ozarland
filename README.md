@@ -50,11 +50,11 @@ experience.
 | You are… | Go to |
 |---|---|
 | 🌱 **New to OpenStack** | [Newcomer path](newcomers/README.md): five short pages, read in order |
-| 🎓 **Learning step by step** | [OzarLand Academy](https://academy.ozarland.com/): one learning path in five stops, from a disposable lab to production |
+| 🎓 **Learning step by step** | [OzarLand Academy](https://academy.ozarland.com/): one learning path in eight stops, from a disposable lab to production and beyond |
 | 🧪 **Want to try OpenStack** | [Quick lab](https://academy.ozarland.com/lab/): one VM, about one hour, one command to delete it |
 | 🔧 **Fixing a problem with a VM** | [VM runbooks](https://academy.ozarland.com/runbooks/#index): step-by-step guides to diagnose and fix a known problem; find your symptom |
 | 🏗️ **Deploying a platform** | [Deployment patterns](https://academy.ozarland.com/deploy/#index): how platforms are built with Kolla-Ansible, today from lab deployments, and what each choice implies |
-| 🤖 **Using an AI assistant on call** | [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills): Claude skills that apply this knowledge and say how well each procedure was tested |
+| 🤖 **Using an AI assistant on call** | [Operator skills](https://academy.ozarland.com/skills/): Claude skills that apply this knowledge and say how well each procedure was tested |
 | 🤝 **Ready to contribute** | [Your first contribution](newcomers/first-contribution.md): start with ten minutes |
 
 💬 Nothing matches, or a question? [Start a discussion](newcomers/start-a-discussion.md) (the public
@@ -109,15 +109,13 @@ flowchart TB
     HUB --> KB
     subgraph KB ["Knowledge and tools"]
         direction LR
-        AC["🎓 ozarland-academy<br/>the learning path: lab, deployment patterns,<br/>day-2 operations, VM runbooks, production guide"]
-        SK["🤖 openstack-operator-skills<br/>Claude skills for operators"] -- "draws on" --> AC
+        AC["🎓 ozarland-academy<br/>the learning path: lab, deployment patterns,<br/>day-2 operations, VM runbooks, production guide,<br/>OKD lab, upgrade journeys, operator skills"]
     end
 ```
 
 | Repository | What it holds |
 |---|---|
-| 🎓 [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | **[OzarLand Academy](https://academy.ozarland.com/)**, the learning path in five stops: [Quick lab](https://academy.ozarland.com/lab/), [Deployment patterns](https://academy.ozarland.com/deploy/) with Kolla-Ansible (one of the common tools that install OpenStack), [Kolla-Ansible Academy](https://academy.ozarland.com/day2/) (day-2 operations), [VM runbooks](https://academy.ozarland.com/runbooks/) for instance problems, [Production guide](https://academy.ozarland.com/production/) |
-| 🤖 [openstack-operator-skills](https://github.com/OzarLand/openstack-operator-skills) | Agent skills for Claude that bring the runbooks, deployment patterns and an operating method into incident analysis, change review and troubleshooting, with the validation status of every procedure |
+| 🎓 [ozarland-academy](https://github.com/OzarLand/ozarland-academy) | **[OzarLand Academy](https://academy.ozarland.com/)**, the learning path in eight stops: [Quick lab](https://academy.ozarland.com/lab/), [Deployment patterns](https://academy.ozarland.com/deploy/) with Kolla-Ansible (one of the common tools that install OpenStack), [Kolla-Ansible Academy](https://academy.ozarland.com/day2/) (day-2 operations), [VM runbooks](https://academy.ozarland.com/runbooks/) for instance problems, [Production guide](https://academy.ozarland.com/production/), [OKD OpenStack lab](https://academy.ozarland.com/okd/), [Upgrade journeys](https://academy.ozarland.com/upgrade/), [Operator skills](https://academy.ozarland.com/skills/) (Agent Skills for Claude, also a Claude Code plugin) |
 | `ozarland` (here) | The newcomer path, the community rules, the templates, the [Discussions](https://github.com/OzarLand/ozarland/discussions) |
 
 Status, planned and archived repositories: [current repositories](docs/repositories.md#current-repositories).
