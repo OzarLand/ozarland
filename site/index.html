@@ -100,8 +100,9 @@
     .hero { grid-template-columns: minmax(0, 1fr); }
     h1 { font-size: 1.875rem; }
     h2 { font-size: 1.5rem; }
-    header.top nav a { margin-left: 0.5rem; font-size: 0.9rem; }
-    header.top .wrap { flex-wrap: wrap; }
+    header.top .wrap { flex-wrap: wrap; row-gap: 0; padding-top: 0.6rem; }
+    header.top nav { display: flex; flex-wrap: wrap; column-gap: 0.7rem; }
+    header.top nav a { margin-left: 0; font-size: 0.85rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; transition: none; } }
 </style>
@@ -109,9 +110,10 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a href="./"><img src="assets/favicon.svg" alt="" width="26" height="26">OzarLand</a>
+    <a href="./" aria-label="OzarLand home"><img src="assets/favicon.svg" alt="" width="26" height="26">OzarLand</a>
     <nav aria-label="Main">
       <a href="https://academy.ozarland.com/">Academy</a>
+      <a href="https://academy.ozarland.com/runbooks/">Runbooks</a>
       <a href="https://github.com/OzarLand/ozarland/discussions">Discussions</a>
       <a href="https://github.com/OzarLand/ozarland/blob/main/newcomers/first-contribution.md">Contribute</a>
       <a href="https://github.com/OzarLand">GitHub</a>
