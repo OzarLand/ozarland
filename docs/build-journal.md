@@ -101,7 +101,7 @@ Counted at 21:30 UTC.
   versus ML2/OVN with Kolla-Ansible), the 2025.1 to 2026.1 version notes rewritten as an upgrade playbook with a
   go / no-go checklist, provenance on every page, and READMEs that start from what the reader sees. In
   `openstack-quick-lab`: the scripts refuse to start without a cost estimate. In `ozarland`: one status table,
-  provenance in the templates, who is behind OzarLand, the build journal, and the Felcloud wording.
+  provenance in the templates, who is behind OzarLand, the build journal, and the sponsor wording.
 - **The owner's production report:** the owner reported that the behaviour of three runbooks (restarting
   `nova_libvirt`, `nova-compute` down with instances running, restarting the Open vSwitch agent) matches what they
   observed in production on an earlier Kolla-Ansible release. It is recorded on each page as an operator entry. After
