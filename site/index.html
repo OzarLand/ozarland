@@ -13,8 +13,34 @@
 <meta property="og:description" content="A community-driven space where OpenStack operators share what they learn running it.">
 <meta property="og:url" content="https://ozarland.com/">
 <meta property="og:image" content="https://ozarland.com/assets/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="500">
 <meta property="og:image:alt" content="An island city above the sea with signposts to the OzarLand spaces.">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ozarland.com/#organization",
+      "name": "OzarLand",
+      "url": "https://ozarland.com/",
+      "logo": "https://ozarland.com/assets/favicon.svg",
+      "description": "A community-driven space where OpenStack operators share what they learn running it.",
+      "sameAs": ["https://github.com/OzarLand"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ozarland.com/#website",
+      "name": "OzarLand",
+      "url": "https://ozarland.com/",
+      "inLanguage": "en",
+      "publisher": {"@id": "https://ozarland.com/#organization"}
+    }
+  ]
+}
+</script>
 <style>
   /* OzarLand palette (brand/academy/tokens/palette.css of ozarland-academy). */
   :root {
@@ -105,7 +131,7 @@
       </p>
     </div>
     <div class="art">
-      <img src="assets/banner.webp" width="1600" height="665" alt="An island city above the sea, with signposts to the OzarLand spaces.">
+      <img src="assets/banner.webp" width="1600" height="665" fetchpriority="high" alt="An island city above the sea, with signposts to the OzarLand spaces.">
     </div>
   </section>
 
@@ -115,14 +141,14 @@
     disposable lab, deploy it, operate it, intervene on instances and hypervisors, take it to production, then
     compare another way to run it and equip your AI assistant.</p>
     <ol class="trail">
-      <li class="stop" style="--accent: var(--village)"><p class="step">Stop 0 · Begin</p><p class="name"><img src="assets/icon-village.svg" alt=""><a href="https://academy.ozarland.com/village/">LUMO's village</a></p><p>The basic concepts of OpenStack, told as a story: LUMO builds a village and learns why each piece of a cloud exists.</p></li>
-      <li class="stop" style="--accent: var(--lab)"><p class="step">Stop 1 · Discover</p><p class="name"><img src="assets/icon-lab.svg" alt=""><a href="https://academy.ozarland.com/lab/">Quick lab</a></p><p>A disposable OpenStack on cloud VMs in about an hour, with break-and-repair exercises.</p></li>
-      <li class="stop" style="--accent: var(--deploy)"><p class="step">Stop 2 · Deploy</p><p class="name"><img src="assets/icon-deploy.svg" alt=""><a href="https://academy.ozarland.com/deploy/">Deployment patterns</a></p><p>Ways to deploy OpenStack with Kolla-Ansible, compared rather than prescribed.</p></li>
-      <li class="stop" style="--accent: var(--day2)"><p class="step">Stop 3 · Operate</p><p class="name"><img src="assets/icon-day2.svg" alt=""><a href="https://academy.ozarland.com/day2/">Kolla-Ansible Academy</a></p><p>Day-2 operations learned from the source code, one study per OpenStack release.</p></li>
-      <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt=""><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Symptom-driven runbooks for instance and hypervisor problems.</p></li>
-      <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt=""><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>Visual memos for production: one operational lesson per page.</p></li>
-      <li class="stop" style="--accent: var(--okd)"><p class="step">Stop 6 · Compare</p><p class="name"><img src="assets/icon-okd.svg" alt=""><a href="https://academy.ozarland.com/okd/">OKD OpenStack lab</a></p><p>OpenStack run by Kubernetes operators on OKD: a reproducible lab for operators who know Kolla-Ansible.</p></li>
-      <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt=""><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>Agent Skills that make Claude reason like a senior OpenStack operator, also a Claude Code plugin.</p></li>
+      <li class="stop" style="--accent: var(--village)"><p class="step">Stop 0 · Begin</p><p class="name"><img src="assets/icon-village.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/village/">LUMO's village</a></p><p>The basic concepts of OpenStack, told as a story: LUMO builds a village and learns why each piece of a cloud exists.</p></li>
+      <li class="stop" style="--accent: var(--lab)"><p class="step">Stop 1 · Discover</p><p class="name"><img src="assets/icon-lab.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/lab/">Quick lab</a></p><p>A disposable OpenStack on cloud VMs in about an hour, with break-and-repair exercises.</p></li>
+      <li class="stop" style="--accent: var(--deploy)"><p class="step">Stop 2 · Deploy</p><p class="name"><img src="assets/icon-deploy.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/deploy/">Deployment patterns</a></p><p>Ways to deploy OpenStack with Kolla-Ansible, compared rather than prescribed.</p></li>
+      <li class="stop" style="--accent: var(--day2)"><p class="step">Stop 3 · Operate</p><p class="name"><img src="assets/icon-day2.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/day2/">Kolla-Ansible Academy</a></p><p>Day-2 operations learned from the source code, one study per OpenStack release.</p></li>
+      <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Symptom-driven runbooks for instance and hypervisor problems.</p></li>
+      <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>Visual memos for production: one operational lesson per page.</p></li>
+      <li class="stop" style="--accent: var(--okd)"><p class="step">Stop 6 · Compare</p><p class="name"><img src="assets/icon-okd.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/okd/">OKD OpenStack lab</a></p><p>OpenStack run by Kubernetes operators on OKD: a reproducible lab for operators who know Kolla-Ansible.</p></li>
+      <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>Agent Skills that make Claude reason like a senior OpenStack operator, also a Claude Code plugin.</p></li>
     </ol>
   </section>
 
@@ -145,7 +171,7 @@
         <p><a href="https://github.com/OzarLand/ozarland/blob/main/newcomers/first-contribution.md">Your first contribution</a></p>
       </div>
       <div class="card" style="--accent: var(--book)">
-        <h3><img src="assets/icon-book.svg" alt="">Deeper reading</h3>
+        <h3><img src="assets/icon-book.svg" alt="" width="26" height="26">Deeper reading</h3>
         <p>The book behind many of the runbooks: <em>OpenStack, the Day After Tomorrow</em>.</p>
         <p><a href="https://book.ozarland.com/">Read the book</a></p>
       </div>
