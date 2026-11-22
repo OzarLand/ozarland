@@ -39,7 +39,6 @@ are expected to be recruited from the first active contributors; see the [launch
 ## Independence
 
 OzarLand is free and is not directed by any vendor, employer or foundation. It accepts sponsors, who are named
-publicly and have no say over the content. Its first sponsor is Felcloud, which provides the cloud credit for the
-labs used to build and test OzarLand. Content may describe commercial products when
+publicly and have no say over the content. Content may describe commercial products when
 operators use them, with the same neutrality as any other approach. No company's product is required to take part
 or to use the content.
