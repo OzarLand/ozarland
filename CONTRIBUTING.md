@@ -38,7 +38,7 @@ flowchart LR
 | Share a problem you solved | Open an issue with the *Problem solved* template, or go straight to a pull request with a runbook |
 | Add or improve a runbook, pattern or playbook | Open a pull request using the matching template from [`community/templates/`](community/templates/) |
 | Tell what happened during an upgrade, an incident or a migration | Start an **Experience reports** discussion, or submit an experience-report page |
-| Confirm that a page works (or does not) in your environment | Comment on the page's pull request or open a *Documentation proposal* issue with your release, deployment method and result. This is how pages become **validated** |
+| Confirm that a page works (or does not) in your environment | Open a [*Documentation proposal*](https://github.com/OzarLand/ozarland-academy/issues/new?template=documentation-proposal.yml) issue in `ozarland-academy` (or use the "Tell us in one line" link at the end of the page) with your release, deployment method and result. A maintainer records it in the page's `confirmed_by` field. This is how pages become **validated** |
 | Fix a typo, a broken link, an outdated command | Open a pull request directly, no issue needed |
 | Propose a change to the community itself (templates, structure, a new repository) | Start an **Ideas** discussion in `ozarland` |
 

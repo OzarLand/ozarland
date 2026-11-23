@@ -1,7 +1,11 @@
 # Newcomer path
 
-Five short pages, to read in order. Together they take about an hour. You do not need to know OpenStack already,
-and you do not need any particular deployment tool.
+Five short pages, to read in order. Together they take about an hour. You do not need any particular deployment
+tool.
+
+**Never seen OpenStack at all?** Read [LUMO's village](https://academy.ozarland.com/village/) first: it explains the
+same services as a story, with no jargon. Then come back here. Whenever a word is not explained, the
+[glossary](glossary.md) has it in one line.
 
 | Step | Page | What you get |
 |---|---|---|

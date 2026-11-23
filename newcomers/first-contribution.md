@@ -17,7 +17,8 @@ learning: they see what is unclear, what is missing, and which word nobody expla
 1. **Pick a task.** Look for issues labelled **`good first contribution`** in the OzarLand repositories. Each says
    what to do, in which file, and what "done" means. Comment on the issue to say you are taking it.
 2. **Open the file on GitHub** and use the pencil icon ("Edit this file"). The web editor is enough for every
-   `good first contribution` task; no local setup needed. GitHub creates a branch and signs off your commit for you.
+   `good first contribution` task; no local setup needed. The checks run on your pull request: if one fails on a
+   link or on the front matter, say so there and the reviewer will help you fix it. GitHub creates a branch and signs off your commit for you.
 3. **Follow the conventions** of the page you edit:
    - metadata block at the top: release, components, deployment method, status
      ([content metadata](../docs/conventions/content-metadata.md));
