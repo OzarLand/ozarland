@@ -12,8 +12,8 @@ from a directory holding the checkouts of ozarland and ozarland-academy:
 
 Counts every page of each module by its `status:` front matter and by top-level folder, then rewrites the
 blocks between `<!-- status-<name>:start -->` and `<!-- status-<name>:end -->` markers: `progress` in the home
-page of each module (index.md), `badges` and `progress` in the hub README, and `summary` in the hub's
-docs/knowledge-lifecycle.md. Without --write, it only reports stale blocks and exits
+page of each module (index.md), `badges` and `progress` in the hub README, `home` in the hub's home page (site/index.html), and `summary` in
+the hub's docs/knowledge-lifecycle.md. Without --write, it only reports stale blocks and exits
 with code 1, so it can run as a check. Text outside the markers is never touched.
 """
 import argparse
@@ -161,6 +161,13 @@ def hub_blocks(counts):
             "badges": badges(t),
             "progress": (f"{n} pages are published in OzarLand Academy: {' and '.join(parts)}.\n\n{pie(t)}\n\n"
                          f"{progress_table(rows, 'Module')}\n\n{legend(t, 'module')}"),
+        },
+        # The home page (site/index.html) states the same counts in its section on trust.
+        "site/index.html": {
+            "home": (f"    <p class=\"intro counts\"><strong>Today:</strong> {n} runbooks and deployment patterns. "
+                     f"<strong>{t['lab-verified']}</strong> lab-verified, <strong>{t['draft']}</strong> draft, "
+                     f"<strong>{t['validated']}</strong> validated by a human operator"
+                     f"{' so far' if not t['validated'] else ''}.</p>"),
         },
         "docs/knowledge-lifecycle.md": {
             "summary": (f"Today (counted from each page's `status:` field by `tools/status_blocks.py`): "

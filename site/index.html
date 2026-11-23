@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OzarLand · A shared land for better OpenStack operations</title>
-<meta name="description" content="OzarLand is a community-driven space where OpenStack operators share what they learn running it: runbooks, deployment choices, a learning path and experience.">
+<meta name="description" content="OpenStack runbooks by symptom, a disposable lab, deployment patterns and production memos, shared by an operator and open to every operator. Free, Apache-2.0.">
 <link rel="canonical" href="https://ozarland.com/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OzarLand">
 <meta property="og:title" content="OzarLand · A shared land for better OpenStack operations">
-<meta property="og:description" content="A community-driven space where OpenStack operators share what they learn running it.">
+<meta property="og:description" content="OpenStack runbooks by symptom, a disposable lab, deployment patterns and production memos, shared by an operator and open to every operator.">
 <meta property="og:url" content="https://ozarland.com/">
 <meta property="og:image" content="https://ozarland.com/assets/home/social.jpg">
 <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
       "name": "OzarLand",
       "url": "https://ozarland.com/",
       "logo": "https://ozarland.com/assets/favicon.svg",
-      "description": "A community-driven space where OpenStack operators share what they learn running it.",
+      "description": "An open space where OpenStack operators share what they learn running it: runbooks, a lab, deployment patterns and production memos.",
       "sameAs": ["https://github.com/OzarLand"],
       "founder": {"@id": "https://ozarland.com/#founder"}
     },
@@ -38,6 +38,7 @@
       "jobTitle": "Platform engineer",
       "description": "Platform engineer who has operated OpenStack in production for more than five years, author of OpenStack, the Day After Tomorrow.",
       "url": "https://ozarland.com/#about",
+      "knowsAbout": ["OpenStack", "Kolla-Ansible", "Day-2 operations", "Private cloud operations", "Incident response"],
       "sameAs": ["https://www.linkedin.com/in/soufian-zaouam/", "https://github.com/soufian-zaouam"]
     },
     {
@@ -82,6 +83,10 @@
   :is(a, button):focus-visible { outline: 2px solid var(--focus); outline-offset: 0; box-shadow: 0 0 0 4px var(--keyline); }
   img { max-width: 100%; height: auto; }
   .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1rem; }
+  /* Skip link: the first stop of the keyboard, visible when focused. */
+  .skip { position: absolute; left: 0.5rem; top: -4rem; z-index: 10; padding: 0.6rem 1rem; background: var(--surface); color: var(--text); border: 2px solid var(--focus); border-radius: 0.4rem; font-weight: 650; }
+  .skip:focus { top: 0.5rem; }
+  main:focus { outline: none; }
   h1, h2, h3, .tagline { font-family: var(--serif); }
 
   /* Cover: the leather binding, with a brass edge. */
@@ -115,9 +120,10 @@
   main > section { padding-bottom: 0.5rem; }
   main > section + section::before { content: ""; display: block; height: 2.2rem; margin: 2.2rem 0 0.4rem; background: url("assets/home/divider.webp") center / min(100%, 44rem) auto no-repeat; }
   h2 { font-size: 2rem; line-height: 1.25; margin: 0.6rem 0 0.6rem; }
-  .intro { max-width: 46rem; margin-top: 0; }
+  .intro { max-width: 65ch; margin-top: 0; }
+  .counts { color: var(--muted); }
   /* Illuminated initial: an empty painted frame behind the first letter, which stays real text. */
-  .dropcap::first-letter { float: left; font-family: var(--serif); font-size: 2.1rem; line-height: 1; font-weight: 700; padding: 0.95rem 1.15rem; margin: 0.15rem 0.4rem 0 0; background: url("assets/home/dropcap-frame.webp") center / contain no-repeat; }
+  .dropcap::first-letter { float: left; font-family: var(--serif); font-size: 2.1rem; line-height: 1; font-weight: 700; padding: 0.7rem 0.85rem; margin: 0.2rem 0.12rem 0 0; background: url("assets/home/dropcap-frame.webp") center / contain no-repeat; }
   .spread { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem; align-items: start; margin-top: 1.2rem; }
   .scene { margin: 0; }
 
@@ -138,6 +144,8 @@
   .card h3 { margin: 0 0 0.3rem; font-size: 1.2rem; display: flex; gap: 0.5rem; align-items: center; }
   .card h3 img { width: 1.6rem; height: 1.6rem; }
   .card p { margin: 0.3rem 0; }
+  /* A link alone on its line is a touch target: at least 24 px high, 44 px on a phone. */
+  .card p:last-child a, .work strong a, .stop .name a, .incidents a { display: inline-block; padding-block: 0.3rem; }
 
   .about .plate p { margin: 0 0 0.8rem; }
   .about .plate p:last-child { margin-bottom: 0; }
@@ -145,10 +153,16 @@
   .about .links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
   .about .plate { padding: 2rem 1.8rem 1.8rem 2.2rem; }
   .works-title { font-size: 1.3rem; margin: 1.6rem 0 0.7rem; }
-  .work { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+  .work { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
   .work li { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent, var(--border)); border-radius: 0.4rem; padding: 0.7rem 0.9rem; }
   .work strong { display: block; font-family: var(--serif); font-size: 1.05rem; }
   .work span { color: var(--muted); font-size: 0.95rem; }
+
+  /* Frequent incidents: the words of the error, each leading to its runbook. */
+  .incidents { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.5rem 1rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+  .incidents li { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--runbooks); border-radius: 0.4rem; padding: 0.35rem 0.9rem; }
+  .incidents a { font-weight: 600; }
+  .incidents span { display: block; color: var(--muted); font-size: 0.92rem; }
 
   /* Three wax seals: the status is written, the seal only accompanies it. */
   .seals { list-style: none; margin: 1.2rem 0 1rem; padding: 0; display: grid; gap: 0.7rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -178,16 +192,23 @@
     .seals img { width: 3.5rem; height: 3.5rem; }
     header.top .wrap { flex-wrap: wrap; row-gap: 0; padding-top: 0.6rem; }
     header.top nav { display: flex; flex-wrap: wrap; column-gap: 0.7rem; }
-    header.top nav a { margin-left: 0; font-size: 0.85rem; }
+    header.top nav a { margin-left: 0; font-size: 0.85rem; min-height: 2.4rem; }
+    .card p:last-child a, .work strong a, .stop .name a, .incidents a { padding-block: 0.65rem; }
   }
   @media (max-width: 34rem) {
     .trail, .cards { grid-template-columns: minmax(0, 1fr); }
-    .dropcap::first-letter { font-size: 1.7rem; padding: 0.75rem 0.95rem; }
+    .dropcap::first-letter { font-size: 1.7rem; padding: 0.6rem 0.75rem; }
+  }
+  @media (prefers-color-scheme: dark) {
+    /* The painted scenes are bright: a little dimmer on the dark canvas. The divider is drawn for parchment. */
+    .art img, .scene img, .colophon img { filter: brightness(0.88); }
+    main > section + section::before { filter: brightness(2.2); }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to the content</a>
 <header class="top">
   <div class="wrap">
     <a href="./" aria-label="OzarLand home"><img src="assets/favicon.svg" alt="" width="26" height="26">OzarLand</a>
@@ -202,14 +223,14 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
   <section class="hero" aria-labelledby="title">
     <div class="plate ornate">
       <h1 id="title">OzarLand</h1>
       <p class="tagline">A shared land for better OpenStack operations.</p>
-      <p class="lead">A community-driven space where OpenStack operators share what they learn running it: fixes,
-      deployment choices, a learning path and first-hand experience. Open to everyone, whatever tool deployed your
-      cloud. Everything is public and Apache-2.0.</p>
+      <p class="lead">A space where OpenStack operators share what they learn running it: runbooks by symptom,
+      deployment choices, a learning path and first-hand experience. Started by one operator, open to everyone,
+      whatever tool deployed your cloud. Everything is public and Apache-2.0.</p>
       <p class="actions">
         <a class="cta primary" href="https://academy.ozarland.com/">Start learning</a>
         <a class="cta" href="https://github.com/OzarLand/ozarland/discussions">Ask a question</a>
@@ -227,6 +248,22 @@
     </div>
   </section>
 
+  <section aria-labelledby="incident">
+    <h2 id="incident">An OpenStack incident right now?</h2>
+    <p class="intro">Start from what you see. Each runbook begins with read-only checks, says what not to do, and
+    states the release it was checked on.</p>
+    <ul class="incidents">
+      <li><a href="https://academy.ozarland.com/runbooks/recovery/compute-host-failure-fence-before-evacuate/">A compute host is unreachable, its instances are down</a><span>Fence before you evacuate</span></li>
+      <li><a href="https://academy.ozarland.com/runbooks/recovery/nova-compute-down-instances-still-running/">nova-compute is down, the instances still run</a><span>What still works, and what to check first</span></li>
+      <li><a href="https://academy.ozarland.com/runbooks/recovery/rabbitmq-partition-or-alarm-rpc-timeouts/">MessagingTimeout in every service</a><span>RabbitMQ partitioned, blocked by an alarm, or a node missing</span></li>
+      <li><a href="https://academy.ozarland.com/runbooks/recovery/galera-cluster-lost-quorum-database-unavailable/">Every API fails on database errors</a><span>The Galera cluster lost quorum</span></li>
+      <li><a href="https://academy.ozarland.com/runbooks/scheduling/no-valid-host-with-free-capacity/">"No valid host was found", although capacity exists</a><span>Placement, filters and what the scheduler really saw</span></li>
+      <li><a href="https://academy.ozarland.com/runbooks/lifecycle/instance-stuck-in-build-waiting-for-vif-plugged/">Instance stuck in BUILD, then ERROR</a><span>Waiting for vif_plugged</span></li>
+    </ul>
+    <p class="intro" style="margin-top: 1rem"><a href="https://academy.ozarland.com/runbooks/#-start-from-what-you-see">Every symptom</a>
+    in the VM runbooks, or <a href="https://academy.ozarland.com/#search">search every module</a>.</p>
+  </section>
+
   <section aria-labelledby="academy">
     <h2 id="academy">OzarLand Academy</h2>
     <p class="intro dropcap">One learning path to run OpenStack, across one island: begin with LUMO's story, then seven stops: discover it on a
@@ -241,7 +278,7 @@
         <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Symptom-driven runbooks for instance and hypervisor problems.</p></li>
         <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>Visual memos for production: one operational lesson per page.</p></li>
         <li class="stop" style="--accent: var(--okd)"><p class="step">Stop 6 · Compare</p><p class="name"><img src="assets/icon-okd.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/okd/">OKD OpenStack lab</a></p><p>OpenStack run by Kubernetes operators on OKD: a reproducible lab for operators who know Kolla-Ansible.</p></li>
-        <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>Agent Skills that make Claude reason like a senior OpenStack operator, also a Claude Code plugin.</p></li>
+        <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>Agent Skills that make Claude follow a senior OpenStack operator's method, also a Claude Code plugin.</p></li>
       </ol>
       <figure class="scene chapters">
         <img src="assets/home/chapters-map.webp" width="1200" height="675" loading="lazy"
@@ -260,12 +297,12 @@
       <div class="cards">
         <div class="card">
           <h3>Newcomer path</h3>
-          <p>Five short pages, read in order: what OpenStack is made of, how to read a runbook, where to ask.</p>
+          <p>After LUMO's village: five short pages, read in order, on what OpenStack is made of, how to read a runbook and where to ask.</p>
           <p><a href="https://github.com/OzarLand/ozarland/tree/main/newcomers">Start the newcomer path</a></p>
         </div>
         <div class="card">
           <h3>Discussions</h3>
-          <p>Questions, experience reports and ideas, answered in public by operators.</p>
+          <p>Questions, experience reports and ideas, asked and answered in public.</p>
           <p><a href="https://github.com/OzarLand/ozarland/discussions">Open the Discussions</a></p>
         </div>
         <div class="card">
@@ -296,9 +333,10 @@
         incidents, maintenance, upgrades, recovery, and the organisation around them.</p>
         <p>I started OzarLand in October 2026 as a personal initiative, to share what that work taught me with other
         operators. It is not a company or a product: I run it in my own name and in my own time, it is free, and
-        everything is public under Apache-2.0.</p>
+        everything is public under Apache-2.0. So far I build it with AI agents, from my book, my notes and my labs,
+        and I say so openly: <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
         <p>My hope is that it grows into a place where operators share their own experience. Your corrections and
-        questions are welcome.</p>
+        questions are welcome: write to me on LinkedIn, or open a discussion.</p>
         <p class="links">
           <a class="cta primary" href="https://www.linkedin.com/in/soufian-zaouam/">LinkedIn</a>
           <a class="cta" href="https://github.com/soufian-zaouam">GitHub</a>
@@ -323,16 +361,20 @@
   <section aria-labelledby="trust">
     <h2 id="trust">What makes a page trustworthy</h2>
     <p class="intro">Every page says where it was observed (OpenStack release, components, deployment method) and how
-    much it was checked. A page carries one of three statuses:</p>
+    much it was checked. A runbook or a deployment pattern carries one of these statuses, shown under its title:</p>
     <ul class="seals">
       <li><img src="assets/home/seal-draft.webp" alt="" width="240" height="240" loading="lazy">
         <div><strong>draft</strong><span>Written; its commands have not been run by anyone other than the author.</span></div></li>
       <li><img src="assets/home/seal-lab-verified.webp" alt="" width="240" height="240" loading="lazy">
-        <div><strong>lab-verified</strong><span>Run on a lab by someone else, on the release the page states.</span></div></li>
+        <div><strong>lab-verified</strong><span>Its commands were run on a lab by someone other than its author (so far an AI lab agent or the maintainer), on the release the page states.</span></div></li>
       <li><img src="assets/home/seal-validated.webp" alt="" width="240" height="240" loading="lazy">
-        <div><strong>validated</strong><span>Confirmed by a human operator on a real platform.</span></div></li>
+        <div><strong>validated</strong><span>Confirmed by a human operator, other than the author, on a real platform.</span></div></li>
     </ul>
-    <p class="intro">Pages are written and lab-tested with AI agents, reviewed independently, and validated only by people:
+<!-- status-home:start -->
+    <p class="intro counts"><strong>Today:</strong> 111 runbooks and deployment patterns. <strong>52</strong> lab-verified, <strong>59</strong> draft, <strong>0</strong> validated by a human operator so far.</p>
+<!-- status-home:end -->
+    <p class="intro">A fourth status, <strong>experimental</strong>, marks a page that may be outdated or was confirmed
+    only under narrow conditions. Pages are written and lab-tested with AI agents, reviewed independently, and validated only by people:
     <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
   </section>
 </main>
