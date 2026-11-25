@@ -40,13 +40,15 @@ The table defines every palette role. Contrast ratios use WCAG relative luminanc
 Use system fonts only. Headings: `Iowan Old Style`, `Palatino Linotype`, Palatino, Georgia, serif. Body, navigation and controls retain the site's current system sans-serif stack. Use a restrained initial-cap frame as decoration; place any actual initial in HTML. No blackletter or web fonts.
 
 ## Section treatment
-1. Header: a leather-like navy book cover with the existing logo and six links.
+1. Header: a leather-like navy book cover with the existing logo and five links (Academy, Runbooks, Book, Join in, About).
 2. Opening: title “OzarLand”, promise, primary and secondary actions, plus a distinct “In an incident?” shortcut beside the Great Book illustration.
 3. Academy: an eight-chapter table of contents paired with a parchment island map and continuous route: LUMO's village, Quick lab, Deployment patterns, Kolla-Ansible Academy, VM runbooks, Production guide, OKD OpenStack lab, Operator skills.
-4. Community: four cards for Newcomer path, Discussions, Contribute and the book, arranged like a shared scriptorium table.
-5. Author: a writing table and a concise author note with five works represented as plain text links.
-6. Trust: three text-labeled statuses with distinguishable wax forms: smooth unmarked draft; lantern-impressed lab-verified; compass-impressed, brass-ringed validated with ribbon.
+4. Trust: three text-labeled statuses with distinguishable wax forms: smooth unmarked draft; lantern-impressed lab-verified; compass-impressed, brass-ringed validated with ribbon.
+5. The book and its author: a writing table and a concise author note, with the book as the main action.
+6. Join in: three cards for the newcomer path, Discussions and a first contribution.
 7. Footer: a quiet colophon with closed book and plain links.
+
+The community scriptorium illustration is kept in `site/assets/home/` but no longer shown on the home page, which was shortened so that a visitor does not miss what matters.
 
 ## Ornaments and mobile use
 The margin vine frames desktop text columns but stays outside the text measure; on mobile it is omitted or reduced to a short side flourish. The divider separates sections at desktop and becomes a short centered rule on mobile. The single corner ornament can be mirrored at page corners and reduced to one upper corner on mobile. The blank drop-cap frame is only a background for an HTML initial; omit it where it would crowd mobile copy. The ribbon bookmark can mark the active chapter on desktop and becomes a narrow top-edge tab on mobile. The three seal PNGs accompany text labels and remain small enough not to compete with them. No decorative illustration sits behind a paragraph; text panels use only a very faint parchment texture.
