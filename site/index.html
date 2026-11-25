@@ -228,16 +228,14 @@
     <div class="plate ornate">
       <h1 id="title">OzarLand</h1>
       <p class="tagline">A shared land for better OpenStack operations.</p>
-      <p class="lead">A space where OpenStack operators share what they learn running it: runbooks by symptom,
-      deployment choices, a learning path and first-hand experience. Started by one operator, open to everyone,
-      whatever tool deployed your cloud. Everything is public and Apache-2.0.</p>
+      <p class="lead">OpenStack operators share what they learn running it: a learning path, runbooks by symptom and
+      first-hand experience. Free and Apache-2.0.</p>
       <p class="actions">
         <a class="cta primary" href="https://academy.ozarland.com/">Start learning</a>
         <a class="cta" href="https://github.com/OzarLand/ozarland/discussions">Ask a question</a>
       </p>
       <p class="shortcut">In an incident? <a href="https://academy.ozarland.com/runbooks/#-start-from-what-you-see">Start from
-      the symptom</a> in the VM runbooks, or <a href="https://academy.ozarland.com/skills/#-install-in-one-minute">give your AI
-      assistant the operator skills</a>.</p>
+      the symptom</a>.</p>
     </div>
     <div class="art">
       <picture>
@@ -250,8 +248,7 @@
 
   <section aria-labelledby="incident">
     <h2 id="incident">An OpenStack incident right now?</h2>
-    <p class="intro">Start from what you see. Each runbook begins with read-only checks, says what not to do, and
-    states the release it was checked on.</p>
+    <p class="intro">Start from what you see: read-only checks first, and what not to do.</p>
     <ul class="incidents">
       <li><a href="https://academy.ozarland.com/runbooks/recovery/compute-host-failure-fence-before-evacuate/">A compute host is unreachable, its instances are down</a><span>Fence before you evacuate</span></li>
       <li><a href="https://academy.ozarland.com/runbooks/recovery/nova-compute-down-instances-still-running/">nova-compute is down, the instances still run</a><span>What still works, and what to check first</span></li>
@@ -260,25 +257,22 @@
       <li><a href="https://academy.ozarland.com/runbooks/scheduling/no-valid-host-with-free-capacity/">"No valid host was found", although capacity exists</a><span>Placement, filters and what the scheduler really saw</span></li>
       <li><a href="https://academy.ozarland.com/runbooks/lifecycle/instance-stuck-in-build-waiting-for-vif-plugged/">Instance stuck in BUILD, then ERROR</a><span>Waiting for vif_plugged</span></li>
     </ul>
-    <p class="intro" style="margin-top: 1rem"><a href="https://academy.ozarland.com/runbooks/#-start-from-what-you-see">Every symptom</a>
-    in the VM runbooks, or <a href="https://academy.ozarland.com/#search">search every module</a>.</p>
+    <p class="intro" style="margin-top: 1rem"><a href="https://academy.ozarland.com/runbooks/#-start-from-what-you-see">Every symptom</a>.</p>
   </section>
 
   <section aria-labelledby="academy">
     <h2 id="academy">OzarLand Academy</h2>
-    <p class="intro dropcap">One learning path to run OpenStack, across one island: begin with LUMO's story, then seven stops: discover it on a
-    disposable lab, deploy it, operate it, intervene on instances and hypervisors, take it to production, then
-    compare another way to run it and equip your AI assistant.</p>
+    <p class="intro dropcap">One learning path across one island, from the first concepts to production.</p>
     <div class="spread">
       <ol class="trail">
-        <li class="stop" style="--accent: var(--village)"><p class="step">Stop 0 · Begin</p><p class="name"><img src="assets/icon-village.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/village/">LUMO's village</a></p><p>The basic concepts of OpenStack, told as a story: LUMO builds a village and learns why each piece of a cloud exists.</p></li>
-        <li class="stop" style="--accent: var(--lab)"><p class="step">Stop 1 · Discover</p><p class="name"><img src="assets/icon-lab.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/lab/">Quick lab</a></p><p>A disposable OpenStack on cloud VMs in about an hour, with break-and-repair exercises.</p></li>
-        <li class="stop" style="--accent: var(--deploy)"><p class="step">Stop 2 · Deploy</p><p class="name"><img src="assets/icon-deploy.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/deploy/">Deployment patterns</a></p><p>Ways to deploy OpenStack with Kolla-Ansible, compared rather than prescribed.</p></li>
-        <li class="stop" style="--accent: var(--day2)"><p class="step">Stop 3 · Operate</p><p class="name"><img src="assets/icon-day2.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/day2/">Kolla-Ansible Academy</a></p><p>Day-2 operations learned from the source code, one study per OpenStack release.</p></li>
-        <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Symptom-driven runbooks for instance and hypervisor problems.</p></li>
-        <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>Visual memos for production: one operational lesson per page.</p></li>
-        <li class="stop" style="--accent: var(--okd)"><p class="step">Stop 6 · Compare</p><p class="name"><img src="assets/icon-okd.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/okd/">OKD OpenStack lab</a></p><p>OpenStack run by Kubernetes operators on OKD: a reproducible lab for operators who know Kolla-Ansible.</p></li>
-        <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>Agent Skills that make Claude follow a senior OpenStack operator's method, also a Claude Code plugin.</p></li>
+        <li class="stop" style="--accent: var(--village)"><p class="step">Stop 0 · Begin</p><p class="name"><img src="assets/icon-village.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/village/">LUMO's village</a></p><p>OpenStack's concepts, told as a story.</p></li>
+        <li class="stop" style="--accent: var(--lab)"><p class="step">Stop 1 · Discover</p><p class="name"><img src="assets/icon-lab.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/lab/">Quick lab</a></p><p>A disposable OpenStack in about an hour.</p></li>
+        <li class="stop" style="--accent: var(--deploy)"><p class="step">Stop 2 · Deploy</p><p class="name"><img src="assets/icon-deploy.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/deploy/">Deployment patterns</a></p><p>Kolla-Ansible choices, compared.</p></li>
+        <li class="stop" style="--accent: var(--day2)"><p class="step">Stop 3 · Operate</p><p class="name"><img src="assets/icon-day2.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/day2/">Kolla-Ansible Academy</a></p><p>Day-2 operations, read from the source.</p></li>
+        <li class="stop" style="--accent: var(--runbooks)"><p class="step">Stop 4 · Intervene</p><p class="name"><img src="assets/icon-runbooks.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></p><p>Instance and hypervisor problems, by symptom.</p></li>
+        <li class="stop" style="--accent: var(--production)"><p class="step">Stop 5 · Go to production</p><p class="name"><img src="assets/icon-production.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/production/">Production guide</a></p><p>One operational lesson per memo.</p></li>
+        <li class="stop" style="--accent: var(--okd)"><p class="step">Stop 6 · Compare</p><p class="name"><img src="assets/icon-okd.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/okd/">OKD OpenStack lab</a></p><p>OpenStack run by Kubernetes operators.</p></li>
+        <li class="stop" style="--accent: var(--skills)"><p class="step">Stop 7 · Equip</p><p class="name"><img src="assets/icon-skills.svg" alt="" width="26" height="26"><a href="https://academy.ozarland.com/skills/">Operator skills</a></p><p>An operator's method for your AI assistant.</p></li>
       </ol>
       <figure class="scene chapters">
         <img src="assets/home/chapters-map.webp" width="1200" height="675" loading="lazy"
@@ -297,22 +291,22 @@
       <div class="cards">
         <div class="card">
           <h3>Newcomer path</h3>
-          <p>After LUMO's village: five short pages, read in order, on what OpenStack is made of, how to read a runbook and where to ask.</p>
+          <p>Five short pages, read in order.</p>
           <p><a href="https://github.com/OzarLand/ozarland/tree/main/newcomers">Start the newcomer path</a></p>
         </div>
         <div class="card">
           <h3>Discussions</h3>
-          <p>Questions, experience reports and ideas, asked and answered in public.</p>
+          <p>Questions and experience, in public.</p>
           <p><a href="https://github.com/OzarLand/ozarland/discussions">Open the Discussions</a></p>
         </div>
         <div class="card">
           <h3>Contribute</h3>
-          <p>Confirm a page on your platform, share a problem you solved, describe how you deploy.</p>
+          <p>Confirm a page or share a problem you solved.</p>
           <p><a href="https://github.com/OzarLand/ozarland/blob/main/newcomers/first-contribution.md">Your first contribution</a></p>
         </div>
         <div class="card">
           <h3><img src="assets/icon-book.svg" alt="" width="26" height="26">Deeper reading</h3>
-          <p>The book behind many of the runbooks: <em>OpenStack, the Day After Tomorrow</em>.</p>
+          <p><em>OpenStack, the Day After Tomorrow</em>.</p>
           <p><a href="https://book.ozarland.com/">Read the book</a></p>
         </div>
       </div>
@@ -328,15 +322,10 @@
       </figure>
       <div class="plate ornate">
         <p class="role">Soufian Zaouam, platform engineer and OpenStack operator.</p>
-        <p class="dropcap">I have operated OpenStack in production for more than five years, responsible for the Day-2 operation of
-        mission-critical private cloud platforms ranging from several hundred to around a thousand compute nodes:
-        incidents, maintenance, upgrades, recovery, and the organisation around them.</p>
-        <p>I started OzarLand in October 2026 as a personal initiative, to share what that work taught me with other
-        operators. It is not a company or a product: I run it in my own name and in my own time, it is free, and
-        everything is public under Apache-2.0. So far I build it with AI agents, from my book, my notes and my labs,
-        and I say so openly: <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
-        <p>My hope is that it grows into a place where operators share their own experience. Your corrections and
-        questions are welcome: write to me on LinkedIn, or open a discussion.</p>
+        <p class="dropcap">I have run the Day-2 operation of mission-critical OpenStack clouds for more than five years,
+        from several hundred to around a thousand compute nodes.</p>
+        <p>I started OzarLand in October 2026, in my own name and my own time, and build it with AI agents:
+        <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
         <p class="links">
           <a class="cta primary" href="https://www.linkedin.com/in/soufian-zaouam/">LinkedIn</a>
           <a class="cta" href="https://github.com/soufian-zaouam">GitHub</a>
@@ -346,36 +335,33 @@
     <h3 class="works-title" id="works">What I share on OzarLand</h3>
     <ul class="work" aria-labelledby="works">
       <li style="--accent: var(--book)"><strong><a href="https://book.ozarland.com/">OpenStack, the Day After Tomorrow</a></strong>
-        <span>My book on operating mission-critical OpenStack platforms, drawn from that production work.</span></li>
+        <span>My book on operating mission-critical OpenStack.</span></li>
       <li style="--accent: var(--runbooks)"><strong><a href="https://academy.ozarland.com/runbooks/">VM runbooks</a></strong>
-        <span>What to check, in which order, when an instance or a hypervisor goes wrong, and what not to do.</span></li>
+        <span>What to check when a VM or hypervisor goes wrong.</span></li>
       <li style="--accent: var(--production)"><strong><a href="https://academy.ozarland.com/production/">Production guide</a></strong>
-        <span>One operational lesson per memo: the decisions that matter on a production platform.</span></li>
+        <span>The decisions that matter in production.</span></li>
       <li style="--accent: var(--skills)"><strong><a href="https://academy.ozarland.com/skills/">Operator skills</a></strong>
-        <span>My operating method (incident analysis, change review, maintenance planning) as skills for an AI assistant.</span></li>
+        <span>My operating method, for an AI assistant.</span></li>
       <li style="--accent: var(--lab)"><strong><a href="https://academy.ozarland.com/lab/">Quick lab</a></strong>
-        <span>A disposable OpenStack built on a real cloud, with exercises to break and repair it.</span></li>
+        <span>A disposable OpenStack to break and repair.</span></li>
     </ul>
   </section>
 
   <section aria-labelledby="trust">
     <h2 id="trust">What makes a page trustworthy</h2>
-    <p class="intro">Every page says where it was observed (OpenStack release, components, deployment method) and how
-    much it was checked. A runbook or a deployment pattern carries one of these statuses, shown under its title:</p>
+    <p class="intro">Every runbook and deployment pattern shows how far it was checked, under its title:</p>
     <ul class="seals">
       <li><img src="assets/home/seal-draft.webp" alt="" width="240" height="240" loading="lazy">
-        <div><strong>draft</strong><span>Written; its commands have not been run by anyone other than the author.</span></div></li>
+        <div><strong>draft</strong><span>Not yet run by anyone other than its author.</span></div></li>
       <li><img src="assets/home/seal-lab-verified.webp" alt="" width="240" height="240" loading="lazy">
-        <div><strong>lab-verified</strong><span>Its commands were run on a lab by someone other than its author (so far an AI lab agent or the maintainer), on the release the page states.</span></div></li>
+        <div><strong>lab-verified</strong><span>Run on a lab by someone other than its author.</span></div></li>
       <li><img src="assets/home/seal-validated.webp" alt="" width="240" height="240" loading="lazy">
-        <div><strong>validated</strong><span>Confirmed by a human operator, other than the author, on a real platform.</span></div></li>
+        <div><strong>validated</strong><span>Confirmed by a human operator on a real platform.</span></div></li>
     </ul>
 <!-- status-home:start -->
     <p class="intro counts"><strong>Today:</strong> 111 runbooks and deployment patterns. <strong>52</strong> lab-verified, <strong>59</strong> draft, <strong>0</strong> validated by a human operator so far.</p>
 <!-- status-home:end -->
-    <p class="intro">A fourth status, <strong>experimental</strong>, marks a page that may be outdated or was confirmed
-    only under narrow conditions. Pages are written and lab-tested with AI agents, reviewed independently, and validated only by people:
-    <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
+    <p class="intro">Validated only by people: <a href="https://github.com/OzarLand/ozarland/blob/main/docs/how-ozarland-is-built.md">how OzarLand is built</a>.</p>
   </section>
 </main>
 
